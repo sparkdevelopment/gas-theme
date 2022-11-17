@@ -10,6 +10,12 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Milligram';
+    src: url("../resources/fonts/Milligram-Regular.ttf");
+    font-weight: 300;
+}
+
 article>*:not(.entry-content),
 .entry-content>* {
     @apply mx-auto max-w-content;

@@ -74,6 +74,7 @@
 </div>
 
 <script>
+    var lethargy = new Lethargy();
     docSlider.init({
         pager: false
     });

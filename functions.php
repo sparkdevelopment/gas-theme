@@ -46,7 +46,8 @@ function tailpress_enqueue_scripts() {
 
 	// If homepage, enqueue docslider js
 	if ( is_front_page() ) {
-		wp_enqueue_script( 'docslider', tailpress_asset( 'js/docSlider.min.js' ), array(), $theme->get( 'Version' ) );
+		wp_enqueue_script( 'lethargy', tailpress_asset( 'js/lethargy.min.js' ), array(), $theme->get( 'Version' ) );
+		wp_enqueue_script( 'docslider', tailpress_asset( 'js/docSlider.js' ), array(), $theme->get( 'Version' ) );
 	}
 }
 
