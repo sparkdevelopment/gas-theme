@@ -9,7 +9,7 @@
 <footer id="colophon" class="site-footer bg-black sm:py-12 py-4" role="contentinfo">
 	<?php do_action('tailpress_footer'); ?>
 	<?php if (has_custom_logo()) { ?>
-		<div class="sm:w-auto max-w-[50%] m-auto">
+		<div class="sm:w-auto max-w-[50%] sm:m-0 m-auto">
 		<?php the_custom_logo(); ?>
 		</div>
 	<?php } ?>
