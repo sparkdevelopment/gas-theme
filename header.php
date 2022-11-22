@@ -18,14 +18,16 @@
 
 		<?php do_action('tailpress_header'); ?>
 
-		<header class="fixed top-0 left-0 z-40 w-full">
+		<header class="absolute top-0 left-0 z-40 w-full">
 
 			<div class="mx-0 w-full">
-				<div class="lg:flex lg:justify-between lg:items-center py-2 w-full">
+				<div class="py-2 w-full">
 					<div class="flex justify-between items-center">
 						<div class="ml-4">
 							<?php if (has_custom_logo()) { ?>
-								<?php the_custom_logo(); ?>
+								<div class="sm:w-auto max-w-[75%]">
+									<?php the_custom_logo(); ?>
+								</div>
 							<?php } else { ?>
 								<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
 									<?php echo get_bloginfo('name'); ?>
@@ -38,17 +40,17 @@
 							<?php } ?>
 						</div>
 
-					</div>
-					<div class="mr-10 text-white">
-						<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-							<svg viewBox="0 0 20 20" class="inline-block w-10 h-10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-								<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-									<g id="icon-shape">
-										<path d="M0,3.5 L20,3.5 L20,5 L0,5 L0,3 Z M0,9.5 L20,9.5 L20,11 L0,11 L0,9 Z M0,15.5 L20,15.5 L20,17 L0,17 L0,15 Z" id="Combined-Shape"></path>
+						<div class="mr-10 text-white">
+							<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
+								<svg viewBox="0 0 20 20" class="inline-block w-10 h-10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+										<g id="icon-shape">
+											<path d="M0,3.5 L20,3.5 L20,5 L0,5 L0,3 Z M0,9.5 L20,9.5 L20,11 L0,11 L0,9 Z M0,15.5 L20,15.5 L20,17 L0,17 L0,15 Z" id="Combined-Shape"></path>
+										</g>
 									</g>
-								</g>
-							</svg>
-						</a>
+								</svg>
+							</a>
+						</div>
 					</div>
 
 					<?php

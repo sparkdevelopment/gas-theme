@@ -1,76 +1,98 @@
-<?php get_header(); ?>
 
 <div class="w-full m-0 docSlider">
     <section id="0" class="h-screen bg-black">
-        <div
-            class="bg-cover bg-center h-[85vh] gas-mask"
-            style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-hero.png'); -webkit-mask-position: bottom; -webkit-mask-size: 125%;"
-        ></div>
-        <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="" class="h-[12vh] mx-auto mt-[1vh]">
+        <?php get_header(); ?>
+        <div class="bg-cover bg-center h-[85vh] gas-mask sm:[-webkit-mask-size:125%] [-webkit-mask-size:175%] sm:[-webkit-mask-position:bottom] [-webkit-mask-position:center]" style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-hero.png');"></div>
+        <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="" class="h-[9vh] mx-auto mt-[3vh]">
     </section>
     <section id="1" class="h-screen bg-black flex flex-column !w-[130vw]">
-        <div class="flex flex-row justify-center items-center h-1/3 self-center w-full -mx-[15vw]">
-            <div class="w-1/3 h-[40vh] m-1">
-                <a href="#" class="h-full block max-w-md mx-auto">
-                    <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/light.jpg');" class="w-full h-full bg-cover bg-center gas-mask"></div>
-                    <p class="font-theme-heading text-white text-center font-bold text-lg m-2">Lighting</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center sm:h-2/3 h-full self-center w-full -mx-[15vw]">
+            <div class="sm:w-1/3 w-1/2 sm:h-[60vh] h-1/3 m-1">
+                <a href="#" class="h-full block mx-auto sm:mt-[-50%] sm:translate-y-[50%] 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
+                    <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/light.jpg');" class="w-full h-full bg-contain bg-center gas-mask mask-center max-h-[35vw]"></div>
+                    <p class="font-theme-heading text-white text-center font-bold text-xl xl:text-2xl 2xl:text-3xl m-2">Lighting</p>
                 </a>
             </div>
-            <div class="w-1/3 h-[40vh] m-1">
-                <a href="#" class="h-full block max-w-md mx-auto">
-                    <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/camera.jpg');" class="w-full h-full bg-cover bg-center gas-mask"></div>
-                    <p class="font-theme-heading text-white text-center font-bold text-lg m-2">Camera & Digital</p>
+            <div class="sm:w-1/3 w-1/2 sm:h-[60vh] h-1/3 m-1">
+                <a href="#" class="h-full block mx-auto sm:mt-[-50%] sm:translate-y-[50%] 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
+                    <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/camera.jpg');" class="w-full h-full bg-contain bg-center gas-mask mask-center max-h-[35vw]"></div>
+                    <p class="font-theme-heading text-white text-center font-bold text-xl xl:text-2xl 2xl:text-3xl m-2">Camera & Digital</p>
                 </a>
             </div>
-            <div class="w-1/3 h-[40vh] m-1">
-                <a href="#" class="h-full block max-w-md mx-auto">
-                    <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/coffee-machine.jpg');" class="w-full h-full bg-cover bg-center gas-mask"></div>
-                    <p class="font-theme-heading text-white text-center font-bold text-lg m-2">Production</p>
+            <div class="sm:w-1/3 w-1/2 sm:h-[60vh] h-1/3 m-1">
+                <a href="#" class="h-full block mx-auto sm:mt-[-50%] sm:translate-y-[50%] 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
+                    <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/coffee.jpg');" class="w-full h-full bg-contain bg-center gas-mask mask-center max-h-[35vw]"></div>
+                    <p class="font-theme-heading text-white text-center font-bold text-xl xl:text-2xl 2xl:text-3xl m-2">Production</p>
                 </a>
             </div>
     </section>
-    <section id="2" class="h-screen bg-black flex flex-row">
-        <div class="w-2/5 font-theme-heading font-normal text-white ml-52 mt-60 mr-12 text-right">
-            <h2 class="text-5xl p-8">The action behind the cameras</h2>
-            <p class="text-xl p-8">Service commitment and crew message ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+    <section id="2" class="h-screen bg-black flex sm:flex-row flex-col-reverse">
+        <div class="sm:w-1/3 w-full sm:h-full h-2/3 font-theme-heading font-normal text-white sm:ml-52 sm:mr-12 sm:text-right text-center flex">
+            <div class="m-auto">
+                <h2 class="block sm:text-5xl text-3xl sm:p-8 p-4">The action behind the cameras</h2>
+                <p class="block sm:text-2xl text-xl sm:p-8 p-4">Service commitment and crew message ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+            </div>
         </div>
-        <div class="w-3/5">
-            <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/group-camera.jpg');" class="h-[70vh] bg-cover bg-center gas-mask mt-[20vh] mb-[10vh] -mr-40"></div>
+        <div class="sm:w-2/3 w-full sm:h-full h-1/3">
+            <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/group-camera.jpg');" class="h-full bg-cover bg-center gas-mask mask-center sm:-mr-40"></div>
         </div>
     </section>
-    <section id="3" class="h-screen bg-white flex flex-row">
-        <div class="w-3/5">
-            <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/studio.jpg');" class="h-[80vh] bg-cover bg-center gas-mask  mt-[10vh] mb-[10vh] -ml-40"></div>
+    <section id="3" class="h-screen bg-white flex sm:flex-row flex-col">
+        <div class="sm:w-1/3 w-full sm:h-full h-1/3">
+            <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/studio.jpg');" class="h-full bg-cover bg-center gas-mask mask-center sm:-ml-40"></div>
         </div>
-        <div class="w-2/5 font-theme-heading font-normal text-black mr-52 mt-60 ml-12 text-left">
-            <img src="<?php echo get_theme_file_uri(); ?>/resources/img/studios-logo.png" class="w-auto h-[50px] -ml-3">
-            <p class="text-xl py-8">Service commitment and crew message ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+        <div class="sm:w-2/3 w-full sm:h-full h-2/3 font-theme-heading font-normal text-black sm:mr-52 sm:ml-12 sm:text-left text-center flex">
+            <div class="m-auto text-center">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/studios-logo.png" class="w-auto h-[50px] sm:-ml-3 m-auto">
+                <p class="sm:text-2xl text-xl sm:py-8 py-4">Service commitment and crew message ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+            </div>
         </div>
     </section>
     <section id="4" class="h-screen bg-black flex flex-column text-white text-center font-theme-heading font-normal">
         <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/9E1585E1AAD72EB4.png');" class="absolute bg-[length:325%] bg-[30%_top] w-full h-[90vh] top-[10vh] overflow-hidden">
-            <div class="w-[34vw] mx-auto">
-                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/white-seal.svg" class="w-32 mx-auto -rotate-12 mt-20">
-                <h2 class="text-5xl p-8">Trust us, we've got it covered</h2>
-                <p class="text-lg">Constantly evolving, ever-improving, it’s our job to prepare for changing tastes in photography, and adapt to whatever the industry needs. Across every part of our business, GAS guarantees that we’ll:</p>
-                <p class="text-lg mt-6 text-blue-300">Offer solutions to problems yet to happen,<br>Push ourselves to improve a client’s production,<br>Be professional but fun, always putting the job first,<br>Be brutally honest but totally fair,<br>Get it right whatever it takes.</p>
+            <div class="sm:w-[75vw] md:w-[55vw] lg:w-[35vw] mx-auto">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/white-seal.svg" class="w-48 mx-auto -rotate-12 sm:mt-20 mt-6">
+                <h2 class="sm:text-5xl text-2xl sm:p-8 p-3">Trust us, we've got it covered</h2>
+                <p class="sm:text-xl text-md p-2">Constantly evolving, ever-improving, it’s our job to prepare for changing tastes in photography, and adapt to whatever the industry needs. Across every part of our business, GAS guarantees that we’ll:</p>
+                <p class="sm:text-xl text-md sm:mt-6 mt-2 p-2">Offer solutions to problems yet to happen,<br>Push ourselves to improve a client’s production,<br>Be professional but fun, always putting the job first,<br>Be brutally honest but totally fair,<br>Get it right whatever it takes.</p>
             </div>
         </div>
     </section>
     <section id="5" class="h-screen bg-black text-white">
         <div class="flex flex-col h-full">
-            <div class="mx-auto w-full h-2/3 mt-12">
-                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/ricky-gervais.jpg" class="z-0  gas-mask mask-85 mask-top absolute max-w-none left-[20%] w-[41%]">
-                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/rami-malek.jpg"    class="z-10 gas-mask mask-85 mask-top absolute max-w-none left-[47%] w-[34%] top-[30%]">
-                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/hapaca.svg"        class="z-20                           absolute max-w-none left-[50%] w-[20%] top-[14%]">
+            <div class="mx-auto w-full sm:h-2/3 h-1/2 sm:mt-12 mt-10">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/ricky-gervais.jpg" class="z-0  gas-mask mask-85 mask-top absolute max-w-none sm:left-[20%] left-[0%] sm:w-[46%] w-[80%]">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/rami-malek.jpg" class="z-10 gas-mask mask-85 mask-top absolute max-w-none sm:left-[47%] left-[35%] sm:w-[39%] w-[65%] sm:top-[30%] top-[25%]">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/hapaca.svg" class="z-20                           absolute max-w-none sm:left-[50%] left-[50%] sm:w-[25%] w-[45%] sm:top-[14%] top-[8%]">
             </div>
-            <div class="w-[34vw] h-1/3 mx-auto font-theme-heading text-lg text-center flex flex-col justify-end">
+            <div class="sm:w-[34vw] w-full sm:h-1/3 h-1/2 mx-auto font-theme-heading text-xl text-center flex flex-col sm:justify-end justify-center">
                 <div>Hapaca backdrops dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
                 <div class="font-bold mt-[5%] mb-[5%]">Find out more<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" class="-rotate-90 w-3 inline ml-4"></div>
             </div>
         </div>
     </section>
-    <section id="6" class="h-screen"></section>
+    <section id="6" class="h-screen">
+        <div class="bg-gray-700 border-y-2 border-gray-700">
+            <p class="sm:text-2xl text-xl text-white text-center sm:my-10 my-4">Just a few of the brands we work with</p>
+            <div class="owl-carousel my-10">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/carousel-logos/Conde Nast Logo White.svg" class="item h-[10vh]">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/carousel-logos/Dazed Logo White.svg" class="item h-[10vh]">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/carousel-logos/Made Logo White.svg" class="item h-[10vh]">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/carousel-logos/Mulberry Logo White.svg" class="item h-[10vh]">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/carousel-logos/Vogue Logo White.svg" class="item h-[10vh]">
+            </div>
+        </div>
+        <div class="bg-gray-800 border-y-2 border-blue-500">
+            <p class="sm:text-2xl text-xl text-white text-center sm:my-10 my-4">See what we're up to on Instagram</p>
+            <div class="flex justify-around sm:my-10 my-4">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/ig-posts/post2.jpeg" class="w-[20vw] h-[20vw] max-h-[300px] max-w-[300px]">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/ig-posts/post1.jpeg" class="w-[20vw] h-[20vw] max-h-[300px] max-w-[300px]">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/ig-posts/post3.jpeg" class="w-[20vw] h-[20vw] max-h-[300px] max-w-[300px]">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/ig-posts/post4.jpeg" class="w-[20vw] h-[20vw] max-h-[300px] max-w-[300px]">
+            </div>
+        </div>
+        <div><?php get_footer(); ?></div>
+    </section>
 </div>
 
 <script>
@@ -78,6 +100,33 @@
     docSlider.init({
         pager: false
     });
+    jQuery(document).ready(function($) {
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 2500,
+            autoplayHoverPause: true,
+            autoHeight:true,
+            items: 5,
+            stagePadding: 150,
+            responsive: {
+                0: {
+                    items: 1,
+                    stagePadding: 100,
+                },
+                600: {
+                    items: 3,
+                    stagePadding: 50,
+                },
+                1000: {
+                    items: 5,
+                    stagePadding: 150,
+                }
+            }
+        })
+    });
 </script>
 <?php
-get_footer();
+
