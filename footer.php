@@ -40,7 +40,7 @@
 			</ul>
 			<p class="sm:my-6 my-2 pt-[2rem] hidden sm:block">&copy; GAS Production Hire Ltd <?php echo date_i18n('Y'); ?></p>
 		</div>
-		<div class="col-span-2 flex flex-col">
+		<d0iv class="col-span-2 flex flex-col">
 			<div class="m-auto w-full">
 				<h3 class="sm:text-3xl text-xl font-bold mb-4">Sign up for our newsletter</h3>
 				<form class="grid grid-cols-4 w-full">

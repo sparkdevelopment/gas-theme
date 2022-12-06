@@ -1,40 +1,59 @@
+<?php get_header(); ?>
 
-<div class="w-full m-0 docSlider">
+<div class="w-full m-0 docSlider font-family">
     <section id="0" class="h-screen bg-black">
-        <?php get_header(); ?>
-        <div class="bg-cover bg-center h-[85vh] gas-mask sm:[-webkit-mask-size:125%] [-webkit-mask-size:175%] sm:[-webkit-mask-position:bottom] [-webkit-mask-position:center]" style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-hero.png');"></div>
-        <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="" class="h-[9vh] mx-auto mt-[3vh]">
+        <div class="absolute top-0 left-0 xl:mt-4 xl:ml-4 mt-1 ml-1 z-50">
+            <?php if (has_custom_logo()) { ?>
+                <div class="sm:w-auto max-w-[75%]">
+                    <?php the_custom_logo(); ?>
+                </div>
+            <?php } else { ?>
+                <a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
+                    <?php echo get_bloginfo('name'); ?>
+                </a>
+
+                <p class="text-sm font-light text-gray-600">
+                    <?php echo get_bloginfo('description'); ?>
+                </p>
+
+            <?php } ?>
+        </div>
+        <div class="bg-cover bg-center lg:h-[85vh] h-[55vh] gas-mask sm:[-webkit-mask-size:125%] lg:[-webkit-mask-size:175%] [-webkit-mask-size:150%] [-webkit-mask-position:bottom]"
+            style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-hero.png');"></div>
+        <div class="lg:hidden text-white h-[20vh] mx-10 md:mx-20 my-[5vh] text-2xl md:text-4xl text-center">Mollit excepteur enim aliqua non. Excepteur consectetur id officia ut laborum esse cupidatat adipisicing.</div>
+        <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="" class="h-[9vh] mx-auto mt-[3vh] motion-safe:animate-bounce ![animation-delay:3.5s]">
     </section>
-    <section id="1" class="h-screen bg-black flex flex-column !w-[130vw]">
-        <div class="flex flex-col sm:flex-row justify-center items-center sm:h-2/3 h-full self-center w-full -mx-[15vw]">
-            <div class="sm:w-1/3 w-1/2 sm:h-[60vh] h-1/3 m-1">
-                <a href="#" class="h-full block mx-auto sm:mt-[-50%] sm:translate-y-[50%] 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
+    <section id="1" class="h-screen bg-black flex flex-column !w-[110vw]">
+        <div class="flex flex-col lg:flex-row justify-center items-center lg:h-2/3 h-full self-center w-full -mx-[5vw]">
+            <div class="lg:w-1/3 w-1/2 lg:h-[55vh] h-1/3 m-1">
+                <a href="#" class="h-full block mx-auto 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
                     <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/light.jpg');" class="w-full h-full bg-contain bg-center gas-mask mask-center max-h-[35vw]"></div>
-                    <p class="font-theme-heading text-white text-center font-bold text-xl xl:text-2xl 2xl:text-3xl m-2">Lighting</p>
+                    <p class="font-theme-heading text-white text-center font-light text-3xl 2xl:text-5xl m-2">Lighting</p>
                 </a>
             </div>
-            <div class="sm:w-1/3 w-1/2 sm:h-[60vh] h-1/3 m-1">
-                <a href="#" class="h-full block mx-auto sm:mt-[-50%] sm:translate-y-[50%] 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
+            <div class="lg:w-1/3 w-1/2 lg:h-[55vh] h-1/3 m-1">
+                <a href="#" class="h-full block mx-auto 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
                     <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/camera.jpg');" class="w-full h-full bg-contain bg-center gas-mask mask-center max-h-[35vw]"></div>
-                    <p class="font-theme-heading text-white text-center font-bold text-xl xl:text-2xl 2xl:text-3xl m-2">Camera & Digital</p>
+                    <p class="font-theme-heading text-white text-center font-light text-3xl 2xl:text-5xl m-2">Camera & Digital</p>
                 </a>
             </div>
-            <div class="sm:w-1/3 w-1/2 sm:h-[60vh] h-1/3 m-1">
-                <a href="#" class="h-full block mx-auto sm:mt-[-50%] sm:translate-y-[50%] 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
+            <div class="lg:w-1/3 w-1/2 lg:h-[55vh] h-1/3 m-1">
+                <a href="#" class="h-full block mx-auto 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
                     <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/coffee.jpg');" class="w-full h-full bg-contain bg-center gas-mask mask-center max-h-[35vw]"></div>
-                    <p class="font-theme-heading text-white text-center font-bold text-xl xl:text-2xl 2xl:text-3xl m-2">Production</p>
+                    <p class="font-theme-heading text-white text-center font-light text-3xl 2xl:text-5xl m-2">Production</p>
                 </a>
             </div>
     </section>
-    <section id="2" class="h-screen bg-black flex sm:flex-row flex-col-reverse">
-        <div class="sm:w-1/3 w-full sm:h-full h-2/3 font-theme-heading font-normal text-white sm:ml-52 sm:mr-12 sm:text-right text-center flex">
+    <section id="2" class="h-screen bg-black flex lg:flex-row flex-col-reverse">
+        <div class="lg:w-1/3 w-full lg:h-full h-[45vh] font-theme-heading text-white xl:ml-52 lg:ml-12 xl:mr-12 lg:mr-8 lg:text-right text-center flex">
             <div class="m-auto">
-                <h2 class="block sm:text-5xl text-3xl sm:p-8 p-4">The action behind the cameras</h2>
-                <p class="block sm:text-2xl text-xl sm:p-8 p-4">Service commitment and crew message ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
+                <h2 class="block lg:text-6xl xl:text-7xl font-light text-4xl lg:p-6 xl:p-8 p-4">The action behind the cameras</h2>
+                <p class="block lg:text-2xl xl:text-3xl font-light text-2xl lg:p-6 xl:p-8 p-4">Service commitment and crew message ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
             </div>
         </div>
-        <div class="sm:w-2/3 w-full sm:h-full h-1/3">
-            <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/group-camera.jpg');" class="h-full bg-cover bg-center gas-mask mask-center sm:-mr-40"></div>
+        <div class="lg:w-2/3 w-full lg:h-full h-[55vh] overflow-hidden">
+            <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/GAS Family.jpg');"
+            class="h-full bg-cover bg-center gas-mask lg:mask-center lg:-mr-40 sm:[-webkit-mask-size:125%] lg:[-webkit-mask-size:175%] [-webkit-mask-size:150%] [-webkit-mask-position:bottom]"></div>
         </div>
     </section>
     <section id="3" class="h-screen bg-white flex sm:flex-row flex-col">
@@ -108,7 +127,7 @@
             autoplay: true,
             autoplayTimeout: 2500,
             autoplayHoverPause: true,
-            autoHeight:true,
+            autoHeight: true,
             items: 5,
             stagePadding: 150,
             responsive: {
@@ -129,4 +148,3 @@
     });
 </script>
 <?php
-

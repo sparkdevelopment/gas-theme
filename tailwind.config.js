@@ -29,8 +29,9 @@ module.exports = {
             'xl': tailpress.theme('settings.layout.wideSize', theme),
             '2xl': '1440px'
         },
-        fontsFamily: {
-            'theme-heading': ['Milligram', 'sans-serif']
+        fontFamily: {
+            'theme-heading': ['Milligram', 'sans-serif'],
+            'sans': ['Milligram', 'sans-serif'],
         }
     },
     plugins: [
