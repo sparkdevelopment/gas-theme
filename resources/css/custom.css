@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: 'Milligram';
-    src: url("../resources/fonts/Milligram-Regular.ttf");
+    src: url("../resources/fonts/Milligram-Light.ttf");
     font-weight: 300;
 }
 
@@ -77,4 +77,14 @@ article>*:not(.entry-content),
 
 .mask-85 {
     mask-size: 85%;
+}
+
+.image-mask {
+    mask-size: 125%;
+}
+
+@screen lg {
+    .image-mask {
+        mask-size: auto;
+    }
 }

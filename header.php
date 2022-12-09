@@ -25,7 +25,7 @@
 					<div class="flex justify-between items-center">
 						<div class="ml-1 xl:ml-4 [filter:opacity(0)]">
 							<?php if (has_custom_logo()) { ?>
-								<div class="sm:w-auto max-w-[75%]">
+								<div class="sm:w-auto max-w-[75%] xl:max-w-[90%]">
 									<?php the_custom_logo(); ?>
 								</div>
 							<?php } else { ?>
@@ -52,7 +52,7 @@
 										</g>
 									</g>
 								</svg>
-								<svg class="inline-block w-10 h-10 hidden nav-cross z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<svg class="w-10 h-10 hidden nav-cross z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
 										<g id="icon-x">
 											<path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
