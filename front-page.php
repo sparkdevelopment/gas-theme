@@ -76,7 +76,7 @@
         <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/9E1585E1AAD72EB4.png');" class="absolute bg-[length:325%] bg-[30%_top] w-full md:h-[90vh] top-[10vh] overflow-hidden">
             <div class="sm:w-[75vw] md:w-[80vw] lg:w-[55vw] xl:w-[57.5vw] mx-auto font-light">
                 <img src="<?php echo get_theme_file_uri(); ?>/resources/img/white-seal.svg"
-                class="w-48 mx-auto -rotate-12 sm:mt-10 md:mt-8 mt-6 2xl:w-60">
+                class="w-48 mx-auto -rotate-12 mt-6 sm:mt-10 md:mt-8 lg:mt-16 2xl:w-60">
                 <h2 class="text-2xl sm:text-3xl md:text-3xl lg:text-3xl 2xl:text-6xl sm:p-4 md:p-4 p-3">Trust us, we've got it covered</h2>
                 <p class="text-md sm:text-md md:text-lg lg:text-xl 2xl:text-4xl p-2">Constantly evolving, ever-improving, it’s our job to prepare for changing tastes in photography, and adapt to whatever the industry needs. Across every part of our business, GAS guarantees that we’ll:</p>
                 <p class="text-md sm:text-md md:text-lg lg:text-xl 2xl:text-4xl sm:mt-3 md:mt-3 mt-2 p-2">Offer solutions to problems yet to happen,<br>Push ourselves to improve a client’s production,<br>Be professional but fun, always putting the job first,<br>Be brutally honest but totally fair,<br>Get it right whatever it takes.</p>
@@ -124,9 +124,9 @@
         <div class="bg-black h-full md:h-1/2 flex flex-col justify-between">
             <?php if (has_custom_logo()) { ?>
                 <div class="mx-0 w-full">
-                    <div class="pt-1 pb-4 w-full">
+                    <div class="pt-1 sm:pb-4 pb-0 w-full">
                         <div class="flex justify-between items-center">
-                            <div class="ml-1 xl:ml-4">
+                            <div class="sm:ml-1 xl:ml-4">
                                 <div class="sm:w-auto max-w-[75%] xl:max-w-[90%]">
                                     <?php the_custom_logo(); ?>
                                 </div>
@@ -136,7 +136,8 @@
                 </div>
             <?php } ?>
             <div class="sm:grid sm:grid-cols-12 flex flex-col-reverse justify-between gap-4 text-white text-md sm:text-xl 2xl:text-2xl sm:mx-8 mx-4 font-light leading-6">
-                <div class="flex flex-col col-span-6 md:col-span-3 justify-between">
+                <div class="text-right text-white sm:mb-6 text-sm sm:text-md 2xl:text-2xl mt-2 sm:hidden col-span-1">Designed by <strong>SoreThumbStudio</strong>&reg;</div>
+                <div class="flex flex-col col-span-5 md:col-span-3 justify-between">
                     <p class="sm:my-6 my-2">
                         GAS Production Hire<br>
                         Unit G, Sutherland House<br>
@@ -149,7 +150,7 @@
                         <a href="mailto:office@gashireco.uk">office@gashireco.uk</a><br>
                         <a href="tel:+442033972757">+44 (0)20 3397 2757</a>
                     </p>
-                    <p class="sm:my-6 my-2 pt-[2rem] block sm:hidden">&copy; GAS Production Hire Ltd <?php echo date_i18n('Y'); ?></p>
+                    <p class="sm:my-6 my-2 pt-[0.5rem] block sm:hidden">&copy; GAS Production Hire Ltd <?php echo date_i18n('Y'); ?></p>
                 </div>
                 <div class="col-span-6 md:col-span-3">
                     <ul class="sm:my-6 my-2">
@@ -174,7 +175,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="text-right text-white sm:mb-6 text-sm sm:text-md 2xl:text-2xl mt-4">Designed by <strong>SoreThumbStudio</strong>&reg;</div>
+                    <div class="text-right text-white sm:mb-6 text-sm sm:text-md 2xl:text-2xl mt-4 hidden sm:block">Designed by <strong>SoreThumbStudio</strong>&reg;</div>
                 </div>
             </div>
         </div>

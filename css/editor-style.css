@@ -148,6 +148,10 @@
   grid-column: span 12 / span 12
 }
 
+.col-span-5 {
+  grid-column: span 5 / span 5
+}
+
 .col-start-8 {
   grid-column-start: 8
 }
@@ -826,6 +830,14 @@
   padding-top: 30vw
 }
 
+.pt-\[0\.5rem\] {
+  padding-top: 0.5rem
+}
+
+.pb-0 {
+  padding-bottom: 0px
+}
+
 .text-left {
   text-align: left
 }
@@ -1218,6 +1230,10 @@ body {
     margin-bottom: 2.5%
   }
 
+  .sm\:ml-1 {
+    margin-left: 0.25rem
+  }
+
   .sm\:block {
     display: block
   }
@@ -1345,6 +1361,10 @@ body {
 
   .sm\:pt-0 {
     padding-top: 0px
+  }
+
+  .sm\:pb-4 {
+    padding-bottom: 1rem
   }
 
   .sm\:text-5xl {
@@ -1623,6 +1643,10 @@ body {
 
   .lg\:-ml-40 {
     margin-left: -10rem
+  }
+
+  .lg\:mt-16 {
+    margin-top: 4rem
   }
 
   .lg\:flex {
