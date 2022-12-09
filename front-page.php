@@ -72,7 +72,7 @@
         </div>
     </section>
 
-    <section id="4" class="h-screen !overflow-x-hidden bg-black flex flex-column text-white text-center font-theme-heading font-normal">
+    <section id="4" class="h-screen !overflow-hidden bg-black flex flex-column text-white text-center font-theme-heading font-normal">
         <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/9E1585E1AAD72EB4.png');" class="absolute bg-[length:325%] bg-[30%_top] w-full h-[90vh] top-[10vh] overflow-hidden">
             <div class="sm:w-[75vw] md:w-[80vw] lg:w-[55vw] xl:w-[57.5vw] mx-auto font-light">
                 <img src="<?php echo get_theme_file_uri(); ?>/resources/img/white-seal.svg"
