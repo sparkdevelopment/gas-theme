@@ -46,7 +46,7 @@
     </section>
 
     <section id="2" class="h-screen !overflow-x-hidden bg-black flex lg:flex-row flex-col-reverse items-center">
-        <div class="lg:w-[40vw] w-full lg:h-full h-[47.5vh] md:h-[40vh] font-theme-heading font-normal text-white lg:ml-12 xl:ml-52 xl:mr-12 lg:mr-8 lg:text-right text-center flex">
+        <div class="lg:w-[40vw] w-full lg:h-full h-[47.5vh] md:h-[40vh] font-theme-heading font-normal text-white lg:ml-12 xl:ml-52 2xl:ml-20 xl:mr-12 lg:mr-8 lg:text-right text-center flex">
             <div class="m-auto">
                 <h2 class="block text-3xl lg:text-5xl xl:text-7xl 2xl:text-7xl font-light lg:p-6 xl:p-2 px-4">The action behind the cameras</h2>
                 <p class="block text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-light lg:p-6 xl:p-2 px-4">Service commitment and crew message ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
@@ -61,7 +61,7 @@
     <section id="3" class="h-screen !overflow-x-hidden bg-white flex lg:flex-row flex-col">
         <div class="lg:w-[60vw] w-full lg:h-full h-[52.5vh] overflow-hidden">
             <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/studio.jpg');"
-            class="h-full bg-cover bg-center gas-mask mask-center image-mask -mt-[10vh] lg:mt-0 lg:-ml-40 image-mask [-webkit-mask-size:125%] [-webkit-mask-position:bottom!important] lg:[-webkit-mask-position:center!important]"></div>
+            class="h-full bg-cover bg-center gas-mask mask-center image-mask -mt-[11vh] lg:mt-0 lg:-ml-40 image-mask [-webkit-mask-size:125%] [-webkit-mask-position:bottom!important] lg:[-webkit-mask-position:center!important]"></div>
         </div>
         <div class="lg:w-[40vw] w-full lg:h-full h-[47.5vh] font-theme-heading font-normal text-black lg:mr-12 xl:mr-52 xl:ml-12 lg:ml-8 lg:text-left text-center flex -mt-[5vh] lg:mt-0">
             <div class="m-auto text-left">
@@ -72,8 +72,8 @@
         </div>
     </section>
 
-    <section id="4" class="h-screen !overflow-hidden bg-black flex flex-column text-white text-center font-theme-heading font-normal">
-        <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/9E1585E1AAD72EB4.png');" class="absolute bg-[length:325%] bg-[30%_top] w-full h-[90vh] top-[10vh] overflow-hidden">
+    <section id="4" class="h-screen !overflow-x-hidden bg-black flex flex-column text-white text-center font-theme-heading font-normal">
+        <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/9E1585E1AAD72EB4.png');" class="absolute bg-[length:325%] bg-[30%_top] w-full md:h-[90vh] top-[10vh] overflow-hidden">
             <div class="sm:w-[75vw] md:w-[80vw] lg:w-[55vw] xl:w-[57.5vw] mx-auto font-light">
                 <img src="<?php echo get_theme_file_uri(); ?>/resources/img/white-seal.svg"
                 class="w-48 mx-auto -rotate-12 sm:mt-10 md:mt-8 mt-6 2xl:w-60">

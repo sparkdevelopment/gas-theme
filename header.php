@@ -67,7 +67,7 @@
 					wp_nav_menu(
 						array(
 							'container_id'    => 'primary-menu',
-							'container_class' => 'hidden absolute w-1/2 bg-black text-white h-screen text-[3.25rem] leading-none right-0 top-0 px-52 pt-44 font-light',
+							'container_class' => 'hidden absolute w-full md:w-1/2 bg-black text-white h-screen text-[3.25rem] leading-none right-0 top-0 px-8 sm:px-12 md:px-20 lg:px-40 xl:px-52 pt-44 font-light',
 							'menu_class'      => 'flex-col lg:flex lg:-mx-4',
 							'theme_location'  => 'primary',
 							'li_class'        => 'lg:mx-4 lg:my-2',

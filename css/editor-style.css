@@ -314,6 +314,10 @@
   margin-top: 0.75rem
 }
 
+.-mt-\[11vh\] {
+  margin-top: -11vh
+}
+
 .block {
   display: block
 }
@@ -789,6 +793,11 @@
   padding-bottom: 2.5rem
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem
+}
+
 .pt-1 {
   padding-top: 0.25rem
 }
@@ -900,6 +909,18 @@
 
 .leading-tight {
   line-height: 1.25
+}
+
+.leading-loose {
+  line-height: 2
+}
+
+.leading-3 {
+  line-height: .75rem
+}
+
+.leading-relaxed {
+  line-height: 1.625
 }
 
 .text-gray-800 {
@@ -1221,6 +1242,10 @@ body {
     height: 20vw
   }
 
+  .sm\:h-\[90vh\] {
+    height: 90vh
+  }
+
   .sm\:w-auto {
     width: auto
   }
@@ -1311,6 +1336,11 @@ body {
   .sm\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem
+  }
+
+  .sm\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem
   }
 
   .sm\:pt-0 {
@@ -1433,6 +1463,10 @@ body {
     height: 50%
   }
 
+  .md\:h-\[90vh\] {
+    height: 90vh
+  }
+
   .md\:w-1\/2 {
     width: 50%
   }
@@ -1487,6 +1521,11 @@ body {
 
   .md\:p-4 {
     padding: 1rem
+  }
+
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem
   }
 
   .md\:text-3xl {
@@ -1655,6 +1694,11 @@ body {
     padding-bottom: 1.5rem
   }
 
+  .lg\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem
+  }
+
   .lg\:text-left {
     text-align: left
   }
@@ -1794,6 +1838,11 @@ body {
   .xl\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem
+  }
+
+  .xl\:px-52 {
+    padding-left: 13rem;
+    padding-right: 13rem
   }
 
   .xl\:pt-4 {
