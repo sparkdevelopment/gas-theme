@@ -18,7 +18,7 @@
 
 		<?php do_action('tailpress_header'); ?>
 
-		<header class="absolute top-0 left-0 z-40 w-full">
+		<!-- <header class="absolute top-0 left-0 z-40 w-full">
 
 			<div class="mx-0 w-full">
 				<div class="py-1 xl:py-4 w-full">
@@ -40,14 +40,14 @@
 							<?php } ?>
 						</div>
 
-						<div class="mr-6 xl:mr-12 text-white z-10 [filter:drop-shadow(0_0_10px_#000)]">
+						<div class="mr-6 xl:mr-12 text-white z-10 [filter:drop-shadow(0_0_10px_#000)_opacity(0)]">
 							<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
 								<svg viewBox="0 0 18 18" class="inline-block w-9 h-9 nav-hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
 										<g id="icon-shape">
-											<path d="	M0,0  L18,0  L18,3  L0,3  L0,0  Z
-														M0,7  L18,7  L18,10 L0,10 L0,7  Z
-														M0,14 L18,14 L18,17 L0,17 L0,14 Z
+											<path d="	M0,0  L18,0  L18,2  L0,2  L0,0  Z
+														M0,7  L18,7  L18,9  L0,9  L0,7  Z
+														M0,14 L18,14 L18,16 L0,16 L0,14 Z
 													" id="Combined-Shape"></path>
 										</g>
 									</g>
@@ -77,7 +77,7 @@
 					?>
 				</div>
 			</div>
-		</header>
+		</header> -->
 
 		<div id="content" class="site-content flex-grow">
 
