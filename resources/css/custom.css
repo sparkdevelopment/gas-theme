@@ -83,6 +83,59 @@ article>*:not(.entry-content),
     mask-size: 125%;
 }
 
+/* Bounce animation */
+.bouncing-item {
+    animation: bounce 10s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    5%,
+    10%,
+    15%,
+    20%,
+    25% {
+        transform: translateY(0);
+    }
+
+    7.5% {
+        transform: translateY(-30px);
+    }
+
+    12.5% {
+        transform: translateY(-15px);
+    }
+
+    17.5% {
+        transform: translateY(-5px);
+    }
+
+    22.5% {
+        transform: translateY(-2px);
+    }
+}
+
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transform: translate(0, 5vh);
+    transition: all 1s;
+}
+
+.fade-in--visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+header {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.header--scrolled {
+    opacity: 0;
+}
+
 @screen lg {
     .image-mask {
         mask-size: auto;
