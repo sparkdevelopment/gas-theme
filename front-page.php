@@ -132,8 +132,8 @@
                 <img src="<?php echo get_theme_file_uri(); ?>/resources/img/hapaca.svg" class="z-20 absolute left-[5%] sm:left-[50%] 2xl:left-[55%] xl:w-[25%] w-[80%] sm:w-[30%] md:w-[35%] top-[1%] sm:top-[6%] md:top-[11%] max-w-none">
             </div>
             <div class="sm:w-[90vw] md:w-[34vw] 2xl:w-[50vw] w-[90vw] sm:h-1/4 h-1/2 mx-auto font-theme-heading text-base sm:text-lg md:text-xl lg:text-xl 2xl:text-2xl font-light text-center flex flex-col md:justify-around justify-end">
-                <div class="fade-in my-[2.5%] md:my-[5%]">Hapaca backdrops dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-                <div class="fade-in font-normal sm:my-[2.5%] md:my-[5%]">Find out more<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" class="-rotate-90 w-4 inline ml-6"></div>
+                <div class="my-[2.5%] md:my-[5%]">Hapaca backdrops dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+                <div class="font-normal sm:my-[2.5%] md:my-[5%]">Find out more<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" class="-rotate-90 w-4 inline ml-6"></div>
             </div>
         </div>
     </section>
