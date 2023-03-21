@@ -1,87 +1,9 @@
 <?php get_header(); ?>
 
 <div class="w-full m-0 docSlider font-sans">
-    <section id="0" class="h-screen !overflow-x-hidden bg-black flex flex-col justify-between">
-        <div>
-            <!-- <div class="absolute top-0 left-0 xl:mt-4 xl:ml-4 mt-1 ml-1 z-50">
-                <?php if (has_custom_logo()) { ?>
-                    <div class="sm:w-auto max-w-[75%]">
-                        <?php the_custom_logo(); ?>
-                    </div>
-                <?php } else { ?>
-                    <a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
-                        <?php echo get_bloginfo('name'); ?>
-                    </a>
+    <?php get_template_part('template-parts/section', 'hero'); ?>
 
-                    <p class="text-sm font-light text-gray-600">
-                        <?php echo get_bloginfo('description'); ?>
-                    </p>
-
-                <?php } ?>
-            </div>
-            <div class="absolute top-0 right-0 mr-6 xl:mr-12 mt-6 xl:mt-12 text-white z-10 [filter:drop-shadow(0_0_10px_#000)]">
-                <a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-                    <svg viewBox="0 0 18 18" class="inline-block w-9 h-9 nav-hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-                            <g id="icon-shape">
-                                <path d="	M0,0  L18,0  L18,2  L0,2  L0,0  Z
-                                            M0,7  L18,7  L18,9  L0,9  L0,7  Z
-                                            M0,14 L18,14 L18,16 L0,16 L0,14 Z
-                                        " id="Combined-Shape"></path>
-                            </g>
-                        </g>
-                    </svg>
-                    <svg class="w-9 h-9 hidden nav-cross z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-                            <g id="icon-x">
-                                <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-                            </g>
-                        </g>
-                    </svg>
-                </a>
-            </div>
-            <?php
-            wp_nav_menu(
-                array(
-                    'container_id'    => 'primary-menu',
-                    'container_class' => 'hidden absolute w-full md:w-1/2 bg-black text-white h-screen text-[3.25rem] leading-none right-0 top-0 px-8 sm:px-12 md:px-20 lg:px-40 xl:px-52 pt-44 font-light z-[1]',
-                    'menu_class'      => 'flex-col lg:flex lg:-mx-4',
-                    'theme_location'  => 'primary',
-                    'li_class'        => 'lg:mx-4 lg:my-2',
-                    'fallback_cb'     => false,
-                )
-            );
-            ?> -->
-        <div class="bg-cover bg-center lg:h-[85vh] h-[50vh] gas-mask [-webkit-mask-size:175%] sm:[-webkit-mask-size:125%] md:[-webkit-mask-size:150%] lg:[-webkit-mask-size:175%] [-webkit-mask-position:65%_100%]" style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-hero.png');"></div>
-    </div>
-        <div class="lg:hidden flex items-center text-white h-[20vh] mx-5 md:mx-20 my-[5vh] font-light text-2xl md:text-4xl text-center">Mollit excepteur enim aliqua non. Excepteur consectetur id officia ut laborum esse cupidatat adipisicing.</div>
-        <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="" class="h-[7vh] mx-auto mt-[2vh] mb-[1vh] bouncing-item ![animation-delay:3.5s]">
-    </section>
-
-    <section id="1" class="h-screen !overflow-x-hidden bg-black flex flex-column">
-        <div class="flex flex-col lg:flex-row justify-center items-center lg:h-2/3 h-full self-center w-full">
-            <div class="lg:w-1/3 w-1/2 lg:h-[65vh] h-1/2 m-1">
-                <a href="#" class="h-full mx-auto 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
-                    <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/light.jpg');" class="group w-full h-full bg-gray-500 hover:bg-white transition-colors bg-cover bg-center max-h-[35vw] flex flex-col justify-center bg-blend-multiply">
-                        <p class="font-theme-heading text-white text-center font-light text-3xl 2xl:text-5xl m-2 group-hover:opacity-0 transition-opacity">Lighting</p>
-                    </div>
-                </a>
-            </div>
-            <div class="lg:w-1/3 w-1/2 lg:h-[65vh] h-1/2 m-1">
-                <a href="#" class="h-full mx-auto 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
-                    <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/camera.jpg');" class="group w-full h-full bg-gray-500 hover:bg-white transition-colors bg-cover bg-center max-h-[35vw] flex flex-col justify-center bg-blend-multiply">
-                        <p class="font-theme-heading text-white text-center font-light text-3xl 2xl:text-5xl m-2 group-hover:opacity-0 transition-opacity">Camera & Digital</p>
-                    </div>
-                </a>
-            </div>
-            <div class="lg:w-1/3 w-1/2 lg:h-[65vh] h-1/2 m-1">
-                <a href="#" class="h-full mx-auto 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
-                    <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/home-category-buttons/coffee.jpg');" class="group w-full h-full bg-gray-500 hover:bg-white transition-colors bg-cover bg-center max-h-[35vw] flex flex-col justify-center bg-blend-multiply">
-                        <p class="font-theme-heading text-white text-center font-light text-3xl 2xl:text-5xl m-2 group-hover:opacity-0 transition-opacity">Production</p>
-                    </div>
-                </a>
-            </div>
-    </section>
+    <?php get_template_part('template-parts/section', 'category'); ?>
 
     <section id="2" class="h-screen !overflow-x-hidden bg-black flex lg:flex-row flex-col-reverse items-center">
         <div class="lg:w-[25vw] w-full lg:h-full h-[47.5vh] md:h-[40vh] font-theme-heading font-normal text-white lg:ml-12 xl:ml-40 2xl:ml-40 xl:mr-12 lg:mr-8 lg:text-right text-center flex">

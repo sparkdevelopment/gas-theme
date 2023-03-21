@@ -19,7 +19,12 @@ module.exports = {
         },
         extend: {
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
-            fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme))
+            fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
+            backgroundImage: {
+                'lighting': "url('/wp-content/themes/gas/resources/img/lighting.jpg')",
+                'camera_digital': "url('/wp-content/themes/gas/resources/img/camera_digital.jpg')",
+                'production': "url('/wp-content/themes/gas/resources/img/production.jpg')"
+            }
         },
         screens: {
             'xs': '480px',
@@ -36,5 +41,10 @@ module.exports = {
     },
     plugins: [
         tailpress.tailwind
+    ],
+    safelist: [
+        'bg-lighting',
+        'bg-camera_digital',
+        'bg-production'
     ]
 };

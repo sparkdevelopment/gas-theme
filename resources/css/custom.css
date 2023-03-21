@@ -136,6 +136,27 @@ header {
     opacity: 0;
 }
 
+.card-zoom {
+    /* @apply relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-60 h-60 rounded-2xl; */
+    @apply w-full h-full relative flex items-center justify-center overflow-hidden;
+}
+
+.card-zoom-image {
+    @apply absolute w-full h-full bg-gray-500 transition-all duration-500 ease-in-out transform bg-center bg-cover bg-blend-multiply;
+}
+
+.card-zoom-text {
+    @apply font-theme-heading absolute text-3xl 2xl:text-5xl font-light transition-all duration-500 ease-in-out transform scale-150 text-white opacity-75;
+}
+
+.card-zoom:hover .card-zoom-image {
+    @apply scale-150 bg-white;
+}
+
+.card-zoom:hover .card-zoom-text {
+    @apply scale-100 opacity-0;
+}
+
 @screen lg {
     .image-mask {
         mask-size: auto;
