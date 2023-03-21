@@ -21,9 +21,9 @@ module.exports = {
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
             fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
             backgroundImage: {
-                'lighting': "url('/wp-content/themes/gas/resources/img/lighting.jpg')",
-                'camera_digital': "url('/wp-content/themes/gas/resources/img/camera_digital.jpg')",
-                'production': "url('/wp-content/themes/gas/resources/img/production.jpg')"
+                'lighting': "url('/wp-content/themes/gas-theme/resources/img/lighting.jpg')",
+                'camera_digital': "url('/wp-content/themes/gas-theme/resources/img/camera_digital.jpg')",
+                'production': "url('/wp-content/themes/gas-theme/resources/img/production.jpg')"
             }
         },
         screens: {

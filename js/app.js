@@ -1,14 +1,1 @@
-(() => {
-  // resources/js/app.js
-  window.addEventListener("load", function() {
-    let main_navigation = document.querySelector("#primary-menu");
-    let nav_cross = document.querySelector(".nav-cross");
-    let nav_hamburger = document.querySelector(".nav-hamburger");
-    document.querySelector("#primary-menu-toggle").addEventListener("click", function(e) {
-      e.preventDefault();
-      main_navigation.classList.toggle("hidden");
-      nav_cross.classList.toggle("hidden");
-      nav_hamburger.classList.toggle("hidden");
-    });
-  });
-})();
+(()=>{window.addEventListener("load",function(){let e=document.querySelector("#primary-menu"),t=document.querySelector(".nav-cross"),n=document.querySelector(".nav-hamburger");document.querySelector("#primary-menu-toggle").addEventListener("click",function(r){r.preventDefault(),e.classList.toggle("hidden"),t.classList.toggle("hidden"),n.classList.toggle("hidden")})});})();
