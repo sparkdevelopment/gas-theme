@@ -136,6 +136,29 @@ header {
     opacity: 0;
 }
 
+.nav-hamburger {
+    -webkit-transition: 0.5s -webkit-filter linear;
+    -moz-transition: 0.5s -moz-filter linear;
+    -moz-transition: 0.5s filter linear;
+    -ms-transition: 0.5s -ms-filter linear;
+    -o-transition: 0.5s -o-filter linear;
+    transition: 0.5s filter linear, 0.5s -webkit-filter linear;
+    filter: brightness(1);
+}
+
+.nav-hamburger.dark {
+    filter: brightness(0);
+}
+
+.menu-slide {
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-slide.visible {
+    transform: translateX(0%);
+}
+
 .card-zoom {
     /* @apply relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-60 h-60 rounded-2xl; */
     @apply w-full h-full relative flex items-center justify-center overflow-hidden;
@@ -146,11 +169,11 @@ header {
 }
 
 .card-zoom-text {
-    @apply font-theme-heading absolute text-3xl 2xl:text-5xl font-light transition-all duration-500 ease-in-out transform scale-150 text-white opacity-75;
+    @apply font-theme-heading absolute text-3xl 2xl:text-4xl font-light transition-all duration-500 ease-in-out transform scale-150 text-white;
 }
 
 .card-zoom:hover .card-zoom-image {
-    @apply scale-150 bg-white;
+    @apply scale-110 bg-white;
 }
 
 .card-zoom:hover .card-zoom-text {

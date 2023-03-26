@@ -3,14 +3,13 @@
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-white text-gray-900 antialiased'); ?>>
+<body <?php body_class('bg-white text-gray-900 antialiased js'); ?>>
 
 	<?php do_action('tailpress_site_before'); ?>
 
@@ -25,7 +24,7 @@
 					<div class="flex justify-between items-center">
 						<div class="ml-1 xl:ml-4">
 							<?php if (has_custom_logo()) { ?>
-								<div class="sm:w-auto max-w-[75%] xl:max-w-[90%]">
+								<div class="sm:w-auto max-w-[75%] xl:max-w-[80%]">
 									<?php the_custom_logo(); ?>
 								</div>
 							<?php } else { ?>
@@ -40,18 +39,16 @@
 							<?php } ?>
 						</div>
 
-						<div class="mr-6 xl:mr-12 text-white z-10 [filter:drop-shadow(0_0_10px_#000)]">
+						<div class="mr-6 xl:mr-12 text-white z-10">
 							<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-								<svg viewBox="0 0 18 18" class="inline-block w-14 h-14 nav-hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+								<svg viewBox="0 0 18 18" class="inline-block w-10 h-10 nav-hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<g stroke="none" stroke-width="2" fill="currentColor" fill-rule="evenodd">
 										<g id="icon-shape">
-											<path d="	M0,0  L18,0  L18,1  L0,1  L0,0  Z
-														M0,8  L18,8  L18,9  L0,9  L0,8  Z
-														M0,16 L18,16 L18,17 L0,17 L0,16 Z
-													" id="Combined-Shape"></path>
+											<path d="M0,0 L18,0 L18,2 L0,2 L0,0 Z M0,7 L18,7 L18,9 L0,9 L0,7 Z M0,14 L18,14 L18,16 L0,16 L0,14 Z"></path>
 										</g>
 									</g>
 								</svg>
+
 								<svg class="w-10 h-10 hidden nav-cross z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
 										<g id="icon-x">
@@ -67,7 +64,7 @@
 					wp_nav_menu(
 						array(
 							'container_id'    => 'primary-menu',
-							'container_class' => 'hidden absolute w-full md:w-1/2 bg-black text-white h-screen text-[3.25rem] leading-none right-0 top-0 px-8 sm:px-12 md:px-20 lg:px-40 xl:px-52 pt-44 font-light',
+							'container_class' => 'absolute w-full md:w-1/2 bg-black text-white h-screen text-[3.25rem] leading-none right-0 top-0 px-8 sm:px-12 md:px-20 lg:px-40 xl:px-52 pt-44 font-light menu-slide',
 							'menu_class'      => 'flex-col lg:flex lg:-mx-4',
 							'theme_location'  => 'primary',
 							'li_class'        => 'lg:mx-4 lg:my-2',

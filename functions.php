@@ -39,24 +39,24 @@ add_action('after_setup_theme', 'tailpress_setup');
 /**
  * Enqueue theme assets.
  */
-function tailpress_enqueue_scripts()
-{
+function tailpress_enqueue_scripts() {
 	$theme = wp_get_theme();
-
+	
+    // Enqueue styles
 	wp_enqueue_style('tailpress', tailpress_asset('css/app.css'), array(), $theme->get('Version'));
-	wp_enqueue_script('tailpress', tailpress_asset('js/app.js'), array(), $theme->get('Version'));
+    wp_enqueue_style('owl-carousel-css', tailpress_asset('css/owl.carousel.min.css'), array(), $theme->get('Version'));
+    wp_enqueue_style('owl-carousel-theme', tailpress_asset('css/owl.theme.default.min.css'), array(), $theme->get('Version'));
 
-	// If homepage, enqueue docslider js
-	if (is_front_page()) {
-		wp_enqueue_script('lethargy', tailpress_asset('js/lethargy.min.js'), array(), $theme->get('Version'));
-		wp_enqueue_script('docslider', tailpress_asset('js/docSlider.js'), array(), $theme->get('Version'));
-		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), null, true);
-		wp_enqueue_script('owl-carousel', tailpress_asset('js/owl.carousel.min.js'), array('jquery'), $theme->get('Version'), true);
-		wp_enqueue_style('owl-carousel', tailpress_asset('css/owl.carousel.min.css'), array(), $theme->get('Version'));
-		wp_enqueue_style('owl-carousel', tailpress_asset('css/owl.theme.default.min.css'), array(), $theme->get('Version'));
-	}
+    // Enqueue scripts
+    wp_enqueue_script('lethargy', tailpress_asset('js/lethargy.min.js'), array(), $theme->get('Version'), true);
+    wp_enqueue_script('docslider', tailpress_asset('js/docSlider.js'), array('lethargy'), $theme->get('Version'), true);
+    wp_enqueue_script('owl-carousel', tailpress_asset('js/owl.carousel.min.js'), array('jquery'), $theme->get('Version'), true);
+    wp_enqueue_script('gas-homepage', tailpress_asset('js/homepage.js'), array('jquery','lethargy','docslider','owl-carousel'), $theme->get('Version'), true);
+
+    // Enqueue jQuery from Google CDN
+    wp_deregister_script('jquery');
+    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), null, true);
 }
-
 add_action('wp_enqueue_scripts', 'tailpress_enqueue_scripts');	
 
 /**
