@@ -18,7 +18,7 @@
         ?>
 
         <?php foreach ($categories as $category) : ?>
-            <div class="lg:w-1/3 w-full lg:h-[55vh] h-1/2 m-1">
+            <div class="lg:w-[33.33333vw] w-full lg:h-[33.33333vw] h-1/2 m-1">
                 <a href="#" class="h-full mx-auto 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
                     <div class="card-zoom">
                         <div class="card-zoom-image bg-<?php echo $category['class']; ?>"></div>

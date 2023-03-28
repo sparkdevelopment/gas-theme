@@ -543,7 +543,7 @@ const docSlider = (function () {
         },
 
         wheel : function (e) {
-            if(window.lethargy.check(e) === false)
+            if(lethargy.check(e) === false)
 	            return;
 
             if(!d.wheelTick)

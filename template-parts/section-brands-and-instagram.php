@@ -6,7 +6,7 @@
             <?php
             $brands = ['Conde_Nast_Logo_White', 'Dazed_Logo_White', 'Made_Logo_White', 'Mulberry_Logo_White', 'Vogue_Logo_White'];
             foreach ($brands as $brand) : ?>
-                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/carousel-logos/<?php echo urlencode($brand); ?>.svg" class="item h-1/4 md:h-15vh px-3 2xl:px-12">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/carousel-logos/<?php echo urlencode($brand); ?>.svg" class="item md:h-15vh px-3 2xl:px-12">
             <?php endforeach; ?>
         </div>
     </div>

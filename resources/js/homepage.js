@@ -63,6 +63,7 @@ $(owl).owlCarousel({
     autoplayHoverPause: true,
     autoHeight: true,
     items: 4,
+    stageClass: "flex items-center",
     slideTransition: 'linear',
     stagePadding: 150,
     responsiveClass: true,

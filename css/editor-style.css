@@ -1372,8 +1372,8 @@ body {
     height: 66.666667%
   }
 
-  .lg\:h-\[55vh\] {
-    height: 55vh
+  .lg\:h-\[33\.33333vw\] {
+    height: 33.33333vw
   }
 
   .lg\:h-\[85vh\] {
@@ -1388,8 +1388,8 @@ body {
     width: 75vw
   }
 
-  .lg\:w-1\/3 {
-    width: 33.333333%
+  .lg\:w-\[33\.33333vw\] {
+    width: 33.33333vw
   }
 
   .lg\:w-\[55vw\] {
