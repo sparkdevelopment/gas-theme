@@ -1,0 +1,39 @@
+<?php
+
+// Template for the product single page
+// Path: template-parts/product-single.php
+
+?>
+
+<article id="product-<?php the_ID(); ?>" <?php post_class( 'bg-black w-full text-white' ); ?>>
+	<div class="pt-52">
+		<h1 class="text-2xl lg:text-6xl font-light text-center font-theme-heading my-4"><?php the_title(); ?></h1>
+		<div class="text-2xl lg:text-5xl font-bold text-center my-4">&pound;<?php echo get_post_meta( get_the_ID(), 'product_price', true ); ?></div>
+		<div class="relative py-16 flex items-center">
+			<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="Arrow pointing left" class="w-[1.5vw] mx-auto mt-[2vh] mb-[1vh] rotate-90 mr-[1.5vw] cursor-pointer">
+			<div class="background-image w-full h-[700px] bg-cover bg-center py-40 grow gas-mask" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>');"></div>
+			<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="Arrow pointing right" class="w-[1.5vw] mx-auto mt-[2vh] mb-[1vh] -rotate-90 ml-[1.5vw] cursor-pointer">
+		</div>
+		<div class="text-2xl font-light text-center space-y-5">
+			<?php
+			// Output description
+			echo wpautop( get_post_meta( get_the_ID(), 'product_description', true ) );
+			?>
+		</div>
+		<div class="text-lg font-light text-center mt-20">
+			<span class="bg-gray-800 text-white inline-block py-1 px-2">Click <a href="#" class="underline">here</a> to send a booking email</span>
+		</div>
+        <div class="text-lg text-center">
+            <a href="#">
+                <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="Arrow pointing left" class="w-[0.9vw] rotate-90 mr-[0.5vw] inline-block"> Back
+            </a>
+        </div>
+        <div class="text-sm font-bold text-center mt-16">
+            <p>Prices exclude VAT and insurance. Prices are subject to change, please contact a team member at GAS for further information</p>
+        </div>
+	</div>
+</article>
+<div class="bg-black text-white text-center">
+    <h2 class="py-20 text-5xl font-light">Back to the categories</h2>
+    <?php get_template_part( 'template-parts/section', 'category' ); ?>
+</div>

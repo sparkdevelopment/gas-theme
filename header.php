@@ -22,11 +22,9 @@
 			<div class="mx-0 w-full">
 				<div class="py-1 xl:py-4 w-full">
 					<div class="flex justify-between items-center">
-						<div class="ml-1 xl:ml-4">
+						<div class="js-header-logo ml-1 xl:ml-4 sm:w-auto max-w-[75%] lg:max-w-[35%] xl:max-w-[10%]">
 							<?php if (has_custom_logo()) { ?>
-								<div class="sm:w-auto max-w-[75%] xl:max-w-[80%]">
-									<?php the_custom_logo(); ?>
-								</div>
+								<div><?php the_custom_logo(); ?></div>
 							<?php } else { ?>
 								<a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
 									<?php echo get_bloginfo('name'); ?>
