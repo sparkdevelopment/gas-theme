@@ -172,6 +172,11 @@
   margin-right: auto
 }
 
+.\!mx-0 {
+  margin-left: 0px !important;
+  margin-right: 0px !important
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem
@@ -202,11 +207,6 @@
   margin-bottom: 5vh
 }
 
-.\!mx-0 {
-  margin-left: 0px !important;
-  margin-right: 0px !important
-}
-
 .mb-8 {
   margin-bottom: 2rem
 }
@@ -235,12 +235,8 @@
   margin-top: 2vh
 }
 
-.mb-\[1vh\] {
-  margin-bottom: 1vh
-}
-
-.-mt-5 {
-  margin-top: -1.25rem
+.mb-\[10vh\] {
+  margin-bottom: 10vh
 }
 
 .mt-24 {
@@ -255,6 +251,10 @@
   margin-top: 4rem
 }
 
+.mb-\[1vh\] {
+  margin-bottom: 1vh
+}
+
 .mr-\[1\.5vw\] {
   margin-right: 1.5vw
 }
@@ -265,10 +265,6 @@
 
 .mt-20 {
   margin-top: 5rem
-}
-
-.mb-\[10vh\] {
-  margin-bottom: 10vh
 }
 
 .mt-2 {
@@ -391,10 +387,6 @@
   height: 15rem
 }
 
-.h-1\/3 {
-  height: 33.333333%
-}
-
 .max-h-full {
   max-height: 100%
 }
@@ -419,8 +411,8 @@
   width: 2.5rem
 }
 
-.w-1\/3 {
-  width: 33.333333%
+.w-\[33\.333vw\] {
+  width: 33.333vw
 }
 
 .w-3\/4 {
@@ -469,10 +461,6 @@
 
 .w-60 {
   width: 15rem
-}
-
-.w-\[33\.333vw\] {
-  width: 33.333vw
 }
 
 .max-w-sm {
@@ -720,6 +708,11 @@
 
 .bg-center {
   background-position: center
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover
 }
 
 .p-2 {
@@ -988,6 +981,11 @@
   outline-style: solid
 }
 
+.brightness-90 {
+  --tw-brightness: brightness(.9);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
 .invert {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
@@ -1096,6 +1094,11 @@
 
 .\[-webkit-mask-position\:65\%_100\%\!important\] {
   -webkit-mask-position: 65% 100% !important
+}
+
+.\[object-fit\:cover\] {
+  -o-object-fit: cover;
+     object-fit: cover
 }
 
 body {
@@ -1611,11 +1614,6 @@ body {
     line-height: 1
   }
 
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem
-  }
-
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1
@@ -1735,12 +1733,12 @@ body {
     left: 55%
   }
 
-  .\32xl\:ml-40 {
-    margin-left: 10rem
-  }
-
   .\32xl\:mt-0 {
     margin-top: 0px
+  }
+
+  .\32xl\:ml-40 {
+    margin-left: 10rem
   }
 
   .\32xl\:mr-40 {
