@@ -147,3 +147,81 @@ add_filter('nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class',
 
 // Include custom post types
 require_once get_template_directory() . '/inc/product-post-type.php';
+
+// Build breadcrumbs for single product and product category pages showing parent and child categories, iterating over all levels
+function build_breadcrumbs() {
+	$breadcrumbs = array();
+	$breadcrumbs[] = array(
+		'title' => 'Home',
+		'link' => get_home_url(),
+	);
+	if ( is_product() ) {
+		$categories = get_the_terms( get_the_ID(), 'product_category' );
+		if ( $categories ) {
+			foreach ( $categories as $category ) {
+				// If the category has a parent, add the parent to the breadcrumbs
+				if ( $category->parent ) {
+					$parent = get_term( $category->parent, 'product_category' );
+					$breadcrumbs[] = array(
+						'title' => $parent->name,
+						'link' => get_term_link( $parent ),
+					);
+				}
+				$breadcrumbs[] = array(
+					'title' => $category->name,
+					'link' => get_term_link( $category ),
+				);
+			}
+		}
+		$breadcrumbs[] = array(
+			'title' => get_the_title(),
+			'link' => get_the_permalink(),
+		);
+	} elseif ( is_product_category() ) {
+		$categories = get_the_terms( get_the_ID(), 'product_category' );
+		if ( $categories ) {
+			foreach ( $categories as $category ) {
+				// If the category has a parent, add the parent to the breadcrumbs
+				if ( $category->parent ) {
+					$parent = get_term( $category->parent, 'product_category' );
+					$breadcrumbs[] = array(
+						'title' => $parent->name,
+						'link' => get_term_link( $parent ),
+					);
+				}
+				$breadcrumbs[] = array(
+					'title' => $category->name,
+					'link' => get_term_link( $category ),
+				);
+			}
+		}
+	}
+	return $breadcrumbs;
+}
+
+// Display breadcrumbs separated by a forward slash
+function display_breadcrumbs() {
+	$breadcrumbs = build_breadcrumbs();
+	$breadcrumb_count = count( $breadcrumbs );
+	$breadcrumb_index = 1;
+	foreach ( $breadcrumbs as $breadcrumb ) {
+		// If last breadcrumb, don't add a link
+		if ( $breadcrumb_index === $breadcrumb_count ) {
+			echo '<span class="text-gray-600">' . $breadcrumb['title'] . '</span>';
+			break;
+		}
+		echo '<a href="' . $breadcrumb['link'] . '">' . $breadcrumb['title'] . '</a>';
+		if ( $breadcrumb_index < $breadcrumb_count ) {
+			echo ' / ';
+		}
+		$breadcrumb_index++;
+	}
+}
+
+function is_product() {
+	return is_singular( 'product' );
+}
+
+function is_product_category() {
+	return is_tax( 'product_category' );
+}
