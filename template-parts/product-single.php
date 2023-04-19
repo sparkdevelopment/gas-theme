@@ -13,9 +13,9 @@
 			<div class="text-2xl lg:text-4xl font-bold text-left my-4">&pound;<?php echo get_post_meta( get_the_ID(), 'product_price', true ); ?></div>
 		</div>
 		<div class="relative my-16 flex items-center">
-			<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-black.svg" alt="Arrow pointing left"  class="absolute left-6 bottom-0 w-[1.5vw] mx-auto mt-[2vh] mb-[1vh] rotate-90 mr-[1.5vw] cursor-pointer">
+			<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-black.svg" alt="Arrow pointing left"  class="absolute left-14 bottom-0 w-[1.5vw] mx-auto mt-[2vh] mb-[1vh] rotate-90 mr-[1.5vw] cursor-pointer">
 			<div class="background-image w-full h-[800px] bg-cover bg-center grow" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>');"></div>
-			<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-black.svg" alt="Arrow pointing right" class="absolute right-6 bottom-0 w-[1.5vw] mx-auto mt-[2vh] mb-[1vh] -rotate-90 ml-[1.5vw] cursor-pointer">
+			<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-black.svg" alt="Arrow pointing right" class="absolute right-14 bottom-0 w-[1.5vw] mx-auto mt-[2vh] mb-[1vh] -rotate-90 ml-[1.5vw] cursor-pointer">
 		</div>
 		<div class="text-2xl font-light text-left space-y-5 mx-8 my-4">
 			<?php

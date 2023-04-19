@@ -18,3 +18,14 @@ var observer = new IntersectionObserver(function (entries, observer) {
 }
 , options);
 observer.observe(footerLogo);
+
+// Handle hamburger menu click
+const main_navigation = document.querySelector('#primary-menu');
+const nav_cross = document.querySelector('.nav-cross');
+const nav_hamburger = document.querySelector('.nav-hamburger');
+document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
+    e.preventDefault();
+    main_navigation.classList.toggle('visible');
+    nav_cross.classList.toggle('hidden');
+    nav_hamburger.classList.toggle('hidden');
+});

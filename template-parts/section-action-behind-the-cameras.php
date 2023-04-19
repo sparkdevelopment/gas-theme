@@ -6,6 +6,6 @@
         </div>
     </div>
     <div class="lg:w-[75vw] w-full h-[52.5vh] md:h-[60vh] lg:h-full overflow-hidden">
-        <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/GAS_Family.jpg');" class="h-full bg-cover bg-center gas-mask mask-center md:-mt-[10vh] lg:mt-0 lg:-mr-60 image-mask [-webkit-mask-size:150%!important] md:[-webkit-mask-size:125%!important] lg:[-webkit-mask-size:175%!important] [-webkit-mask-position:65%_100%!important] lg:[-webkit-mask-position:0%_15%!important]"></div>
+        <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/action-behind.jpg');" class="h-full bg-cover bg-center gas-mask mask-center md:-mt-[10vh] lg:mt-0 lg:-mr-60 image-mask [-webkit-mask-size:150%!important] md:[-webkit-mask-size:125%!important] lg:[-webkit-mask-size:175%!important] [-webkit-mask-position:65%_100%!important] lg:[-webkit-mask-position:0%_15%!important]"></div>
     </div>
 </section>
