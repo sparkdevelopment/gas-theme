@@ -691,15 +691,15 @@
 }
 
 .bg-lighting {
-  background-image: url('/wp-content/themes/gas-theme/resources/img/lighting.jpg')
+  background-image: url('/wp-content/themes/gas-theme/resources/img/lighting.jpeg')
 }
 
 .bg-camera_digital {
-  background-image: url('/wp-content/themes/gas-theme/resources/img/camera_digital.jpg')
+  background-image: url('/wp-content/themes/gas-theme/resources/img/camera_digital.jpeg')
 }
 
 .bg-production {
-  background-image: url('/wp-content/themes/gas-theme/resources/img/production.jpg')
+  background-image: url('/wp-content/themes/gas-theme/resources/img/production.jpeg')
 }
 
 .bg-cover {
@@ -822,6 +822,10 @@
 
 .pt-8 {
   padding-top: 2rem
+}
+
+.pb-20 {
+  padding-bottom: 5rem
 }
 
 .text-left {
@@ -1094,11 +1098,6 @@
 
 .\[-webkit-mask-position\:65\%_100\%\!important\] {
   -webkit-mask-position: 65% 100% !important
-}
-
-.\[object-fit\:cover\] {
-  -o-object-fit: cover;
-     object-fit: cover
 }
 
 body {

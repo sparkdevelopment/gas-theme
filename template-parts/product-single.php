@@ -24,7 +24,13 @@
 			<span class="bg-gray-800 text-white inline-block py-1 px-2">Click <a href="#" class="underline">here</a> to send a booking email</span>
 		</div>
         <div class="text-lg text-center">
-            <a href="#">
+			<?php
+			// Get the product category url
+			$terms = get_the_terms( get_the_ID(), 'product_category' );
+			$term = array_pop( $terms );
+			$term_link = get_term_link( $term );
+			?>
+            <a href="<?php echo esc_attr( $term_link ); ?>">
                 <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="Arrow pointing left" class="w-[0.9vw] rotate-90 mr-[0.5vw] inline-block"> Back
             </a>
         </div>
@@ -35,5 +41,5 @@
 </article>
 <div class="bg-black text-white text-center">
     <h2 class="py-20 text-5xl font-light">Back to the categories</h2>
-    <?php get_template_part( 'template-parts/section', 'category' ); ?>
+    <?php get_template_part( 'template-parts/section', 'category', array('full-height' => false) ); ?>
 </div>
