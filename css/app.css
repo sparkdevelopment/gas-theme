@@ -736,6 +736,11 @@ video {
   margin-bottom: 7rem;
 }
 
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -834,6 +839,10 @@ video {
 
 .ml-4 {
   margin-left: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
@@ -1030,6 +1039,10 @@ video {
 
 .max-w-4xl {
   max-width: 56rem;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
 }
 
 .flex-grow {
@@ -1371,6 +1384,14 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-48 {
+  padding-top: 12rem;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
 }
 
 .text-left {

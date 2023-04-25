@@ -56,9 +56,8 @@ function tailpress_enqueue_scripts() {
     	wp_enqueue_script('docslider', tailpress_asset('js/docSlider.js'), array('lethargy'), $theme->get('Version'), true);
 		wp_enqueue_script('owl-carousel', tailpress_asset('js/owl.carousel.min.js'), array('jquery'), $theme->get('Version'), true);
 		wp_enqueue_script('gas-homepage', tailpress_asset('js/homepage.js'), array('jquery','lethargy','docslider','owl-carousel'), $theme->get('Version'), true);
-	} else {
-		wp_enqueue_script('gas', tailpress_asset('js/app.js'), array('jquery','lethargy'), $theme->get('Version'), true);
 	}
+	wp_enqueue_script('gas', tailpress_asset('js/app.js'), array('jquery'), $theme->get('Version'), true);
 
     // Enqueue jQuery from Google CDN
     wp_deregister_script('jquery');

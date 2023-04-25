@@ -30,7 +30,7 @@
 		<div class="col-span-6 md:col-span-3">
 			<ul class="sm:my-6 my-2">
 				<li><a href="#">Price List & Account Form</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="/contact">Contact</a></li>
 				<li><a href="#">Careers</a></li>
 				<li><a href="#">Terms and Conditions</a></li>
 				<li><a href="#">Privacy Policy</a></li>
