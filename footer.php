@@ -8,7 +8,7 @@
 
 <?php $full_height = $args['full-height'] ?? true; ?>
 
-<footer id="colophon" class="site-footer bg-black <?php echo $full_height ? 'h-[50vh] ' : ''; ?>flex flex-col" role="contentinfo">
+<footer id="colophon" class="site-footer bg-black <?php echo $full_height ? 'h-[50vh] ' : ''; ?>flex flex-col hidden" role="contentinfo">
 	<?php do_action('tailpress_footer'); ?>
 </footer>
 

@@ -1,4 +1,4 @@
-<section id="section-brands-and-instagram" class="h-screen overflow-x-hidden">
+<section id="section-brands-and-instagram" class="h-screen <?php echo is_front_page() ? 'overflow-x-hidden ' : ''; ?>bg-white">
     <div class="bg-[#3e3e3e] h-1/2 relative">
         <p class="text-xl sm:text-2xl lg:text-3xl 2xl:text-3xl text-white text-center font-light py-4 md:py-12 sm:py-4 absolute w-full">Just a few of the brands we work with</p>
         <div class="owl-carousel h-full !flex flex-col justify-center pt-20 item">

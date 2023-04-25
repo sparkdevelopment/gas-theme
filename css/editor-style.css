@@ -72,16 +72,16 @@
   right: 0px
 }
 
-.left-6 {
-  left: 1.5rem
+.left-14 {
+  left: 3.5rem
 }
 
 .bottom-0 {
   bottom: 0px
 }
 
-.right-6 {
-  right: 1.5rem
+.right-14 {
+  right: 3.5rem
 }
 
 .left-\[0\%\] {
@@ -106,30 +106,6 @@
 
 .top-\[0\%\] {
   top: 0%
-}
-
-.left-8 {
-  left: 2rem
-}
-
-.right-8 {
-  right: 2rem
-}
-
-.left-12 {
-  left: 3rem
-}
-
-.right-12 {
-  right: 3rem
-}
-
-.left-14 {
-  left: 3.5rem
-}
-
-.right-14 {
-  right: 3.5rem
 }
 
 .z-40 {
@@ -178,10 +154,6 @@
 
 .m-auto {
   margin: auto
-}
-
-.m-1 {
-  margin: 0.25rem
 }
 
 .m-3 {
@@ -251,6 +223,11 @@
 .my-\[5vh\] {
   margin-top: 5vh;
   margin-bottom: 5vh
+}
+
+.my-28 {
+  margin-top: 7rem;
+  margin-bottom: 7rem
 }
 
 .mb-8 {
@@ -333,8 +310,8 @@
   margin-left: -13%
 }
 
-.mt-\[12\.5\%\] {
-  margin-top: 12.5%
+.mt-\[75px\] {
+  margin-top: 75px
 }
 
 .ml-6 {
@@ -345,20 +322,12 @@
   margin-left: 1rem
 }
 
-.mt-\[\] {
-  margin-top: 
+.mt-48 {
+  margin-top: 12rem
 }
 
-.mt-\[75px\] {
-  margin-top: 75px
-}
-
-.mr-8 {
-  margin-right: 2rem
-}
-
-.ml-8 {
-  margin-left: 2rem
+.mb-16 {
+  margin-bottom: 4rem
 }
 
 .block {
@@ -553,6 +522,10 @@
   max-width: none
 }
 
+.max-w-4xl {
+  max-width: 56rem
+}
+
 .flex-grow {
   flex-grow: 1
 }
@@ -667,6 +640,12 @@
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse))
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse))
 }
 
 .self-center {
@@ -1415,16 +1394,16 @@ body {
     margin-top: 3rem
   }
 
+  .md\:mt-0 {
+    margin-top: 0px
+  }
+
   .md\:mt-\[10vh\] {
     margin-top: 10vh
   }
 
   .md\:-mt-\[5vh\] {
     margin-top: -5vh
-  }
-
-  .md\:mt-0 {
-    margin-top: 0px
   }
 
   .md\:flex {
