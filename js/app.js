@@ -9,7 +9,7 @@
   };
   var observer = new IntersectionObserver(function(entries, observer2) {
     entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && entry.intersectionRatio < 1) {
         header.classList.add("header--scrolled");
       } else {
         header.classList.remove("header--scrolled");
@@ -18,19 +18,16 @@
   }, options);
   observer.observe(footerLogo);
   var productDetails = document.querySelector(".js-product-details");
-  if (productDetails) {
-    productDetailsObserver = new IntersectionObserver(function(entries, observer2) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          header.classList.add("header--scrolled");
-        } else {
-          header.classList.remove("header--scrolled");
-        }
-      });
-    }, options);
-    productDetailsObserver.observe(productDetails);
-  }
-  var productDetailsObserver;
+  console.log(header.offsetHeight);
+  window.addEventListener("scroll", function() {
+    var productDetailsTop = productDetails ? productDetails.getBoundingClientRect().top : Number.MAX_VALUE;
+    if (productDetailsTop <= header.offsetHeight) {
+      header.classList.add("header--scrolled");
+    } else {
+      header.classList.remove("header--scrolled");
+    }
+  });
+  header.classList.remove("header--scrolled");
   var main_navigation = document.querySelector("#primary-menu");
   var nav_cross = document.querySelector(".nav-cross");
   var nav_hamburger = document.querySelector(".nav-hamburger");

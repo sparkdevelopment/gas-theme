@@ -7,32 +7,34 @@ var options = {
     rootMargin: '0px',
     threshold: 0.5
 };
+// Set up Intersection Observer
 var observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio < 1) {
             header.classList.add('header--scrolled');
         } else {
             header.classList.remove('header--scrolled');
         }
     });
-}
-, options);
+}, options);
+
+// Observe footerLogo
 observer.observe(footerLogo);
-// if js-product-details exists, set up observer
+
+// Set up scroll event listener
 var productDetails = document.querySelector('.js-product-details');
-if (productDetails) {
-    var productDetailsObserver = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                header.classList.add('header--scrolled');
-            } else {
-                header.classList.remove('header--scrolled');
-            }
-        });
+console.log(header.offsetHeight);
+window.addEventListener("scroll", function () {
+    var productDetailsTop = productDetails ? productDetails.getBoundingClientRect().top : Number.MAX_VALUE;
+    if (productDetailsTop <= header.offsetHeight) {
+        header.classList.add('header--scrolled');
+    } else {
+        header.classList.remove('header--scrolled');
     }
-    , options);
-    productDetailsObserver.observe(productDetails);
-}
+});
+
+// Show the header initially
+header.classList.remove('header--scrolled');
 
 // Handle hamburger menu click
 const main_navigation = document.querySelector('#primary-menu');
@@ -69,4 +71,3 @@ if (getCookie("cookie_bar_shown")) {
         document.getElementById("cookie-bar").classList.add("show");
     }, 1000);
 }
-  
