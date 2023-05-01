@@ -200,6 +200,11 @@
   margin-bottom: 4rem
 }
 
+.my-28 {
+  margin-top: 7rem;
+  margin-bottom: 7rem
+}
+
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem
@@ -223,16 +228,6 @@
 .my-\[5vh\] {
   margin-top: 5vh;
   margin-bottom: 5vh
-}
-
-.my-28 {
-  margin-top: 7rem;
-  margin-bottom: 7rem
-}
-
-.my-24 {
-  margin-top: 6rem;
-  margin-bottom: 6rem
 }
 
 .mb-8 {
@@ -271,14 +266,6 @@
   margin-top: 6rem
 }
 
-.mr-\[0\.5vw\] {
-  margin-right: 0.5vw
-}
-
-.mt-16 {
-  margin-top: 4rem
-}
-
 .mb-\[1vh\] {
   margin-bottom: 1vh
 }
@@ -295,16 +282,24 @@
   margin-top: 5rem
 }
 
+.mr-\[0\.5vw\] {
+  margin-right: 0.5vw
+}
+
+.mt-16 {
+  margin-top: 4rem
+}
+
+.mt-8 {
+  margin-top: 2rem
+}
+
 .mt-2 {
   margin-top: 0.5rem
 }
 
 .mt-0 {
   margin-top: 0px
-}
-
-.mt-4 {
-  margin-top: 1rem
 }
 
 .mt-10 {
@@ -325,18 +320,6 @@
 
 .ml-4 {
   margin-left: 1rem
-}
-
-.mt-48 {
-  margin-top: 12rem
-}
-
-.mb-16 {
-  margin-bottom: 4rem
-}
-
-.mt-8 {
-  margin-top: 2rem
 }
 
 .block {
@@ -459,12 +442,12 @@
   width: 75%
 }
 
-.w-\[0\.9vw\] {
-  width: 0.9vw
-}
-
 .w-\[1\.5vw\] {
   width: 1.5vw
+}
+
+.w-\[0\.9vw\] {
+  width: 0.9vw
 }
 
 .w-auto {
@@ -515,6 +498,10 @@
   max-width: 100% !important
 }
 
+.max-w-5xl {
+  max-width: 64rem
+}
+
 .max-w-full {
   max-width: 100%
 }
@@ -533,10 +520,6 @@
 
 .max-w-4xl {
   max-width: 56rem
-}
-
-.max-w-5xl {
-  max-width: 64rem
 }
 
 .flex-grow {
@@ -683,10 +666,6 @@
 
 .rounded {
   border-radius: 0.25rem
-}
-
-.border {
-  border-width: 1px
 }
 
 .border-b {
@@ -868,6 +847,14 @@
   padding-top: 6rem
 }
 
+.pt-48 {
+  padding-top: 12rem
+}
+
+.pb-16 {
+  padding-bottom: 4rem
+}
+
 .pt-1 {
   padding-top: 0.25rem
 }
@@ -878,14 +865,6 @@
 
 .pt-8 {
   padding-top: 2rem
-}
-
-.pt-48 {
-  padding-top: 12rem
-}
-
-.pb-16 {
-  padding-bottom: 4rem
 }
 
 .text-left {
@@ -941,11 +920,6 @@
   font-size: 1.25rem
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem
-}
-
 .text-\[0\.9rem\] {
   font-size: 0.9rem
 }
@@ -953,6 +927,15 @@
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem
+}
+
+.\!text-xl {
+  font-size: 1.25rem !important
+}
+
+.\!text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important
 }
 
 .font-light {
@@ -1039,10 +1022,6 @@
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-}
-
-.outline {
-  outline-style: solid
 }
 
 .brightness-90 {
@@ -1859,10 +1838,6 @@ body {
   .\32xl\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem
-  }
-
-  .\32xl\:text-xl {
-    font-size: 1.25rem
   }
 
   .\32xl\:text-4xl {

@@ -18,6 +18,21 @@ var observer = new IntersectionObserver(function (entries, observer) {
 }
 , options);
 observer.observe(footerLogo);
+// if js-product-details exists, set up observer
+var productDetails = document.querySelector('.js-product-details');
+if (productDetails) {
+    var productDetailsObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+    }
+    , options);
+    productDetailsObserver.observe(productDetails);
+}
 
 // Handle hamburger menu click
 const main_navigation = document.querySelector('#primary-menu');

@@ -17,6 +17,20 @@
     });
   }, options);
   observer.observe(footerLogo);
+  var productDetails = document.querySelector(".js-product-details");
+  if (productDetails) {
+    productDetailsObserver = new IntersectionObserver(function(entries, observer2) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          header.classList.add("header--scrolled");
+        } else {
+          header.classList.remove("header--scrolled");
+        }
+      });
+    }, options);
+    productDetailsObserver.observe(productDetails);
+  }
+  var productDetailsObserver;
   var main_navigation = document.querySelector("#primary-menu");
   var nav_cross = document.querySelector(".nav-cross");
   var nav_hamburger = document.querySelector(".nav-hamburger");

@@ -31,7 +31,7 @@ $product_subcategories = get_terms(
 			<a href="<?php echo get_term_link( $product_subcategory ); ?>" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-[33.333vw] h-[33.333vw]">
 				<div class="card-zoom">
 					<div class="card-zoom-image" style="background-image: url('<?php echo get_term_meta( $product_subcategory->term_id, 'product_category_image', true ); ?>')"></div>
-					<h1 class="card-zoom-text"><?php echo $product_subcategory->name; ?></h1>
+					<h1 class="card-zoom-text !text-2xl"><?php echo $product_subcategory->name; ?></h1>
 				</div>
 			</a>
 		<?php } ?>
@@ -61,7 +61,7 @@ $product_subcategories = get_terms(
 				<a href="<?php echo the_permalink(); ?>" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-[33.333vw] h-[33.333vw]">
 					<div class="card-zoom">
 						<div class="card-zoom-image" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
-						<h1 class="card-zoom-text"><?php echo get_the_title(); ?></h1>
+						<h1 class="card-zoom-text !text-2xl"><?php echo get_the_title(); ?></h1>
 					</div>
 				</a>
 				<?php
@@ -81,11 +81,5 @@ $product_subcategories = get_terms(
 			$parent_url      = get_term_link( $parent_category );
 		}
 		?>
-		<a href="<?php echo esc_attr( $parent_url ); ?>">
-			<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="Arrow pointing left" class="w-[0.9vw] rotate-90 mr-[0.5vw] inline-block"> Back
-		</a>
-	</div>
-	<div class="text-sm font-bold text-center mt-16">
-		<p>Prices exclude VAT and insurance. Prices are subject to change, please contact a team member at GAS for further information</p>
 	</div>
 </div>

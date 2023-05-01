@@ -8,15 +8,6 @@
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
     return rect.top >= 0 && rect.bottom <= windowHeight;
   }
-  var main_navigation = document.querySelector("#primary-menu");
-  var nav_cross = document.querySelector(".nav-cross");
-  var nav_hamburger = document.querySelector(".nav-hamburger");
-  document.querySelector("#primary-menu-toggle").addEventListener("click", function(e) {
-    e.preventDefault();
-    main_navigation.classList.toggle("visible");
-    nav_cross.classList.toggle("hidden");
-    nav_hamburger.classList.toggle("hidden");
-  });
   var docSliderContainer = document.querySelector(".docSlider");
   if (docSliderContainer) {
     docSlider.init({

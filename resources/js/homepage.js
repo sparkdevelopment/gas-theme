@@ -13,17 +13,6 @@ function isElementVisible(element) {
     return rect.top >= 0 && rect.bottom <= windowHeight;
 }
 
-// Handle hamburger menu click
-const main_navigation = document.querySelector('#primary-menu');
-const nav_cross = document.querySelector('.nav-cross');
-const nav_hamburger = document.querySelector('.nav-hamburger');
-document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
-    e.preventDefault();
-    main_navigation.classList.toggle('visible');
-    nav_cross.classList.toggle('hidden');
-    nav_hamburger.classList.toggle('hidden');
-});
-
 // Initialize DocSlider
 var docSliderContainer = document.querySelector(".docSlider");
 if (docSliderContainer) {

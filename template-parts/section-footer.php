@@ -19,11 +19,10 @@
 			</p>
 			<address class="sm:my-6 my-2 not-italic">
 				GAS Production Hire<br>
-				Unit G, Sutherland House<br>
-				Sutherland Road<br>
-				Walthamstow<br>
+				Unit 8 A/B<br>
+				The High Cross Centre<br>
 				London<br>
-				E17 6BU
+				N15 4QN
 			</address>
 			<p class="sm:my-6 my-2 pt-2 block sm:hidden">&copy; GAS Production Hire Ltd <?php echo date_i18n( 'Y' ); ?></p>
 		</div>
@@ -36,7 +35,6 @@
 				<li><a href="#">Privacy Policy</a></li>
 				<li><a href="#">Cookie Policy</a></li>
 			</ul>
-			<p class="sm:my-6 my-2 pt-8 hidden sm:block">&copy; GAS Production Hire Ltd <?php echo date_i18n( 'Y' ); ?></p>
 		</div>
 		<div class="md:col-start-8 md:col-end-13 col-span-12 md:col-span-5 flex flex-col justify-end">
 			<div class="m-auto w-full mt-0">
@@ -50,7 +48,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="text-right text-white sm:mb-6 text-xs 2xl:text-xl mt-4 hidden sm:block">Designed by <strong>SoreThumbStudio</strong>®</div>
+			<p class="sm:my-6 my-2 pt-8 hidden sm:block text-right">&copy; GAS Production Hire Ltd <?php echo date_i18n( 'Y' ); ?></p>
 		</div>
 	</div>
 </div>
