@@ -60,12 +60,16 @@
   position: relative
 }
 
-.top-0 {
-  top: 0px
+.bottom-0 {
+  bottom: 0px
 }
 
 .left-0 {
   left: 0px
+}
+
+.top-0 {
+  top: 0px
 }
 
 .right-0 {
@@ -74,10 +78,6 @@
 
 .left-14 {
   left: 3.5rem
-}
-
-.bottom-0 {
-  bottom: 0px
 }
 
 .right-14 {
@@ -234,6 +234,10 @@
   margin-bottom: 2rem
 }
 
+.mr-4 {
+  margin-right: 1rem
+}
+
 .ml-1 {
   margin-left: 0.25rem
 }
@@ -276,14 +280,6 @@
 
 .ml-\[1\.5vw\] {
   margin-left: 1.5vw
-}
-
-.mt-20 {
-  margin-top: 5rem
-}
-
-.mr-\[0\.5vw\] {
-  margin-right: 0.5vw
 }
 
 .mt-16 {
@@ -444,10 +440,6 @@
 
 .w-\[1\.5vw\] {
   width: 1.5vw
-}
-
-.w-\[0\.9vw\] {
-  width: 0.9vw
 }
 
 .w-auto {
@@ -697,11 +689,6 @@
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
-.bg-gray-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity))
-}
-
 .bg-\[\#3e3e3e\] {
   --tw-bg-opacity: 1;
   background-color: rgb(62 62 62 / var(--tw-bg-opacity))
@@ -725,6 +712,21 @@
 .bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity))
+}
+
+.bg-\[\#553926\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(85 57 38 / var(--tw-bg-opacity))
+}
+
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity))
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity))
 }
 
 .bg-lighting {
@@ -760,6 +762,18 @@
   padding: 4vw
 }
 
+.p-4 {
+  padding: 1rem
+}
+
+.p-8 {
+  padding: 2rem
+}
+
+.p-6 {
+  padding: 1.5rem
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem
@@ -788,11 +802,6 @@
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem
 }
 
 .py-20 {
@@ -911,6 +920,11 @@
   font-size: 3.25rem
 }
 
+.\!text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem
@@ -927,15 +941,6 @@
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem
-}
-
-.\!text-xl {
-  font-size: 1.25rem !important
-}
-
-.\!text-2xl {
-  font-size: 1.5rem !important;
-  line-height: 2rem !important
 }
 
 .font-light {
@@ -982,6 +987,11 @@
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity))
 }
 
 .text-gray-600 {
@@ -1038,16 +1048,16 @@
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms
 }
 
-.transition-all {
-  transition-property: all;
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms
 }

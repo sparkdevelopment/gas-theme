@@ -186,3 +186,12 @@ header {
         mask-size: auto;
     }
 }
+
+/* Cookie bar */
+#cookie-bar {
+    transform: translateY(100%);
+}
+
+#cookie-bar.show {
+    transform: translateY(0);
+}
