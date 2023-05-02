@@ -45,6 +45,9 @@ module.exports = {
     safelist: [
         'bg-lighting',
         'bg-camera_digital',
-        'bg-production'
+        'bg-production',
+        'rounded-full',
+        'px-8',
+        'py-4',
     ]
 };

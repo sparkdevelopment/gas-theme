@@ -1166,6 +1166,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
