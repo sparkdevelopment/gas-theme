@@ -33,7 +33,7 @@
 				<li><a href="/careers/">Careers</a></li>
 				<li><a href="/terms-conditions/">Terms and Conditions</a></li>
 				<li><a href="/privacy-policy/">Privacy Policy</a></li>
-				<li><a href="https://www.whatarecookies.com/">Cookie Policy</a></li>
+				<li><a href="/cookie-policy/">Cookie Policy</a></li>
 			</ul>
 		</div>
 		<div class="md:col-start-8 md:col-end-13 col-span-12 md:col-span-5 flex flex-col justify-end">
