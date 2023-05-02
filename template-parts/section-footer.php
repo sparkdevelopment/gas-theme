@@ -28,12 +28,12 @@
 		</div>
 		<div class="col-span-6 md:col-span-3">
 			<ul class="sm:my-6 my-2">
-				<li><a href="#">Price List & Account Form</a></li>
-				<li><a href="/contact">Contact</a></li>
-				<li><a href="#">Careers</a></li>
-				<li><a href="#">Terms and Conditions</a></li>
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Cookie Policy</a></li>
+				<li><a href="/price-list/">Price List & Account Form</a></li>
+				<li><a href="/contact/">Contact</a></li>
+				<li><a href="/careers/">Careers</a></li>
+				<li><a href="/terms-conditions/">Terms and Conditions</a></li>
+				<li><a href="/privacy-policy/">Privacy Policy</a></li>
+				<li><a href="https://www.whatarecookies.com/">Cookie Policy</a></li>
 			</ul>
 		</div>
 		<div class="md:col-start-8 md:col-end-13 col-span-12 md:col-span-5 flex flex-col justify-end">
