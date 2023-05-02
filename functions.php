@@ -59,6 +59,11 @@ function tailpress_enqueue_scripts() {
 	}
 	wp_enqueue_script('gas', tailpress_asset('js/app.js'), array('jquery'), $theme->get('Version'), true);
 
+	if ( is_singular( 'product' ) ) {
+		wp_enqueue_script('owl-carousel', tailpress_asset('js/owl.carousel.min.js'), array('jquery'), $theme->get('Version'), true);
+		wp_enqueue_script('gas-product-single', tailpress_asset('js/productSingle.js'), array('jquery'), $theme->get('Version'), true);
+	}
+
     // Enqueue jQuery from Google CDN
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), null, true);
@@ -73,7 +78,7 @@ function tailpress_enqueue_admin_scripts() {
 	wp_enqueue_media();
 	
 	// Enqueue styles
-	// wp_enqueue_style('tailpress-admin', tailpress_asset('css/admin.css'), array(), $theme->get('Version'));
+	wp_enqueue_style('tailpress-admin', tailpress_asset('css/admin.css'), array(), $theme->get('Version'));
 
 	// Enqueue scripts
 	wp_enqueue_script('tailpress-admin', tailpress_asset('js/admin.js'), array('jquery'), $theme->get('Version'), true);
@@ -224,3 +229,6 @@ function is_product() {
 function is_product_category() {
 	return is_tax( 'product_category' );
 }
+
+// Register images sizes
+add_image_size( 'product', 0, 800, true );

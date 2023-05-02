@@ -29,6 +29,14 @@ function add_product_fields() {
 		'normal',
 		'high'
 	);
+	add_meta_box(
+        'product_images',
+        'Product Images',
+        'product_images_callback',
+        'product',
+        'normal',
+        'high'
+    );	
 }
 add_action( 'add_meta_boxes', 'add_product_fields' );
 
@@ -101,13 +109,38 @@ function save_product_fields( $post_id, $post ) {
 
 	// Sanitize user input.
 	$product_price_new       = isset( $_POST['product_price'] ) ? sanitize_text_field( $_POST['product_price'] ) : '';
-	$product_description_new = isset( $_POST['product_description'] ) ? $_POST['product_description'] : '';
+	$product_description_new = isset( $_POST['product_description'] ) ? wp_kses_post( $_POST['product_description'] ) : '';
+	$product_images_new      = isset( $_POST['product_images'] ) ? array_map( 'absint', $_POST['product_images'] ) : array();
 
 	// Update the meta field in the database.
 	update_post_meta( $post_id, 'product_price', $product_price_new );
 	update_post_meta( $post_id, 'product_description', $product_description_new );
+	update_post_meta( $post_id, 'product_images', $product_images_new );
 }
 add_action( 'save_post', 'save_product_fields', 10, 2 );
+
+function product_images_callback($post) {
+    wp_nonce_field( basename(__FILE__), 'product_images_nonce' );
+    $images = get_post_meta($post->ID, 'product_images', true);
+    ?>
+    <div class="product-images-container">
+        <div class="product-images-list">
+            <?php if (!empty($images)) :
+                foreach ($images as $image_id) : ?>
+                    <div class="product-image-item">
+                        <?php echo wp_get_attachment_image($image_id, 'thumbnail'); ?>
+                        <input type="hidden" name="product_images[]" value="<?php echo esc_attr($image_id); ?>">
+                        <a href="#" class="remove-product-image">Remove</a>
+                    </div>
+                <?php endforeach;
+            endif; ?>
+        </div>
+        <p>
+            <button class="button button-primary upload-product-images">Upload Images</button>
+        </p>
+    </div>
+    <?php
+}
 
 // Create product category taxonomy
 function create_product_category_taxonomy() {

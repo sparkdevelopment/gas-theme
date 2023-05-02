@@ -23,7 +23,6 @@ observer.observe(footerLogo);
 
 // Set up scroll event listener
 var productDetails = document.querySelector('.js-product-details');
-console.log(header.offsetHeight);
 window.addEventListener("scroll", function () {
     var productDetailsTop = productDetails ? productDetails.getBoundingClientRect().top : Number.MAX_VALUE;
     if (productDetailsTop <= header.offsetHeight) {

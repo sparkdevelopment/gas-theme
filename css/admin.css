@@ -1,0 +1,27 @@
+.product-images-container .product-image-item {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.product-images-container .product-image-item img {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-images-container .product-image-item .remove-product-image {
+    display: block;
+    color: #ff0000;
+    text-align: center;
+}
+
+.product-images-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.product-image-item .thumbnail {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
