@@ -23,14 +23,16 @@ observer.observe(footerLogo);
 
 // Set up scroll event listener
 var productDetails = document.querySelector('.js-product-details');
-window.addEventListener("scroll", function () {
-    var productDetailsTop = productDetails ? productDetails.getBoundingClientRect().top : Number.MAX_VALUE;
-    if (productDetailsTop <= header.offsetHeight) {
-        header.classList.add('header--scrolled');
-    } else {
-        header.classList.remove('header--scrolled');
-    }
-});
+if (productDetails) {
+    window.addEventListener("scroll", function () {
+        var productDetailsTop = productDetails ? productDetails.getBoundingClientRect().top : Number.MAX_VALUE;
+        if (productDetailsTop <= header.offsetHeight) {
+            header.classList.add('header--scrolled');
+        } else {
+            header.classList.remove('header--scrolled');
+        }
+    });
+}
 
 // Show the header initially
 header.classList.remove('header--scrolled');
