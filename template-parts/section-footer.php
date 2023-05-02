@@ -17,7 +17,7 @@
 				<a href="mailto:office@gashireco.uk">office@gashireco.uk</a><br>
 				<a href="tel:+442033972757">+44 (0)20 3397 2757</a>
 			</p>
-			<address class="sm:my-6 my-2 not-italic">
+			<address class="sm:mb-6 sm:mt-0 my-2 not-italic">
 				GAS Production Hire<br>
 				Unit 8 A/B<br>
 				The High Cross Centre<br>
