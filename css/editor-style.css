@@ -318,10 +318,6 @@
   margin-left: 1rem
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem
-}
-
 .block {
   display: block
 }
@@ -672,9 +668,18 @@
   border-bottom-width: 1px
 }
 
+.border-b-2 {
+  border-bottom-width: 2px
+}
+
 .border-primary {
   --tw-border-opacity: 1;
   border-color: rgb(14 165 233 / var(--tw-border-opacity))
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity))
 }
 
 .bg-primary {
@@ -727,12 +732,12 @@
   background-color: rgb(107 114 128 / var(--tw-bg-opacity))
 }
 
-.bg-lighting {
-  background-image: url('/wp-content/themes/gas-theme/resources/img/lighting.jpg')
-}
-
 .bg-camera_digital {
   background-image: url('/wp-content/themes/gas-theme/resources/img/camera_digital.jpg')
+}
+
+.bg-lighting {
+  background-image: url('/wp-content/themes/gas-theme/resources/img/lighting.jpg')
 }
 
 .bg-production {
@@ -1205,17 +1210,16 @@ body {
     margin-bottom: 2.5%
   }
 
-  .sm\:my-4 {
-    margin-top: 1rem;
-    margin-bottom: 1rem
-  }
-
   .sm\:ml-1 {
     margin-left: 0.25rem
   }
 
   .sm\:mb-6 {
     margin-bottom: 1.5rem
+  }
+
+  .sm\:mt-0 {
+    margin-top: 0px
   }
 
   .sm\:mt-6 {
@@ -1232,10 +1236,6 @@ body {
 
   .sm\:-ml-1 {
     margin-left: -0.25rem
-  }
-
-  .sm\:mt-0 {
-    margin-top: 0px
   }
 
   .sm\:block {

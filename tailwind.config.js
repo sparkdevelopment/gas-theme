@@ -43,11 +43,13 @@ module.exports = {
         tailpress.tailwind
     ],
     safelist: [
-        'bg-lighting',
         'bg-camera_digital',
+        'bg-lighting',
         'bg-production',
-        'rounded-full',
+        'border-b-2',
+        'border-white',
         'px-8',
         'py-4',
+        'rounded-full',
     ]
 };
