@@ -48,7 +48,9 @@ module.exports = {
         'bg-production',
         'border-b-2',
         'border-white',
+        'px-4',
         'px-8',
+        'py-2',
         'py-4',
         'rounded-full',
         'self-center'
