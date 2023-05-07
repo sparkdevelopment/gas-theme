@@ -43,7 +43,6 @@ module.exports = {
         tailpress.tailwind
     ],
     safelist: [
-        'align-middle',
         'bg-camera_digital',
         'bg-lighting',
         'bg-production',
@@ -52,6 +51,6 @@ module.exports = {
         'px-8',
         'py-4',
         'rounded-full',
-        'table-cell'
+        'self-center'
     ]
 };
