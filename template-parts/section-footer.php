@@ -37,17 +37,12 @@
 			</ul>
 		</div>
 		<div class="md:col-start-8 md:col-end-13 col-span-12 md:col-span-5 flex flex-col justify-end">
-			<div class="m-auto w-full mt-0">
-				<h3 class="font-bold mb-4 sm:mt-6 mt-2">Sign up for our newsletter</h3>
-				<form class="grid grid-cols-8 w-full">
-					<div class="col-span-6 lg:col-span-5">
-						<input class="w-full bg-gray-900 text-white placeholder:text-white sm:py-2 sm:px-3 px-1" type="text" placeholder="Enter email address">
-					</div>
-					<div class="col-span-2 lg:col-span-3">
-						<button class="w-full bg-gray-300 text-black sm:py-2 sm:px-3 px-1 font-bold">Subscribe</button>
-					</div>
-				</form>
-			</div>
+			<?php
+			// Add widget area for footer newsletter form
+			if ( is_active_sidebar( 'footer-newsletter' ) ) {
+				dynamic_sidebar( 'footer-newsletter' );
+			}
+			?>
 			<p class="sm:my-6 my-2 pt-8 hidden sm:block text-right">&copy; GAS Production Hire Ltd <?php echo date_i18n( 'Y' ); ?></p>
 		</div>
 	</div>
