@@ -195,3 +195,12 @@ header {
 #cookie-bar.show {
     transform: translateY(0);
 }
+
+/* Newsletter form */
+.newsletter-subscribe-form input[type="email"] {
+    @apply w-full bg-gray-900 text-white placeholder:text-white sm:py-2 sm:px-3 px-1;
+}
+
+.newsletter-subscribe-form input[type="submit"] {
+    @apply w-full bg-gray-300 text-black sm:py-2 sm:px-3 px-1 font-bold;
+}
