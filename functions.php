@@ -236,3 +236,6 @@ function is_product_category() {
 
 // Register images sizes
 add_image_size( 'product', 0, 800, true );
+
+// Disable <p> tags around Contact Form 7 inputs
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
