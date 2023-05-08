@@ -52,6 +52,7 @@ module.exports = {
         'px-8',
         'py-2',
         'py-4',
+        'py-8',
         'rounded-full',
         'self-center',
         'w-fit'
