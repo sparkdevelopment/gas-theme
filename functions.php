@@ -153,6 +153,9 @@ add_filter('nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class',
 // Include custom post types
 require_once get_template_directory() . '/inc/product-post-type.php';
 
+// Include custom widget areas
+require_once get_template_directory() . '/inc/custom-widget-areas.php';
+
 // Build breadcrumbs for single product and product category pages showing parent and child categories, iterating over all levels
 function build_breadcrumbs() {
 	$breadcrumbs = array();
