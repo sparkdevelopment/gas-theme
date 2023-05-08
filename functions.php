@@ -31,6 +31,7 @@ function tailpress_setup()
 	add_theme_support('wp-block-styles');
 
 	add_theme_support('editor-styles');
+	add_theme_support('widgets');
 	add_editor_style('css/editor-style.css');
 }
 
