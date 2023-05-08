@@ -53,6 +53,7 @@ module.exports = {
         'py-2',
         'py-4',
         'rounded-full',
-        'self-center'
+        'self-center',
+        'w-fit'
     ]
 };
