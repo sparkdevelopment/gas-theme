@@ -204,3 +204,7 @@ header {
 .newsletter-subscribe-form input[type="submit"] {
     @apply w-full bg-gray-300 text-black sm:py-2 sm:px-3 px-1 font-bold;
 }
+
+.newsletter-subscribe-form .wpcf7-response-output {
+    display: none;
+}
