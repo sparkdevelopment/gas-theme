@@ -12,7 +12,7 @@
 	<?php endif; ?>
 	<div class="sm:grid sm:grid-cols-12 flex flex-col-reverse justify-between gap-4 text-white text-base sm:text-xl 2xl:text-2xl sm:mx-8 mx-4 font-light leading-6">
 		<div class="text-right text-white sm:mb-6 text-sm sm:text-base 2xl:text-2xl mt-2 sm:hidden col-span-1">Designed by <strong>SoreThumbStudio</strong>&reg;</div>
-		<div class="flex flex-col col-span-5 md:col-span-3 justify-between">
+		<div class="flex flex-col col-span-5 md:col-span-3">
 			<p class="sm:my-6 my-2">
 				<a href="mailto:office@gashireco.uk">office@gashireco.uk</a><br>
 				<a href="tel:+442033972757">+44 (0)20 3397 2757</a>
