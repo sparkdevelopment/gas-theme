@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
+<?php $hide_nav = $args['hide_nav'] ?? false; ?>
+
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +19,7 @@
 
 		<?php do_action('tailpress_header'); ?>
 
+		<?php if (!$hide_nav) { ?>
 		<header class="fixed top-0 left-0 z-40 w-full">
 
 			<div class="mx-0 w-full">
@@ -73,6 +76,7 @@
 				</div>
 			</div>
 		</header>
+		<?php } ?>
 
 		<div id="content" class="site-content flex-grow">
 
