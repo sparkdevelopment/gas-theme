@@ -44,10 +44,15 @@ module.exports = {
     ],
     safelist: [
         'bg-camera_digital',
+        'bg-gray-300',
+        'bg-gray-900',
         'bg-lighting',
         'bg-production',
         'border-b-2',
         'border-white',
+        'font-bold',
+        'placeholder:text-white',
+        'px-1',
         'px-4',
         'px-8',
         'py-2',
@@ -55,6 +60,11 @@ module.exports = {
         'py-8',
         'rounded-full',
         'self-center',
-        'w-fit'
+        'sm:px-3',
+        'sm:py-2',
+        'text-black',
+        'text-white',
+        'w-fit',
+        'w-full',
     ]
 };
