@@ -2,7 +2,7 @@
     <div class="lg:w-[25vw] w-full lg:h-full h-[47.5vh] md:h-[40vh] font-theme-heading text-white lg:ml-12 xl:ml-40 2xl:ml-40 xl:mr-12 lg:mr-8 lg:text-right text-center flex">
         <div class="m-auto mb-[10vh]">
             <h2 class="fade-in block text-2xl sm:text-3xl md:text-3xl lg:text-3xl 2xl:text-5xl font-light p-2 lg:p-6 xl:p-2 px-4">The action behind the cameras</h2>
-            <p class="fade-in block text-base lg:text-2xl xl:text-2xl 2xl:text-2xl font-light lg:p-6 xl:p-2 px-4">Service commitment and crew message ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+            <p class="fade-in block text-lg lg:text-2xl xl:text-2xl 2xl:text-2xl font-light lg:p-6 xl:p-2 px-4">Service commitment and crew message ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
         </div>
     </div>
     <div class="lg:w-[75vw] w-full h-[52.5vh] md:h-[60vh] lg:h-full overflow-hidden">
