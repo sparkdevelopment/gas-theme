@@ -1,11 +1,43 @@
 <div class="min-h-screen bg-[#202020]">
-    <div class="sticky top-0 w-full flex p-20 bg-black">
-        <input type="text" class="flex-grow p-4 bg-[#202020] font-theme-heading text-4xl text-white placeholder:text-white" placeholder="Search">
-        <button type="submit" class="absolute right-20 p-2 self-center">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.5 15.5L20 20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M10 4C5.58172 4 2 7.58172 2 12C2 16.4183 5.58172 20 10 20C14.4183 20 18 16.4183 18 12C18 7.58172 14.4183 4 10 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
+    <form id="search-form" class="sticky top-0 w-full flex p-20 bg-black z-10">
+        <input id="search-input" type="text" class="flex-grow p-6 bg-[#202020] font-theme-heading text-4xl text-white placeholder:text-white" placeholder="Search">
+        <button type="submit" class="absolute right-24 p-4 self-center">
+            <img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-8 h-8">
         </button>
+    </form>
+    <div id="search-results"></div>
+</div>
+
+<div id="search-results-template" class="hidden">
+    <div class="flex flex-col items-center justify-center w-full pt-6">
+        <div id="search-results-list" class="mt-8 text-white list-none flex flex-col flex-wrap lg:flex-row justify-center space-x-0 space-y-0 px-10 lg:px-0 w-3/4 mx-auto"></div>
+    </div>
+</div>
+
+<div id="search-results-template-no-results" class="hidden">
+    <div class="flex flex-col items-center justify-center w-full pt-6">
+        <img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-24 h-24">
+        <p class="mt-8 text-2xl font-theme-heading text-white">No results found</p>
+    </div>
+</div>
+
+<div id="search-results-template-error" class="hidden">
+    <div class="flex flex-col items-center justify-center w-full pt-6">
+        <img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-24 h-24">
+        <p class="mt-8 text-2xl font-theme-heading text-white">Something went wrong</p>
+    </div>
+</div>
+
+<div id="search-results-template-loading" class="hidden">
+    <div class="flex flex-col items-center justify-center w-full pt-6">
+        <img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-24 h-24">
+        <p class="mt-8 text-2xl font-theme-heading text-white">Searching...</p>
+    </div>
+</div>
+
+<div id="search-results-template-no-input" class="hidden">
+    <div class="flex flex-col items-center justify-center w-full pt-6">
+        <img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-24 h-24">
+        <p class="mt-8 text-2xl font-theme-heading text-white">Search for something</p>
     </div>
 </div>

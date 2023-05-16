@@ -7,37 +7,44 @@
     rootMargin: "0px",
     threshold: 0.5
   };
-  var observer = new IntersectionObserver(function(entries, observer2) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting && entry.intersectionRatio < 1) {
-        header.classList.add("header--scrolled");
-      } else {
-        header.classList.remove("header--scrolled");
-      }
-    });
-  }, options);
-  observer.observe(footerLogo);
-  var productDetails = document.querySelector(".js-product-details");
-  if (productDetails) {
-    window.addEventListener("scroll", function() {
-      var productDetailsTop = productDetails ? productDetails.getBoundingClientRect().top : Number.MAX_VALUE;
-      if (productDetailsTop <= header.offsetHeight) {
-        header.classList.add("header--scrolled");
-      } else {
-        header.classList.remove("header--scrolled");
-      }
-    });
+  if (header) {
+    observer = new IntersectionObserver(function(entries, observer2) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && entry.intersectionRatio < 1) {
+          header.classList.add("header--scrolled");
+        } else {
+          header.classList.remove("header--scrolled");
+        }
+      });
+    }, options);
+    observer.observe(footerLogo);
+    productDetails = document.querySelector(".js-product-details");
+    if (productDetails) {
+      window.addEventListener("scroll", function() {
+        var productDetailsTop = productDetails ? productDetails.getBoundingClientRect().top : Number.MAX_VALUE;
+        if (productDetailsTop <= header.offsetHeight) {
+          header.classList.add("header--scrolled");
+        } else {
+          header.classList.remove("header--scrolled");
+        }
+      });
+    }
+    header.classList.remove("header--scrolled");
   }
-  header.classList.remove("header--scrolled");
+  var observer;
+  var productDetails;
   var main_navigation = document.querySelector("#primary-menu");
   var nav_cross = document.querySelector(".nav-cross");
   var nav_hamburger = document.querySelector(".nav-hamburger");
-  document.querySelector("#primary-menu-toggle").addEventListener("click", function(e) {
-    e.preventDefault();
-    main_navigation.classList.toggle("visible");
-    nav_cross.classList.toggle("hidden");
-    nav_hamburger.classList.toggle("hidden");
-  });
+  var menu_toggle = document.querySelector("#primary-menu-toggle");
+  if (menu_toggle) {
+    menu_toggle.addEventListener("click", function(e) {
+      e.preventDefault();
+      main_navigation.classList.toggle("visible");
+      nav_cross.classList.toggle("hidden");
+      nav_hamburger.classList.toggle("hidden");
+    });
+  }
   function getCookie(name) {
     const value = "; " + document.cookie;
     const parts = value.split("; " + name + "=");
