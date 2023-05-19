@@ -28,10 +28,10 @@ $product_subcategories = get_terms(
 	<?php if ( $product_subcategories ) { ?>
 		<div class="flex flex-col flex-wrap lg:flex-row justify-center lg:space-x-10 lg:space-y-0 space-y-10 px-10 lg:px-0 w-full mx-auto">
 		<?php foreach ( $product_subcategories as $product_subcategory ) { ?>
-			<a href="<?php echo get_term_link( $product_subcategory ); ?>" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-[33.333vw] h-[33.333vw]">
+			<a href="<?php echo get_term_link( $product_subcategory ); ?>" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-full aspect-square md:w-[33.333vw] md:h-[33.333vw]">
 				<div class="card-zoom">
 					<div class="card-zoom-image" style="background-image: url('<?php echo get_term_meta( $product_subcategory->term_id, 'product_category_image', true ); ?>')"></div>
-					<h1 class="card-zoom-text !text-2xl"><?php echo $product_subcategory->name; ?></h1>
+					<h1 class="card-zoom-text !text-xl md:!text-2xl"><?php echo $product_subcategory->name; ?></h1>
 				</div>
 			</a>
 		<?php } ?>
@@ -54,14 +54,14 @@ $product_subcategories = get_terms(
 		);
 
 		if ( $products->have_posts() ) {
-			echo '<div class="flex flex-col flex-wrap lg:flex-row justify-center lg:space-x-10 lg:space-y-0 space-y-10 px-10 lg:px-0 w-3/4 mx-auto">';
+			echo '<div class="flex flex-col flex-wrap lg:flex-row justify-center lg:space-x-10 lg:space-y-0 space-y-10 px-10 lg:px-0 w-full mx-auto">';
 			while ( $products->have_posts() ) {
 				$products->the_post();
 				?>
-				<a href="<?php echo the_permalink(); ?>" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-[33.333vw] h-[33.333vw]">
+				<a href="<?php echo the_permalink(); ?>" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-full aspect-square md:w-[33.333vw] md:h-[33.333vw]">
 					<div class="card-zoom">
 						<div class="card-zoom-image" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
-						<h1 class="card-zoom-text !text-2xl"><?php echo get_the_title(); ?></h1>
+						<h1 class="card-zoom-text !text-xl md:!text-2xl"><?php echo get_the_title(); ?></h1>
 					</div>
 				</a>
 				<?php

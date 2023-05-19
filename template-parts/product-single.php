@@ -15,8 +15,8 @@
 			</div>
 			<div class="relative my-16 flex items-center">
 				<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-black.svg" alt="Arrow pointing left"  class="js-carousel-previous absolute left-14 bottom-0 w-[1.5vw] mx-auto mt-[2vh] mb-[1vh] rotate-90 mr-[1.5vw] cursor-pointer z-10 invert mix-blend-difference">
-				<div class="owl-carousel w-full h-[800px]">
-					<div class="background-image w-full h-[800px] bg-cover bg-center grow" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'product' ); ?>');"></div>
+				<div class="owl-carousel w-full aspect-square">
+					<div class="background-image w-full bg-cover bg-center grow aspect-square" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'product' ); ?>');"></div>
 					<?php
 					// Get the rest of the images
 					$images = get_post_meta( get_the_ID(), 'product_images', true );
@@ -29,7 +29,7 @@
 
 						// Output the image
 						// echo '<img class="background-image w-full h-[800px] bg-cover bg-center grow" src="' . $image_url . '">';
-						echo '<div class="background-image w-full h-[800px] bg-cover bg-center grow" style="background-image: url(' . $image_url . ');"></div>';
+						echo '<div class="background-image w-full bg-cover bg-center grow aspect-square" style="background-image: url(' . $image_url . ');"></div>';
 
 					endforeach;
 					?>

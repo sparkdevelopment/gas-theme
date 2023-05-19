@@ -51,7 +51,6 @@ searchForm.addEventListener('submit', function (e) {
             searchResults.innerHTML = searchResultsTemplate.innerHTML;
             const searchResultsList = document.querySelector('#search-results-list');
             results.forEach(function (result) {
-                console.log(result);
                 // Get the thumbnail url
                 const thubnailUrl = result._embedded['wp:featuredmedia']['0'].media_details.sizes.large.source_url || 'https://via.placeholder.com/150';
                 const searchResultsListItem = document.createElement('li');
@@ -64,4 +63,17 @@ searchForm.addEventListener('submit', function (e) {
             // If there is an error, show the error template
             searchResults.innerHTML = searchResultsTemplateError.innerHTML;
         });
+});
+
+// Close the search results when the X button is pressed
+const searchResultsClose = document.querySelector('#search-results-close');
+searchResultsClose.addEventListener('click', function (e) {
+    e.preventDefault();
+    // If there is a referrer, return to it
+    if (document.referrer) {
+        window.location.href = document.referrer;
+    } else {
+        // Otherwise, go to the homepage
+        window.location.href = '/';
+    }
 });

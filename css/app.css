@@ -622,6 +622,22 @@ video {
   right: 6rem;
 }
 
+.top-2 {
+  top: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -636,10 +652,6 @@ video {
 
 .z-20 {
   z-index: 20;
-}
-
-.col-span-1 {
-  grid-column: span 1 / span 1;
 }
 
 .col-span-5 {
@@ -804,10 +816,6 @@ video {
   margin-top: 2rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -830,6 +838,18 @@ video {
 
 .mt-0 {
   margin-top: 0px;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-\[25px\] {
+  margin-top: 25px;
+}
+
+.mt-\[35px\] {
+  margin-top: 35px;
 }
 
 .block {
@@ -866,6 +886,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .h-1 {
@@ -926,6 +950,22 @@ video {
 
 .h-60 {
   height: 15rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-2\/3 {
+  height: 66.666667%;
+}
+
+.h-3\/4 {
+  height: 75%;
+}
+
+.h-1\/4 {
+  height: 25%;
 }
 
 .max-h-full {
@@ -1011,6 +1051,10 @@ video {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .max-w-sm {
@@ -1328,6 +1372,10 @@ video {
   padding: 1rem;
 }
 
+.p-24 {
+  padding: 6rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1346,6 +1394,11 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-7 {
@@ -1388,9 +1441,9 @@ video {
   padding-bottom: 2rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pt-44 {
@@ -1447,6 +1500,10 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-\[115px\] {
+  padding-top: 115px;
 }
 
 .text-left {
@@ -1507,10 +1564,6 @@ video {
   line-height: 1.5rem;
 }
 
-.text-\[0\.9rem\] {
-  font-size: 0.9rem;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1519,6 +1572,22 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-xxl {
+  font-size: 1.5rem;
+}
+
+.text-\[3\.2vmin\] {
+  font-size: 3.2vmin;
+}
+
+.text-\[4vmin\] {
+  font-size: 4vmin;
+}
+
+.\!text-xl {
+  font-size: 1.25rem !important;
 }
 
 .font-light {
@@ -1729,6 +1798,14 @@ video {
 
 .\[-webkit-mask-position\:65\%_100\%\!important\] {
   -webkit-mask-position: 65% 100% !important;
+}
+
+.\[-webkit-mask-size\:1750\%\!important\] {
+  -webkit-mask-size: 1750% !important;
+}
+
+.\[-webkit-mask-size\:175\%\!important\] {
+  -webkit-mask-size: 175% !important;
 }
 
 @font-face {
@@ -2209,14 +2286,13 @@ header {
     font-size: 1.25rem;
   }
 
-  .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-\[4vmin\] {
+    font-size: 4vmin;
   }
 
   .sm\:\[-webkit-mask-size\:125\%\] {
@@ -2312,6 +2388,10 @@ header {
     height: 50%;
   }
 
+  .md\:h-\[33\.333vw\] {
+    height: 33.333vw;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2334,6 +2414,10 @@ header {
 
   .md\:w-\[80vw\] {
     width: 80vw;
+  }
+
+  .md\:w-\[33\.333vw\] {
+    width: 33.333vw;
   }
 
   .md\:basis-\[25\%\] {
@@ -2377,6 +2461,15 @@ header {
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-\[4vmin\] {
+    font-size: 4vmin;
+  }
+
+  .md\:\!text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
   }
 
   .md\:\[-webkit-mask-size\:150\%\] {
@@ -2504,16 +2597,6 @@ header {
     padding: 1.5rem;
   }
 
-  .lg\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .lg\:py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -2522,6 +2605,16 @@ header {
   .lg\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .lg\:px-28 {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pt-0 {
@@ -2534,6 +2627,11 @@ header {
 
   .lg\:text-right {
     text-align: right;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:text-5xl {
@@ -2554,11 +2652,6 @@ header {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .lg\:text-xl {

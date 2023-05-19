@@ -2,6 +2,7 @@
   // resources/js/homepage.js
   var fade_in_elements = document.querySelectorAll(".fade-in");
   var window_height = window.innerHeight;
+  var nav_hamburger = document.querySelector(".nav-hamburger");
   window.lethargy = new Lethargy();
   function isElementVisible(element) {
     const rect = element.getBoundingClientRect();

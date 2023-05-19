@@ -4,6 +4,7 @@
 // Get elements and variables
 const fade_in_elements = document.querySelectorAll('.fade-in');
 const window_height = window.innerHeight;
+const nav_hamburger = document.querySelector('.nav-hamburger');
 window.lethargy = new Lethargy();
 
 // Check if element is visible
