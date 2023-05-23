@@ -2658,6 +2658,11 @@ header {
     font-size: 1.25rem;
   }
 
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .lg\:\[-webkit-mask-size\:175\%\] {
     -webkit-mask-size: 175%;
   }
@@ -2750,6 +2755,10 @@ header {
   .xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
   }
 }
 
