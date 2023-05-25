@@ -23,9 +23,9 @@
 		<header class="fixed top-0 left-0 z-40 w-full">
 
 			<div class="mx-0 w-full">
-				<div class="py-1 xl:py-4 w-full">
+				<div class="xl:py-4 w-full">
 					<div class="flex justify-between items-center">
-						<div class="js-header-logo ml-1 xl:ml-4 sm:w-auto max-w-[75%] lg:max-w-[35%] xl:max-w-[10%]">
+						<div class="h-24 js-header-logo xl:ml-4 sm:w-auto max-w-[75%] lg:max-w-[35%] xl:max-w-[10%]">
 							<?php if (has_custom_logo()) { ?>
 								<div><?php the_custom_logo(); ?></div>
 							<?php } else { ?>
@@ -40,9 +40,9 @@
 							<?php } ?>
 						</div>
 
-						<div class="mr-6 xl:mr-12 text-white z-10">
+						<div class="mr-8 xl:mr-12 text-white z-10">
 							<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-								<svg viewBox="0 0 18 18" class="inline-block w-10 h-10 nav-hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<svg viewBox="0 0 18 18" class="inline-block w-7 md:w-10 h-7 md:h-10 nav-hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									<g stroke="none" stroke-width="2" fill="currentColor" fill-rule="evenodd">
 										<g id="icon-shape">
 											<path d="M0,0 L18,0 L18,2 L0,2 L0,0 Z M0,7 L18,7 L18,9 L0,9 L0,7 Z M0,14 L18,14 L18,16 L0,16 L0,14 Z"></path>
@@ -50,7 +50,7 @@
 									</g>
 								</svg>
 
-								<svg class="w-10 h-10 hidden nav-cross z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<svg class="w-7 md:w-10 h-7 md:h-10 hidden nav-cross z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
 										<g id="icon-x">
 											<path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />

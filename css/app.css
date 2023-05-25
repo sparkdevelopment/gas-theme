@@ -836,6 +836,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mr-8 {
+  margin-right: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -948,6 +952,14 @@ video {
   height: 50vw;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -1031,6 +1043,10 @@ video {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .max-w-sm {
@@ -1407,6 +1423,16 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pt-44 {
@@ -2313,6 +2339,10 @@ header {
     height: 50%;
   }
 
+  .md\:h-10 {
+    height: 2.5rem;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2339,6 +2369,10 @@ header {
 
   .md\:w-\[80vw\] {
     width: 80vw;
+  }
+
+  .md\:w-10 {
+    width: 2.5rem;
   }
 
   .md\:basis-\[25\%\] {
@@ -2783,5 +2817,84 @@ header {
   .\32xl\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+}
+
+.\[\&\:first-child\]\:h-6:first-child {
+  height: 1.5rem;
+}
+
+.\[\&\>img\]\:my-6>img {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.\[\&\>img\]\:my-7>img {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.\[\&\>img\]\:my-8>img {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.\[\&\>img\]\:mx-8>img {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.\[\&\>img\]\:h-6>img {
+  height: 1.5rem;
+}
+
+.\[\&\>img\]\:h-7>img {
+  height: 1.75rem;
+}
+
+.\[\&\>img\]\:h-8>img {
+  height: 2rem;
+}
+
+.\[\&\>img\]\:h-10>img {
+  height: 2.5rem;
+}
+
+.\[\&\>img\]\:w-auto>img {
+  width: auto;
+}
+
+.\[\&\>img\]\:py-6>img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 782px) {
+  .\[\&\>img\]\:md\:mx-8>img {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .\[\&\>img\]\:md\:mx-0>img {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .\[\&\>img\]\:md\:my-8>img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .\[\&\>img\]\:md\:my-0>img {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .\[\&\>img\]\:md\:h-8>img {
+    height: 2rem;
+  }
+
+  .\[\&\>img\]\:md\:h-auto>img {
+    height: auto;
   }
 }
