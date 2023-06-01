@@ -678,6 +678,10 @@ video {
   margin: 0.75rem;
 }
 
+.m-6 {
+  margin: 1.5rem;
+}
+
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -756,12 +760,8 @@ video {
   margin-right: 1rem;
 }
 
-.ml-1 {
-  margin-left: 0.25rem;
-}
-
-.mr-6 {
-  margin-right: 1.5rem;
+.mr-8 {
+  margin-right: 2rem;
 }
 
 .mb-4 {
@@ -836,10 +836,6 @@ video {
   margin-top: 0.5rem;
 }
 
-.mr-8 {
-  margin-right: 2rem;
-}
-
 .block {
   display: block;
 }
@@ -888,8 +884,12 @@ video {
   height: 50vh;
 }
 
-.h-10 {
-  height: 2.5rem;
+.h-24 {
+  height: 6rem;
+}
+
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-screen {
@@ -940,24 +940,12 @@ video {
   height: 2rem;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
 .h-60 {
   height: 15rem;
 }
 
 .h-\[50vw\] {
   height: 50vw;
-}
-
-.h-7 {
-  height: 1.75rem;
-}
-
-.h-9 {
-  height: 2.25rem;
 }
 
 .max-h-full {
@@ -980,8 +968,8 @@ video {
   width: 4rem;
 }
 
-.w-10 {
-  width: 2.5rem;
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-\[1\.5vw\] {
@@ -1045,10 +1033,6 @@ video {
   width: fit-content;
 }
 
-.w-7 {
-  width: 1.75rem;
-}
-
 .max-w-sm {
   max-width: 24rem;
 }
@@ -1107,9 +1091,9 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.scale-150 {
-  --tw-scale-x: 1.5;
-  --tw-scale-y: 1.5;
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1119,9 +1103,9 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.scale-100 {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
+.scale-150 {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1425,16 +1409,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .pt-44 {
   padding-top: 11rem;
 }
@@ -1564,6 +1538,11 @@ video {
 .\!text-sm {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
+}
+
+.\!text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
 }
 
 .font-light {
@@ -1978,9 +1957,11 @@ header {
 
 .card-zoom-text {
   position: absolute;
-  --tw-scale-x: 1.5;
-  --tw-scale-y: 1.5;
+  margin: 1.5rem;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  text-align: center;
   font-family: Milligram, sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2008,8 +1989,8 @@ header {
 }
 
 .card-zoom:hover .card-zoom-text {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   opacity: 0;
 }
@@ -2323,6 +2304,10 @@ header {
     display: flex;
   }
 
+  .md\:h-10 {
+    height: 2.5rem;
+  }
+
   .md\:h-\[33\.333vw\] {
     height: 33.333vw;
   }
@@ -2339,12 +2324,12 @@ header {
     height: 50%;
   }
 
-  .md\:h-10 {
-    height: 2.5rem;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-10 {
+    width: 2.5rem;
   }
 
   .md\:w-\[33\.333vw\] {
@@ -2369,10 +2354,6 @@ header {
 
   .md\:w-\[80vw\] {
     width: 80vw;
-  }
-
-  .md\:w-10 {
-    width: 2.5rem;
   }
 
   .md\:basis-\[25\%\] {
@@ -2818,25 +2799,11 @@ header {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
-}
 
-.\[\&\:first-child\]\:h-6:first-child {
-  height: 1.5rem;
-}
-
-.\[\&\>img\]\:my-6>img {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.\[\&\>img\]\:my-7>img {
-  margin-top: 1.75rem;
-  margin-bottom: 1.75rem;
-}
-
-.\[\&\>img\]\:my-8>img {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  .\32xl\:\!text-4xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+  }
 }
 
 .\[\&\>img\]\:mx-8>img {
@@ -2844,16 +2811,9 @@ header {
   margin-right: 2rem;
 }
 
-.\[\&\>img\]\:h-6>img {
-  height: 1.5rem;
-}
-
-.\[\&\>img\]\:h-7>img {
-  height: 1.75rem;
-}
-
-.\[\&\>img\]\:h-8>img {
-  height: 2rem;
+.\[\&\>img\]\:my-7>img {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
 }
 
 .\[\&\>img\]\:h-10>img {
@@ -2864,34 +2824,15 @@ header {
   width: auto;
 }
 
-.\[\&\>img\]\:py-6>img {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 @media (min-width: 782px) {
-  .\[\&\>img\]\:md\:mx-8>img {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
   .\[\&\>img\]\:md\:mx-0>img {
     margin-left: 0px;
     margin-right: 0px;
   }
 
-  .\[\&\>img\]\:md\:my-8>img {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
   .\[\&\>img\]\:md\:my-0>img {
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-
-  .\[\&\>img\]\:md\:h-8>img {
-    height: 2rem;
   }
 
   .\[\&\>img\]\:md\:h-auto>img {

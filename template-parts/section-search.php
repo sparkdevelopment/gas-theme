@@ -21,7 +21,7 @@
 
 <div id="search-results-template" class="hidden">
 	<div class="flex flex-col items-center justify-center w-full lg:pt-6">
-		<div id="search-results-list" class="lg:mt-8 text-white list-none flex flex-row flex-wrap justify-center space-x-0 space-y-0 lg:w-3/4 mx-auto"></div>
+		<div id="search-results-list" class="lg:mt-8 text-white list-none flex flex-row flex-wrap justify-center space-x-0 space-y-0 mx-auto"></div>
 	</div>
 </div>
 

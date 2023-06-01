@@ -17,17 +17,20 @@ const searchResultsTemplateError = document.querySelector('#search-results-templ
 const searchResultsTemplateLoading = document.querySelector('#search-results-template-loading');
 const searchResultsTemplateNoInput = document.querySelector('#search-results-template-no-input');
 
-// Handle search form submit
-searchForm.addEventListener('submit', function (e) {
-
-    // Prevent form from submitting
-    e.preventDefault();
+// Monitor the search input for changes
+searchInput.addEventListener('input', function (e) {
 
     // Get the search term
-    const searchTerm = searchInput.value;
+    const searchTerm = e.target.value;
 
     // If there is no search term, show the no input template
     if (!searchTerm) {
+        searchResults.innerHTML = searchResultsTemplateNoInput.innerHTML;
+        return;
+    }
+
+    // If the string is 2 letters or less, show the no input template
+    if (searchTerm.length <= 2) {
         searchResults.innerHTML = searchResultsTemplateNoInput.innerHTML;
         return;
     }
@@ -36,7 +39,7 @@ searchForm.addEventListener('submit', function (e) {
     searchResults.innerHTML = searchResultsTemplateLoading.innerHTML;
 
     // Fetch the search results
-    fetch('/wp-json/wp/v2/product?search=' + searchTerm + '&_embed')
+    fetch('/wp-json/wp/v2/product?search=' + searchTerm + '&_embed&per_page=96')
         .then(function (response) {
             return response.json();
         })
@@ -52,9 +55,13 @@ searchForm.addEventListener('submit', function (e) {
             const searchResultsList = document.querySelector('#search-results-list');
             results.forEach(function (result) {
                 // Get the thumbnail url
-                const thubnailUrl = result._embedded['wp:featuredmedia']['0'].media_details.sizes.large.source_url || 'https://via.placeholder.com/150';
+                if (result._embedded && result._embedded['wp:featuredmedia'] && result._embedded['wp:featuredmedia']['0'] && result._embedded['wp:featuredmedia']['0'].media_details && result._embedded['wp:featuredmedia']['0'].media_details.sizes && result._embedded['wp:featuredmedia']['0'].media_details.sizes.large && result._embedded['wp:featuredmedia']['0'].media_details.sizes.large.source_url) {
+                    var thubnailUrl = result._embedded['wp:featuredmedia']['0'].media_details.sizes.large.source_url;
+                } else {
+                    var thubnailUrl = '';
+                }
                 const searchResultsListItem = document.createElement('li');
-            searchResultsListItem.innerHTML =  '<a href="' + result.link + '" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-[50vw] lg:w-[33.333vw] h-[50vw] lg:h-[33.333vw]"><div class="card-zoom"><div class="card-zoom-image" style="background-image: url(\'' + thubnailUrl + '\')"></div><h1 class="card-zoom-text !lg:text-2xl !text-sm">' + result.title.rendered + '</h1></div>';
+            searchResultsListItem.innerHTML =  '<a href="' + result.link + '" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-[50vw] lg:w-[33.333vw] h-[50vw] lg:h-[33.333vw]"><div class="card-zoom"><div class="card-zoom-image" style="background-image: url(\'' + thubnailUrl + '\')"></div><h1 class="card-zoom-text !text-2xl md:!text-2xl 2xl:!text-4xl">' + result.title.rendered + '</h1></div>';
                 searchResultsList.appendChild(searchResultsListItem);
             });
         })
