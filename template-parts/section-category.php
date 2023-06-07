@@ -12,7 +12,7 @@
             array(
                 'title' => 'Camera & Digital',
                 'class' => 'camera_digital',
-                'slug'  => 'camera-digital',
+                'slug'  => 'camera',
             ),
             array(
                 'title' => 'Production',
