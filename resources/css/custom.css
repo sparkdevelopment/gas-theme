@@ -136,7 +136,10 @@ header {
     opacity: 0;
 }
 
-.nav-hamburger {
+.nav-hamburger,
+.custom-logo-link,
+.nav-tel,
+#search-toggle {
     -webkit-transition: 0.5s -webkit-filter linear;
     -moz-transition: 0.5s -moz-filter linear;
     -moz-transition: 0.5s filter linear;
@@ -147,8 +150,10 @@ header {
 }
 
 .nav-hamburger.dark,
-.custom-logo-link.dark {
-    filter: brightness(0);
+.custom-logo-link.dark,
+.nav-tel.dark,
+#search-toggle.dark {
+    /* filter: brightness(0); */
 }
 
 .menu-slide {

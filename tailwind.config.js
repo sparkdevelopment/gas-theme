@@ -58,6 +58,7 @@ module.exports = {
         'lg:col-span-3',
         'lg:col-span-5',
         'm-auto',
+        'max-w-none',
         'mb-4',
         'mt-0',
         'mt-2',

@@ -5,6 +5,8 @@
 const fade_in_elements = document.querySelectorAll('.fade-in');
 const window_height = window.innerHeight;
 const nav_hamburger = document.querySelector('.nav-hamburger');
+const nav_tel = document.querySelector('.nav-tel');
+const search_toggle = document.querySelector('#search-toggle');
 window.lethargy = new Lethargy();
 
 // Check if element is visible
@@ -37,8 +39,12 @@ if (docSliderContainer) {
             const backgroundColor = getComputedStyle(document.querySelector('.docSlider-current')).backgroundColor;
             if (backgroundColor === 'rgb(255, 255, 255)') {
                 nav_hamburger.classList.add('dark');
+                nav_tel.classList.add('dark');
+                search_toggle.classList.add('dark');
             } else {
                 nav_hamburger.classList.remove('dark');
+                nav_tel.classList.remove('dark');
+                search_toggle.classList.remove('dark');
             }
         }
     });

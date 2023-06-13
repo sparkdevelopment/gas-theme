@@ -247,7 +247,7 @@ add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
 // Add logo classes
 function adjust_logo_classes( $html ) {
-	$html = str_replace('custom-logo-link', '[&>img]:mx-8 [&>img]:md:mx-0 [&>img]:my-7 [&>img]:md:my-0 [&>img]:h-10 [&>img]:md:h-auto [&>img]:w-auto', $html );
+	$html = str_replace('custom-logo-link', 'block [&>img]:mx-8 [&>img]:md:mx-0 [&>img]:my-7 [&>img]:md:my-0 [&>img]:h-10 [&>img]:md:h-auto [&>img]:w-auto', $html );
 	return $html;
 }
 add_filter('get_custom_logo', 'adjust_logo_classes', 10);

@@ -1,7 +1,7 @@
 <?php $full_height = $args['full-height'] ?? true; ?>
 
 <section id="section-category" class="<?php echo $full_height ? 'h-screen ' : ''; ?>!overflow-x-hidden bg-black flex flex-col justify-center">
-    <div class="flex flex-col lg:flex-row justify-center items-center lg:h-2/3 h-full self-center w-full pt-24 lg:pt-0">
+    <div class="relative flex flex-col lg:flex-row justify-center items-center lg:h-2/3 h-full self-center w-full pt-24 lg:pt-0">
         <?php
         $categories = array(
             array(
@@ -35,4 +35,6 @@
             </div>
         <?php endforeach; ?>
     </div>
+    <div class="text-center mr-8 text-white text-3xl">Bringing order to the chaos of shoots</div>
+    <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="Arrow pointing down" class="absolute bottom-0 w-full h-[7vh] mx-auto mt-[2vh] mb-[1vh] bouncing-item ![animation-delay:3.5s]">
 </section>
