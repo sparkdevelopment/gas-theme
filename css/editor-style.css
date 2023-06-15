@@ -363,6 +363,26 @@
   margin-top: -7vh
 }
 
+.ml-\[3vw\] {
+  margin-left: 3vw
+}
+
+.-ml-\[3vw\] {
+  margin-left: -3vw
+}
+
+.-ml-\[2vw\] {
+  margin-left: -2vw
+}
+
+.-ml-\[4vw\] {
+  margin-left: -4vw
+}
+
+.-ml-\[6vw\] {
+  margin-left: -6vw
+}
+
 .block {
   display: block
 }
@@ -1975,6 +1995,10 @@ body {
 
   .lg\:mr-4 {
     margin-right: 1rem
+  }
+
+  .lg\:-ml-\[2vw\] {
+    margin-left: -2vw
   }
 
   .lg\:block {
