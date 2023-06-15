@@ -23,7 +23,7 @@
             element.classList.remove("fade-in--visible");
           }
         });
-        if (index == 6) {
+        if (index == 4) {
           document.querySelector("header").classList.add("header--scrolled");
         } else {
           document.querySelector("header").classList.remove("header--scrolled");
@@ -37,6 +37,13 @@
           nav_hamburger.classList.remove("dark");
           nav_tel.classList.remove("dark");
           search_toggle.classList.remove("dark");
+        }
+        if (index == 3) {
+          document.querySelector("header").classList.add("bg-[rgba(0.5,0.5,0.5,0.5)]");
+          document.querySelector("header").classList.remove("bg-[rgba(0.5,0.5,0.5,0.0)]");
+        } else {
+          document.querySelector("header").classList.add("bg-[rgba(0.5,0.5,0.5,0.0)]");
+          document.querySelector("header").classList.remove("bg-[rgba(0.5,0.5,0.5,0.5)]");
         }
       }
     });

@@ -149,13 +149,6 @@ header {
     filter: brightness(1);
 }
 
-.nav-hamburger.dark,
-.custom-logo-link.dark,
-.nav-tel.dark,
-#search-toggle.dark {
-    /* filter: brightness(0); */
-}
-
 .menu-slide {
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
@@ -212,4 +205,13 @@ header {
 
 .newsletter-subscribe-form .wpcf7-response-output {
     display: none;
+}
+
+@media screen and (min-width: 960px) {
+    .nav-hamburger.dark,
+    .custom-logo-link.dark,
+    .nav-tel.dark,
+    #search-toggle.dark {
+        filter: brightness(0);
+    }
 }
