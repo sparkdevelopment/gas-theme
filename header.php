@@ -50,9 +50,6 @@
 							<a href="#" aria-label="Toggle search" id="search-toggle">
 								<img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-8 h-8 js-search-icon">
 							</a>
-							<div class="opacity-0 fixed top-0 left-0 backdrop-blur-sm w-full h-full z-50 transition-opacity pointer-events-none bg-[rgba(0,0,0,0.75)]" id="search-form">
-								<?php get_template_part('template-parts/section', 'search'); ?>
-							</div>
 
 							<?php // Menu ?>
 							<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle" class="z-20">
@@ -90,6 +87,9 @@
 				</div>
 			</div>
 		</header>
+		<div class="opacity-0 fixed top-0 left-0 backdrop-blur-sm w-full h-full z-50 transition-opacity pointer-events-none bg-[rgba(0,0,0,0.75)]" id="search-form">
+			<?php get_template_part('template-parts/section', 'search'); ?>
+		</div>
 		<?php } ?>
 
 		<div id="content" class="site-content flex-grow">
