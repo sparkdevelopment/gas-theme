@@ -83,3 +83,6 @@ $product_subcategories = get_terms(
 		?>
 	</div>
 </div>
+<div class="bg-black text-white text-center py-8">
+	<?php get_template_part( 'template-parts/section', 'category', array( 'full-height' => false ) ); ?>
+</div>

@@ -48,7 +48,6 @@
 		</div>
 	</div>
 </article>
-<div class="bg-black text-white text-center">
-	<h2 class="py-20 text-5xl font-light">Back to the categories</h2>
+<div class="bg-black text-white text-center py-8">
 	<?php get_template_part( 'template-parts/section', 'category', array( 'full-height' => false ) ); ?>
 </div>

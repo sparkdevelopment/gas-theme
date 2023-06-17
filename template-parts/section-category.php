@@ -35,6 +35,8 @@
             </div>
         <?php endforeach; ?>
     </div>
+    <?php if(is_home()): ?>
     <div class="text-center mr-8 text-white text-3xl hidden lg:block">Bringing order to the chaos of shoots</div>
     <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="Arrow pointing down" class="hidden lg:block absolute bottom-0 w-full h-[7vh] mx-auto mt-[2vh] mb-[1vh] bouncing-item ![animation-delay:3.5s]">
+    <?php endif; ?>
 </section>
