@@ -43,13 +43,4 @@
       searchResults.innerHTML = searchResultsTemplateError.innerHTML;
     });
   });
-  var searchResultsClose = document.querySelector("#search-results-close");
-  searchResultsClose.addEventListener("click", function(e) {
-    e.preventDefault();
-    if (document.referrer) {
-      window.location.href = document.referrer;
-    } else {
-      window.location.href = "/";
-    }
-  });
 })();

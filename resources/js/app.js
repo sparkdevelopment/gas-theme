@@ -54,6 +54,55 @@ if (menu_toggle) {
     });
 }
 
+// Handle search toggle click
+const search_form = document.querySelector('#search-form');
+const search_toggle = document.querySelector('#search-toggle');
+if (search_toggle) {
+    // If click or '/' key is pressed, toggle the search form
+    document.addEventListener('keydown', function (e) {
+        // Do not close the form if / is pressed
+        if (e.key === '/' && document.querySelector('#search-form').classList.contains('opacity-0')) {
+            openSearch(e);
+        }
+    });
+    search_toggle.addEventListener('click', function (e) {
+        openSearch(e);
+    });
+}
+
+openSearch = function (e) {
+    e.preventDefault();
+    search_form.classList.toggle('opacity-0');
+    search_form.classList.toggle('pointer-events-none');
+    // Focus search field
+    if (search_form.classList.contains('opacity-0')) {
+        document.querySelector('#search-input').blur();
+    } else {
+        document.querySelector('#search-input').focus();
+    }
+}
+
+// Handle search close click
+const search_close = document.querySelector('#search-results-close');
+if (search_close) {
+    // If click or Escape key is pressed, toggle the search form
+    search_close.addEventListener('click', function (e) {
+        closeSearch(e);
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && ! document.querySelector('#search-form').classList.contains('opacity-0')) {
+            closeSearch(e);
+        }
+    });
+}
+
+closeSearch = function (e) {
+    e.preventDefault();
+    search_form.classList.toggle('opacity-0');
+    search_form.classList.toggle('pointer-events-none');
+}
+
+
 // Cookie bar
 // Check if the cookie has been set
 function getCookie(name) {

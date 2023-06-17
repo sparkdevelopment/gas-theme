@@ -43,10 +43,18 @@
 						</div>
 
 						<div class="mr-8 xl:mr-12 text-white flex gap-10 items-center text-3xl">
+							<?php // Telephone number ?>
 							<a class="nav-tel hidden md:block" href="tel:020 3397 2757">020 3397 2757</tel>
+
+							<?php // Search ?>
 							<a href="#" aria-label="Toggle search" id="search-toggle">
-								<img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-8 h-8">
+								<img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-8 h-8 js-search-icon">
 							</a>
+							<div class="opacity-0 fixed top-0 left-0 backdrop-blur-sm w-full h-full z-50 transition-opacity pointer-events-none bg-[rgba(0,0,0,0.75)]" id="search-form">
+								<?php get_template_part('template-parts/section', 'search'); ?>
+							</div>
+
+							<?php // Menu ?>
 							<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle" class="z-20">
 								<svg viewBox="0 0 18 18" class="inline-block w-6 md:w-8 h-6 md:h-8 nav-hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									<g stroke="none" stroke-width="2" fill="currentColor" fill-rule="evenodd">
@@ -76,6 +84,7 @@
 								)
 							);
 							?>
+
 						</div>
 					</div>
 				</div>

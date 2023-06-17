@@ -71,16 +71,3 @@ searchInput.addEventListener('input', function (e) {
             searchResults.innerHTML = searchResultsTemplateError.innerHTML;
         });
 });
-
-// Close the search results when the X button is pressed
-const searchResultsClose = document.querySelector('#search-results-close');
-searchResultsClose.addEventListener('click', function (e) {
-    e.preventDefault();
-    // If there is a referrer, return to it
-    if (document.referrer) {
-        window.location.href = document.referrer;
-    } else {
-        // Otherwise, go to the homepage
-        window.location.href = '/';
-    }
-});

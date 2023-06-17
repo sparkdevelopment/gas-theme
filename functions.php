@@ -65,10 +65,8 @@ function tailpress_enqueue_scripts() {
 		wp_enqueue_script('gas-product-single', tailpress_asset('js/productSingle.js'), array('jquery'), $theme->get('Version'), true);
 	}
 
-	// Load search JS if search page
-	if ( is_search() || is_page_template( 'page-templates/search.php' ) ) {
-		wp_enqueue_script('gas-search', tailpress_asset('js/search.js'), array('jquery'), $theme->get('Version'), true);
-	}
+	// Load search on all pages
+	wp_enqueue_script('gas-search', tailpress_asset('js/search.js'), array('jquery'), $theme->get('Version'), true);
 
     // Enqueue jQuery from Google CDN
     wp_deregister_script('jquery');

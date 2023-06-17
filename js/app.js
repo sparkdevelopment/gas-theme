@@ -45,6 +45,44 @@
       nav_hamburger.classList.toggle("hidden");
     });
   }
+  var search_form = document.querySelector("#search-form");
+  var search_toggle = document.querySelector("#search-toggle");
+  if (search_toggle) {
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "/" && document.querySelector("#search-form").classList.contains("opacity-0")) {
+        openSearch(e);
+      }
+    });
+    search_toggle.addEventListener("click", function(e) {
+      openSearch(e);
+    });
+  }
+  openSearch = function(e) {
+    e.preventDefault();
+    search_form.classList.toggle("opacity-0");
+    search_form.classList.toggle("pointer-events-none");
+    if (search_form.classList.contains("opacity-0")) {
+      document.querySelector("#search-input").blur();
+    } else {
+      document.querySelector("#search-input").focus();
+    }
+  };
+  var search_close = document.querySelector("#search-results-close");
+  if (search_close) {
+    search_close.addEventListener("click", function(e) {
+      closeSearch(e);
+    });
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && !document.querySelector("#search-form").classList.contains("opacity-0")) {
+        closeSearch(e);
+      }
+    });
+  }
+  closeSearch = function(e) {
+    e.preventDefault();
+    search_form.classList.toggle("opacity-0");
+    search_form.classList.toggle("pointer-events-none");
+  };
   function getCookie(name) {
     const value = "; " + document.cookie;
     const parts = value.split("; " + name + "=");
