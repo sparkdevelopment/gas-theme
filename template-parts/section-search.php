@@ -1,4 +1,4 @@
-<form class="w-full h-1/3 flex p-12 lg:p-24 bg-black z-10">
+<form class="w-full h-1/4 lg:h-1/3 flex p-12 lg:p-24 bg-black z-10">
 	<div class="text-white z-10 absolute right-3 lg:right-6 top-3 lg:top-6">
 		<div id="search-results-close" class="cursor-pointer">
 			<svg class="w-6 lg:w-8 h-6 lg:h-8 z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -15,7 +15,7 @@
 		<img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-8 h-8">
 	</button>
 </form>
-<div id="search-results" class="h-2/3 overflow-y-scroll"></div>
+<div id="search-results" class="h-3/4 lg:h-2/3 overflow-y-scroll"></div>
 
 <div id="search-results-template" class="hidden">
 	<div class="flex flex-col items-center justify-center w-full">
