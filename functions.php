@@ -160,13 +160,15 @@ function build_breadcrumbs() {
 	$breadcrumbs = array();
 
 	if ( is_product() ) {
+		$categories = get_the_terms( get_the_ID(), 'product_category' );
 		$breadcrumbs[] = array(
 			'title' => get_the_title(),
 			'link'  => get_the_permalink(),
 		);
+	} else {
+		$categories[0] = get_term( get_queried_object()->term_id, 'product_category' );
 	}
 
-	$categories = get_the_terms( get_the_ID(), 'product_category' );
 	if ( ! empty( $categories ) ) {
 		$current_category = $categories[0];
 
