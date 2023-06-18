@@ -17,6 +17,11 @@ const searchResultsTemplateError = document.querySelector('#search-results-templ
 const searchResultsTemplateLoading = document.querySelector('#search-results-template-loading');
 const searchResultsTemplateNoInput = document.querySelector('#search-results-template-no-input');
 
+// Prevent form submission on Enter key
+searchForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+});
+
 // Monitor the search input for changes
 searchInput.addEventListener('input', function (e) {
 

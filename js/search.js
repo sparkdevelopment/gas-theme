@@ -8,6 +8,9 @@
   var searchResultsTemplateError = document.querySelector("#search-results-template-error");
   var searchResultsTemplateLoading = document.querySelector("#search-results-template-loading");
   var searchResultsTemplateNoInput = document.querySelector("#search-results-template-no-input");
+  searchForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+  });
   searchInput.addEventListener("input", function(e) {
     const searchTerm = e.target.value;
     if (!searchTerm) {
