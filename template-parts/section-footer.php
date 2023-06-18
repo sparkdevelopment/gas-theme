@@ -29,7 +29,7 @@
 		</div>
 		<div class="col-span-6 md:col-span-2">
 			<ul class="sm:my-4 my-2">
-				<li><a href="/contact-info/">Contact & Info</a></li>
+				<li><a href="/info-contact/">Contact & Info</a></li>
 				<li><a href="/careers/">Careers</a></li>
 				<li><a href="/privacy-policy/">Privacy Policy</a></li>
 				<li><a href="/cookie-policy/">Cookie Policy</a></li>
