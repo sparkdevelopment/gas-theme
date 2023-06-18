@@ -100,6 +100,9 @@ closeSearch = function (e) {
     e.preventDefault();
     search_form.classList.toggle('opacity-0');
     search_form.classList.toggle('pointer-events-none');
+    // Reset search form and results
+    document.querySelector('#search-input').value = '';
+    document.querySelector('#search-results-list').innerHTML = '';
 }
 
 

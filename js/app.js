@@ -82,6 +82,8 @@
     e.preventDefault();
     search_form.classList.toggle("opacity-0");
     search_form.classList.toggle("pointer-events-none");
+    document.querySelector("#search-input").value = "";
+    document.querySelector("#search-results-list").innerHTML = "";
   };
   function getCookie(name) {
     const value = "; " + document.cookie;
