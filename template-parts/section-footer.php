@@ -15,7 +15,7 @@
 		</div>
 		<div class="flex flex-col col-span-5 md:col-span-2">
 			<p class="sm:my-4 my-2">
-				<a href="mailto:office@gashire.co.uk">office@gashire.co.uk</a><br>
+				<a href="mailto:office@gashire.co.uk?subject=Enquiry from website">office@gashire.co.uk</a><br>
 				<a href="tel:+442033972757">+44 (0)20 3397 2757</a>
 			</p>
 			<address class="sm:mb-6 sm:mt-0 my-2 not-italic">

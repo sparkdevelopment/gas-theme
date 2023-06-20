@@ -5,7 +5,7 @@
                 <h1 class="text-5xl my-4 font-bold"><?php the_title(); ?></h1>
                 <div class="text-2xl">
                     <a href="tel:020 3397 2757" class="block font-light mt-8">T: 020 3397 2757</a>
-                    <a href="mailto:office@gashire.co.uk" class="block font-light mb-8">E: office@gashire.co.uk</a>
+                    <a href="mailto:office@gashire.co.uk?subject=Enquiry from website" class="block font-light mb-8">E: office@gashire.co.uk</a>
                 </div>
                 <div class="my-8">
                     <a href="#" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Price List</a>
