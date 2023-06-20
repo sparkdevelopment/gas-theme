@@ -8,9 +8,9 @@
                     <a href="mailto:office@gashire.co.uk?subject=Enquiry from website" class="block font-light mb-8">E: office@gashire.co.uk</a>
                 </div>
                 <div class="my-8">
-                    <a href="#" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Price List</a>
-                    <a href="#" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Account Form</a>
-                    <a href="#" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">T&Cs</a>
+                    <a target="_blank" href="<?php echo get_theme_file_uri(); ?>/resources/misc/GAS Price List_MAY11_v1.pdf" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Price List</a>
+                    <a target="_blank" href="<?php echo get_theme_file_uri(); ?>/resources/misc/GAS-ACCOUNT APPLICATION form.pdf" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Account Form</a>
+                    <a target="_blank" href="<?php echo get_theme_file_uri(); ?>/resources/misc/GAS t&cs.pdf" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">T&Cs</a>
                 </div>
                 <div class="text-lg space-y-4"><?php the_content(); ?></div>
             </div>

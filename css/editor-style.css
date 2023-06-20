@@ -887,6 +887,14 @@
   background-position: bottom
 }
 
+.bg-top {
+  background-position: top
+}
+
+.bg-left-top {
+  background-position: left top
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover
