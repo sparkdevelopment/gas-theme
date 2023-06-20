@@ -15,7 +15,7 @@ $product_subcategories = get_terms(
 ?>
 <div class="bg-black text-white flex flex-col justify-between min-h-screen">
 	<?php if ( ! $has_parent ) { ?>
-	<div class="flex items-center bg-cover bg-center lg:h-[85vh] h-[50vh] gas-mask [-webkit-mask-size:175%] sm:[-webkit-mask-size:125%] md:[-webkit-mask-size:150%] lg:[-webkit-mask-size:175%] [-webkit-mask-position:65%_100%]" style="background-image: url('<?php echo $category_header_image; ?>');">
+	<div class="flex items-center bg-cover bg-bottom lg:h-[85vh] h-[50vh] gas-mask [-webkit-mask-size:175%] sm:[-webkit-mask-size:125%] md:[-webkit-mask-size:150%] lg:[-webkit-mask-size:175%] [-webkit-mask-position:65%_100%]" style="background-image: url('<?php echo $category_header_image; ?>');">
 		<h1 class="mx-auto text-2xl lg:text-7xl font-light"><?php echo $category_title; ?></h1>
 	</div>
 	<img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" alt="Arrow pointing down" class="h-[7vh] mx-auto mt-[2vh] mb-[10vh] bouncing-item ![animation-delay:3.5s]">
