@@ -542,6 +542,10 @@
   width: 12rem
 }
 
+.w-1\/2 {
+  width: 50%
+}
+
 .min-w-fit {
   min-width: -moz-fit-content;
   min-width: fit-content
@@ -678,6 +682,10 @@
 
 .flex-wrap {
   flex-wrap: wrap
+}
+
+.content-start {
+  align-content: flex-start
 }
 
 .items-center {
@@ -1088,6 +1096,10 @@
 
 .text-right {
   text-align: right
+}
+
+.align-top {
+  vertical-align: top
 }
 
 .align-middle {
