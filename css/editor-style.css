@@ -453,6 +453,10 @@
   height: 75%
 }
 
+.h-\[15vh\] {
+  height: 15vh
+}
+
 .max-h-full {
   max-height: 100%
 }
