@@ -1,6 +1,6 @@
 <section id="section-brands-and-instagram" class="h-screen bg-black">
 
-    <div class="h-1/3 relative">
+    <div class="h-1/2 lg:1/3 relative">
         <div class="owl-carousel h-full !flex flex-col justify-center item">
             <!-- Carousel items -->
             <?php
@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="h-1/3 relative">
+    <div class="h-1/2 lg:h-1/3 relative">
         <!-- <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 h-full items-center pt-12 px-4"> -->
         <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 h-full items-center px-[4vw]">
             <!-- Instagram posts -->
