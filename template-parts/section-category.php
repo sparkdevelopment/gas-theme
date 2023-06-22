@@ -1,7 +1,7 @@
 <?php $full_height = $args['full-height'] ?? true; ?>
 
 <section id="section-category" class="<?php echo $full_height ? 'h-screen ' : ''; ?>!overflow-x-hidden bg-black flex flex-col justify-center">
-    <div class="relative flex flex-col lg:flex-row justify-center items-center lg:h-2/3 h-full self-center w-full md:pt-24 lg:pt-0">
+    <div class="relative flex flex-col lg:flex-row justify-center items-center lg:h-2/3 h-full self-center w-full pt-24 lg:pt-0">
         <?php
         $categories = array(
             array(

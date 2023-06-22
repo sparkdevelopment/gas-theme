@@ -27,7 +27,7 @@
 					<div class="flex justify-between items-center">
 						<div class="h-24 js-header-logo xl:ml-4 sm:w-auto max-w-[75%] md:max-w-[35%] xl:max-w-[10%]">
 							<?php if ( has_custom_logo() ) { ?>
-								<div class="h-full items-center md:flex hidden">
+								<div class="md:w-60 h-full items-center md:flex hidden">
 									<?php the_custom_logo(); ?>
 								</div>
 								<div class="h-full md:hidden flex">

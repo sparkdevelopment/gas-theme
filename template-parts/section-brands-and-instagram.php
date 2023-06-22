@@ -1,6 +1,6 @@
 <section id="section-brands-and-instagram" class="h-screen bg-black">
 
-    <div class="h-1/2 lg:1/3 relative">
+    <div class="h-1/2 lg:h-1/3 relative">
         <div class="owl-carousel h-full !flex flex-col justify-center item">
             <!-- Carousel items -->
             <?php
