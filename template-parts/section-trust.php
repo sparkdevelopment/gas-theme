@@ -1,5 +1,5 @@
 <section id="section-trust" class="h-screen overflow-hidden bg-black flex flex-col text-white text-center font-theme-heading justify-center">
-    <div class="sm:w-[75vw] md:w-[80vw] lg:w-[55vw] xl:w-[57.5vw] mx-auto font-light pt-[115px]">
+    <div class="sm:w-[75vw] md:w-[80vw] lg:w-[55vw] xl:w-[57.5vw] mx-auto font-light">
         <h2 class="fade-in text-3xl sm:text-3xl md:text-3xl lg:text-3xl 2xl:text-5xl sm:p-3 md:p-4 p-2 w-[75%] sm:w-[75%] mx-auto">Black & White with a Splash of Colour</h2>
         <p class="fade-in text-[4vmin] sm:text-xl md:text-xl lg:text-xl 2xl:text-2xl p-2">GAS was founded in 2011 with the goal of making photographic shoots run smoothly.</p>
         <p class="fade-in text-[4vmin] sm:text-xl md:text-xl lg:text-xl 2xl:text-2xl p-2">It all began when a high-end shoot in LA was brought to a standstill due to chaos and no broom!</p>
