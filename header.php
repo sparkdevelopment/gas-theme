@@ -23,9 +23,9 @@
 		<header class="fixed top-0 left-0 z-40 w-full transition-all duration-500 bg-[rgba(0.5,0.5,0.5,0.0)] bg-blend-color">
 
 			<div class="mx-0 w-full">
-				<div class="xl:py-4 w-full">
+				<div class="w-full">
 					<div class="flex justify-between items-center">
-						<div class="h-24 js-header-logo xl:ml-4 sm:w-auto max-w-[75%] md:max-w-[35%] xl:max-w-[10%]">
+						<div class="h-24 js-header-logo sm:w-auto max-w-[75%] md:max-w-[35%] xl:max-w-[10%]">
 							<?php if ( has_custom_logo() ) { ?>
 								<div class="md:w-60 h-full items-center md:flex hidden">
 									<?php the_custom_logo(); ?>
@@ -45,7 +45,7 @@
 							<?php } ?>
 						</div>
 
-						<div class="mr-4 md:mr-8 xl:mr-12 text-white flex flex-col-reverse md:flex-row items-end flex-wrap gap-4 md:gap-10 text-3xl">
+						<div class="mr-4 md:mr-8 text-white flex flex-col-reverse md:flex-row items-end flex-wrap gap-4 md:gap-10 text-3xl">
 							<?php // Telephone number ?>
 							<a class="nav-tel block text-lg md:text-3xl" href="tel:020 3397 2757">020 3397 2757</a>
 
