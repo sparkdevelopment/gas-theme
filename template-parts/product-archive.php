@@ -26,7 +26,7 @@ $product_subcategories = get_terms(
 		</div>
 	<?php } ?>
 	<?php if ( $product_subcategories ) { ?>
-		<div class="flex flex-col flex-wrap lg:flex-row justify-center lg:space-x-10 lg:space-y-0 space-y-10 px-10 lg:px-0 w-full mx-auto">
+		<div class="flex flex-col flex-wrap md:flex-row justify-center md:space-x-10 md:space-y-0 space-y-10 px-10 md:px-0 w-full mx-auto">
 		<?php foreach ( $product_subcategories as $product_subcategory ) { ?>
 			<a href="<?php echo get_term_link( $product_subcategory ); ?>" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-full aspect-square md:w-[25vw] md:h-[25vw]">
 				<div class="card-zoom">
@@ -54,7 +54,7 @@ $product_subcategories = get_terms(
 		);
 
 		if ( $products->have_posts() ) {
-			echo '<div class="flex flex-col flex-wrap lg:flex-row justify-center lg:space-x-10 lg:space-y-0 space-y-10 px-10 lg:px-0 w-full mx-auto">';
+			echo '<div class="flex flex-col flex-wrap md:flex-row justify-center md:space-x-10 md:space-y-0 space-y-10 px-10 md:px-0 w-full mx-auto">';
 			while ( $products->have_posts() ) {
 				$products->the_post();
 				?>

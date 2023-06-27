@@ -25,7 +25,11 @@
         <?php foreach ($categories as $category) : ?>
             <?php $category_link = get_term_link($category['slug'], 'product_category'); ?>
             <?php if (is_wp_error($category_link)) $category_link = '#'; ?>
+            <?php if(is_front_page()): ?>
             <div class="lg:w-[33.33333vw] w-full lg:h-[33.33333vw] h-1/2">
+            <?php else: ?>
+            <div class="lg:w-[25vw] w-full lg:h-[25vw] h-1/2">
+            <?php endif; ?>
                 <a href="<?php echo esc_attr($category_link); ?>" class="h-full mx-auto 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
                     <div class="card-zoom min-h-[150px]">
                         <div class="card-zoom-image bg-<?php echo $category['class']; ?>"></div>
