@@ -30,9 +30,9 @@ if (docSliderContainer) {
                 }
             });
             if (index == 4) {
-                document.querySelector('header').classList.add('header--scrolled');
+                // document.querySelector('header').classList.add('header--scrolled');
             } else {
-                document.querySelector('header').classList.remove('header--scrolled');
+                // document.querySelector('header').classList.remove('header--scrolled');
             }
 
             // Change header elements color
@@ -70,6 +70,7 @@ $(owl).owlCarousel({
     autoplaySpeed: 5000,
     autoplayHoverPause: true,
     autoHeight: true,
+    dots: false,
     items: 4,
     stageClass: "flex items-center",
     slideTransition: 'linear',

@@ -207,6 +207,15 @@ header {
     display: none;
 }
 
+.gasstudios-nav > a {
+    background-image: url('../resources/img/gas-studios-logo.png');
+    color: transparent;
+    background-size: contain;
+    backdrop-filter: invert(1);
+    display: block;
+    background-repeat: no-repeat;
+}
+
 @media screen and (min-width: 960px) {
     .nav-hamburger.dark,
     .custom-logo-link.dark,

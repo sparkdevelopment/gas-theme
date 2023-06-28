@@ -11,9 +11,7 @@
     observer = new IntersectionObserver(function(entries, observer2) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting && entry.intersectionRatio < 1) {
-          header.classList.add("header--scrolled");
         } else {
-          header.classList.remove("header--scrolled");
         }
       });
     }, options);

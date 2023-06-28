@@ -31,7 +31,9 @@
 									<?php the_custom_logo(); ?>
 								</div>
 								<div class="h-full md:hidden flex">
-									<img src="<?php echo get_template_directory_uri(); ?>/resources/img/mobile-logo.svg">
+									<a href="<?php echo get_bloginfo( 'url' ); ?>">
+										<img src="<?php echo get_template_directory_uri(); ?>/resources/img/mobile-logo.svg">
+									</a>
 								</div>
 							<?php } else { ?>
 								<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">

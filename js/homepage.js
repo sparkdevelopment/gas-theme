@@ -24,9 +24,7 @@
           }
         });
         if (index == 4) {
-          document.querySelector("header").classList.add("header--scrolled");
         } else {
-          document.querySelector("header").classList.remove("header--scrolled");
         }
         const backgroundColor = getComputedStyle(document.querySelector(".docSlider-current")).backgroundColor;
         if (backgroundColor === "rgb(255, 255, 255)") {
@@ -57,6 +55,7 @@
     autoplaySpeed: 5e3,
     autoplayHoverPause: true,
     autoHeight: true,
+    dots: false,
     items: 4,
     stageClass: "flex items-center",
     slideTransition: "linear",

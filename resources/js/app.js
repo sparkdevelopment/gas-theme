@@ -13,9 +13,9 @@ if (header) {
     var observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting && entry.intersectionRatio < 1) {
-                header.classList.add('header--scrolled');
+                // header.classList.add('header--scrolled');
             } else {
-                header.classList.remove('header--scrolled');
+                // header.classList.remove('header--scrolled');
             }
         });
     }, options);
