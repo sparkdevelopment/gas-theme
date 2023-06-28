@@ -155,6 +155,9 @@ require_once get_template_directory() . '/inc/product-post-type.php';
 // Include custom widget areas
 require_once get_template_directory() . '/inc/custom-widget-areas.php';
 
+// Include site options page
+require_once get_template_directory() . '/inc/site-options.php';
+
 // Build breadcrumbs for single product and product category pages showing parent and child categories, iterating over all levels
 function build_breadcrumbs() {
 	$breadcrumbs = array();
@@ -228,7 +231,9 @@ function is_product_category() {
 }
 
 // Register images sizes
-add_image_size( 'product', 0, 800, true );
+add_image_size( 'product', 0, 800, true );	
+add_image_size( 'product-large', 900, 0, true );
+add_image_size( 'product-square', 450, 450, true );
 
 // Disable <p> tags around Contact Form 7 inputs
 add_filter( 'wpcf7_autop_or_not', '__return_false' );

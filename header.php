@@ -32,7 +32,7 @@
 								</div>
 								<div class="h-full md:hidden flex">
 									<a href="<?php echo get_bloginfo( 'url' ); ?>">
-										<img src="<?php echo get_template_directory_uri(); ?>/resources/img/mobile-logo.svg">
+										<img class="h-full" src="<?php echo get_template_directory_uri(); ?>/resources/img/mobile-logo.svg">
 									</a>
 								</div>
 							<?php } else { ?>
