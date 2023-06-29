@@ -38,7 +38,7 @@
           var thubnailUrl = "";
         }
         const searchResultsListItem = document.createElement("li");
-        searchResultsListItem.innerHTML = '<a href="' + result.link + `" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-[50vw] lg:w-[25vw] h-[50vw] lg:h-[25vw]"><div class="card-zoom"><div class="card-zoom-image" style="background-image: url('` + thubnailUrl + `')"></div><h1 class="card-zoom-text !text-2xl md:!text-2xl 2xl:!text-4xl">` + result.title.rendered + "</h1></div>";
+        searchResultsListItem.innerHTML = '<a href="' + result.link + `" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-full aspect-square sm:w-[50vw] md:w-[25vw] sm:h-[50vw] md:h-[25vw]"><div class="card-zoom"><div class="card-zoom-image" style="background-image: url('` + thubnailUrl + `')"></div><h1 class="card-zoom-text !text-2xl md:!text-2xl 2xl:!text-4xl">` + result.title.rendered + "</h1></div>";
         searchResultsList.appendChild(searchResultsListItem);
       });
     }).catch(function(error) {

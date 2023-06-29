@@ -6,7 +6,7 @@
             <a class="fade-in block text-[3.8vmin] md:text-regular lg:text-lg xl:text-xl 2xl:text-2xl font-normal px-4 my-2 lg:my-0" href="https://hapacastudio.com/" target="_blank">Find out more <img src="<?php echo get_theme_file_uri(); ?>/resources/img/arrow-white.svg" class="-rotate-90 w-2 lg:w-5 inline ml-4"></a>
         </div>
     </div>
-    <div class="lg:w-[75vw] w-full lg:h-full h-[65vh] overflow-hidden">
+    <div class="lg:w-auto w-full lg:h-full h-[65vh] overflow-hidden aspect-square">
         <div style="background-image: url('<?php echo get_theme_file_uri(); ?>/resources/img/hapaca-collage.jpg');" class="h-full bg-cover bg-left-top"></div>
     </div>
 </section>

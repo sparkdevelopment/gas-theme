@@ -207,11 +207,16 @@ header {
     display: none;
 }
 
+.gasstudios-nav {
+    font-size: 1.6rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
 .gasstudios-nav > a {
-    background-image: url('../resources/img/gas-studios-logo.png');
+    background-image: url('../resources/img/gas-studios-logo.svg');
     color: transparent;
     background-size: contain;
-    backdrop-filter: invert(1);
     display: block;
     background-repeat: no-repeat;
 }

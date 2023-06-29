@@ -16,7 +16,7 @@ $images = get_post_meta( get_the_ID(), 'product_images', true );
 					<div><?php display_breadcrumbs(); ?></div>
 					<h1 class="text-2xl lg:text-5xl font-light text-left font-theme-heading my-4"><?php the_title(); ?></h1>
 					<div class="text-2xl lg:text-4xl font-bold text-left my-4">&pound;<?php echo get_post_meta( get_the_ID(), 'product_price', true ); ?></div>
-					<div class="text-lg md:text-2xl font-light text-left space-y-5 mx-0 md:mx-8 my-4">
+					<div class="text-lg md:text-2xl font-light text-left space-y-5 mx-0 my-4 md:my-8">
 						<?php
 						// Output description
 						echo wpautop( get_post_meta( get_the_ID(), 'product_description', true ) );

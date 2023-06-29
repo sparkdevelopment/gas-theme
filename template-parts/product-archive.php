@@ -26,9 +26,9 @@ $product_subcategories = get_terms(
 		</div>
 	<?php } ?>
 	<?php if ( $product_subcategories ) { ?>
-		<div class="flex flex-col flex-wrap md:flex-row justify-center md:space-x-10 md:space-y-0 space-y-10 px-10 md:px-0 w-full mx-auto">
+		<div class="flex flex-row flex-wrap justify-center md:px-0 w-full mx-auto">
 		<?php foreach ( $product_subcategories as $product_subcategory ) { ?>
-			<a href="<?php echo get_term_link( $product_subcategory ); ?>" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-full aspect-square md:w-[25vw] md:h-[25vw]">
+			<a href="<?php echo get_term_link( $product_subcategory ); ?>" class="!mx-0 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center w-full aspect-square sm:w-[50vw] md:w-[25vw] sm:h-[50vw] md:h-[25vw]">
 				<div class="card-zoom">
 					<div class="card-zoom-image" style="background-image: url('<?php echo get_term_meta( $product_subcategory->term_id, 'product_category_image', true ); ?>')"></div>
 					<h1 class="card-zoom-text !text-2xl md:!text-2xl 2xl:!text-4xl"><?php echo $product_subcategory->name; ?></h1>
