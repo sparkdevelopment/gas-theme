@@ -1,4 +1,4 @@
-<section id="section-brands-and-instagram" class="h-screen bg-black flex flex-col justify-between md:!pt-24">
+<section id="section-brands-and-instagram" class="h-screen bg-black flex flex-col justify-between !pt-24">
 
     <div class="h-1/2 lg:h-1/5 relative">
         <div class="owl-carousel h-full !flex flex-col justify-center item">
