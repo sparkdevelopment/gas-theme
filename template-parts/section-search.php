@@ -1,4 +1,4 @@
-<form class="w-full h-1/5 lg:h-1/3 flex px-6 py-14 md:p-12 lg:p-24 bg-black z-10">
+<form class="w-full h-1/5 lg:h-1/4 flex px-6 py-14 md:p-12 lg:px-20 lg:py-[7.5vh] bg-black z-10">
 	<div class="text-white z-10 absolute right-3 lg:right-6 top-3 lg:top-6">
 		<div id="search-results-close" class="cursor-pointer">
 			<svg class="w-6 lg:w-8 h-6 lg:h-8 z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -11,7 +11,7 @@
 		</div>
 	</div>
 	<input id="search-input" type="text" class="flex-grow p-4 bg-[#202020] font-theme-heading text-2xl lg:text-4xl text-white placeholder:text-white" placeholder="Search">
-	<button type="submit" class="absolute right-6 md:right-12 lg:right-24 p-4 self-center">
+	<button type="submit" class="absolute right-6 md:right-12 lg:right-20 p-4 self-center">
 		<img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-8 h-8">
 	</button>
 </form>
