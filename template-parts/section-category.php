@@ -3,23 +3,39 @@
 <section id="section-category" class="<?php echo $full_height ? 'h-screen ' : ''; ?>!overflow-x-hidden bg-black flex flex-col justify-center">
     <div class="relative flex flex-col lg:flex-row justify-center items-center lg:h-2/3 h-full self-center w-full pb-8 lg:pb-12">
         <?php
-        $categories = array(
-            array(
-                'title' => 'Lighting',
-                'class' => 'lighting',
-                'slug'  => 'lighting',
-            ),
-            array(
-                'title' => 'Camera & Digital',
-                'class' => 'camera_digital',
-                'slug'  => 'camera',
-            ),
-            array(
-                'title' => 'Production',
-                'class' => 'production',
-                'slug'  => 'production',
-            ),
-        );
+        // $categories = array(
+        //     array(
+        //         'title' => 'Lighting',
+        //         'class' => 'lighting',
+        //         'slug'  => 'lighting',
+        //     ),
+        //     array(
+        //         'title' => 'Camera & Digital',
+        //         'class' => 'camera_digital',
+        //         'slug'  => 'camera',
+        //     ),
+        //     array(
+        //         'title' => 'Production',
+        //         'class' => 'production',
+        //         'slug'  => 'production',
+        //     ),
+        // );
+
+        // Get top level categories
+        $top_level_categories = get_terms(array(
+            'taxonomy' => 'product_category',
+            'parent'   => 0,
+            'hide_empty' => true,
+        ));
+        $categories = array();
+        foreach ($top_level_categories as $top_level_category) {
+            $categories[] = array(
+                'title' => $top_level_category->name,
+                'class' => $top_level_category->slug,
+                'slug'  => $top_level_category->slug,
+                'image' => get_term_meta( $top_level_category->ID, 'product_category_image', true ),
+            );
+        }
         ?>
 
         <?php foreach ($categories as $category) : ?>

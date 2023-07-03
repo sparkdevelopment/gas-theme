@@ -1,84 +1,96 @@
 <?php
+add_action( 'admin_menu', 'gas_top_lvl_menu' );
 
-// Create tabbed settings page using native WordPress code
+function gas_top_lvl_menu() {
 
-// Add menu item
-function add_site_options_page() {
-    add_menu_page(
-        'Site Options',
-        'Site Options',
-        'manage_options',
-        'site-options',
-        'site_options_page_html',
-        'dashicons-admin-generic',
-        30
-    );
-}
-add_action( 'admin_menu', 'add_site_options_page' );
-
-// Add settings section
-function add_site_options_section() {
-    add_settings_section(
-        'site_options_section',
-        'Site Options',
-        'site_options_section_html',
-        'site-options'
-    );
-}
-add_action( 'admin_init', 'add_site_options_section' );
-
-// Add settings fields
-function add_site_options_fields() {
-    add_settings_field(
-        'site_options_field',
-        'Site Options Field',
-        'site_options_field_html',
-        'site-options',
-        'site_options_section'
-    );
-}
-add_action( 'admin_init', 'add_site_options_fields' );
-
-// Register settings
-function register_site_options_settings() {
-    register_setting(
-        'site_options_section',
-        'site_options_field'
-    );
-}
-add_action( 'admin_init', 'register_site_options_settings' );
-
-// Callback functions
-function site_options_page_html() {
-    // Add tabbed interface
-    ?>
-    <h2 class="nav-tab-wrapper">
-        <a href="?page=site-options" class="nav-tab nav-tab-active">Site Options</a>
-        <a href="?page=site-options&tab=tab-2" class="nav-tab">Tab 2</a>
-        <a href="?page=site-options&tab=tab-3" class="nav-tab">Tab 3</a>
-    </h2>
-    <?php
-    // Add settings page
-    ?>
-    <div class="wrap">
-        <h1>Site Options</h1>
-        <form action="options.php" method="post">
-            <?php
-            settings_fields( 'site_options_section' );
-            do_settings_sections( 'site-options' );
-            submit_button();
-            ?>
-        </form>
-    </div>
-    <?php
+	add_menu_page(
+		'GAS Options', // page <title>Title</title>
+		'GAS', // link text
+		'manage_options', // user capabilities
+		'gas_options', // page slug
+		'gas_options_page_callback', // this function prints the page content
+		'dashicons-admin-site', // icon (from Dashicons for example)
+		4 // menu position
+	);
 }
 
-function site_options_section_html() {
-    echo '<p>Site options description.</p>';
+function gas_options_page_callback(){
+	?>
+		<div class="wrap">
+			<h1><?php echo get_admin_page_title() ?></h1>
+			<form method="post" action="options.php">
+				<?php
+					settings_fields( 'gas_options_settings' ); // settings group name
+					do_settings_sections( 'gas_options' ); // just a page slug
+					submit_button(); // "Save Changes" button
+				?>
+			</form>
+		</div>
+	<?php
 }
 
-function site_options_field_html() {
-    ?>
-    <input type="text" name="site_options_field" value="<?php echo esc_attr( get_option( 'site_options_field' ) ); ?>">
-    <?php
+add_action( 'admin_init',  'gas_settings_fields' );
+function gas_settings_fields(){
+
+    // 1. register a new settings section
+	$page_slug = 'gas_options';
+	$option_group = 'gas_options_settings';
+
+	add_settings_section(
+		'gas_section_id', // section ID
+		'', // title (optional)
+		'', // callback function to display the section (optional)
+		$page_slug
+	);
+
+	// 2. register fields
+	register_setting( $option_group, 'slider_on', 'gas_sanitize_checkbox' );
+	register_setting( $option_group, 'num_of_slides', 'absint' );
+
+	// 3. add fields
+	add_settings_field(
+		'slider_on',
+		'Display slider',
+		'gas_checkbox', // function to print the field
+		$page_slug,
+		'gas_section_id' // section ID
+	);
+
+	add_settings_field(
+		'num_of_slides',
+		'Number of slides',
+		'gas_number',
+		$page_slug,
+		'gas_section_id',
+		array(
+			'label_for' => 'num_of_slides',
+			'class' => 'hello', // for <tr> element
+			'name' => 'num_of_slides' // pass any custom parameters
+		)
+	);
+
+}
+
+// custom callback function to print field HTML
+function gas_number( $args ){
+	printf(
+		'<input type="number" id="%s" name="%s" value="%d" />',
+		$args[ 'name' ],
+		$args[ 'name' ],
+		get_option( $args[ 'name' ], 2 ) // 2 is the default number of slides
+	);
+}
+// custom callback function to print checkbox field HTML
+function gas_checkbox( $args ) {
+	$value = get_option( 'slider_on' );
+	?>
+		<label>
+			<input type="checkbox" name="slider_on" <?php checked( $value, 'yes' ) ?> /> Yes
+		</label>
+	<?php
+}
+
+// custom sanitization function for a checkbox field
+function gas_sanitize_checkbox( $value ) {
+	return 'on' === $value ? 'yes' : 'no';
 }
