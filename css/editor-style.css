@@ -947,10 +947,6 @@
   padding-top: 12rem
 }
 
-.pt-24 {
-  padding-top: 6rem
-}
-
 .text-left {
   text-align: left
 }
@@ -1844,10 +1840,6 @@ body {
 
   .lg\:pb-12 {
     padding-bottom: 3rem
-  }
-
-  .lg\:pt-0 {
-    padding-top: 0px
   }
 
   .lg\:text-left {

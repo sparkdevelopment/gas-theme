@@ -37,60 +37,74 @@ function gas_settings_fields(){
 	$option_group = 'gas_options_settings';
 
 	add_settings_section(
-		'gas_section_id', // section ID
-		'', // title (optional)
+		'gas_category_images', // section ID
+		'Category Images', // title (optional)
 		'', // callback function to display the section (optional)
 		$page_slug
 	);
 
 	// 2. register fields
-	register_setting( $option_group, 'slider_on', 'gas_sanitize_checkbox' );
-	register_setting( $option_group, 'num_of_slides', 'absint' );
+	register_setting( $option_group, 'gas_lighting_image', 'esc_attr' );
+	register_setting( $option_group, 'gas_camera_digital_image', 'esc_attr' );
+	register_setting( $option_group, 'gas_production_image', 'esc_attr' );
 
 	// 3. add fields
 	add_settings_field(
-		'slider_on',
-		'Display slider',
-		'gas_checkbox', // function to print the field
+		'gas_lighting_image',
+		'Lighting Image',
+		'gas_cat_image_field', // function to print the field
 		$page_slug,
-		'gas_section_id' // section ID
+		'gas_category_images' // section ID
 	);
 
 	add_settings_field(
-		'num_of_slides',
-		'Number of slides',
-		'gas_number',
+		'gas_camera_digital_image',
+		'Camera & Digital Image',
+		'gas_cat_image_field', // function to print the field
 		$page_slug,
-		'gas_section_id',
-		array(
-			'label_for' => 'num_of_slides',
-			'class' => 'hello', // for <tr> element
-			'name' => 'num_of_slides' // pass any custom parameters
-		)
+		'gas_category_images' // section ID
+	);
+
+	add_settings_field(
+		'gas_production_image',
+		'Production Image',
+		'gas_cat_image_field', // function to print the field
+		$page_slug,
+		'gas_category_images' // section ID
 	);
 
 }
 
-// custom callback function to print field HTML
-function gas_number( $args ){
-	printf(
-		'<input type="number" id="%s" name="%s" value="%d" />',
-		$args[ 'name' ],
-		$args[ 'name' ],
-		get_option( $args[ 'name' ], 2 ) // 2 is the default number of slides
-	);
+// Uses WordPress media uploader
+function gas_cat_image_field( $image_id ) {
+	var_dump($image_id);
+	if( $image = wp_get_attachment_image_url( $image_id, 'medium' ) ) : ?>
+		<a href="#" class="custom-media-button-upload">
+			<img src="<?php echo esc_url( $image ) ?>" />
+		</a>
+		<a href="#" class="custom-media-button-remove">Remove image</a>
+		<input type="hidden" name="gas_lighting_image" value="<?php echo absint( $image_id ) ?>">
+	<?php else : ?>
+		<a href="#" class="button custom-media-button-upload">Upload image</a>
+		<a href="#" class="custom-media-button-remove" style="display:none">Remove image</a>
+		<input type="hidden" name="gas_lighting_image" value="">
+	<?php endif;
 }
-// custom callback function to print checkbox field HTML
-function gas_checkbox( $args ) {
-	$value = get_option( 'slider_on' );
+
+function gas_camera_digital_image_field( $image_id ) {
+	$value = get_option( 'gas_camera_digital_image' );
 	?>
-		<label>
-			<input type="checkbox" name="slider_on" <?php checked( $value, 'yes' ) ?> /> Yes
-		</label>
+		<input type="text" name="gas_camera_digital_image" id="gas_camera_digital_image" value="<?php echo esc_attr( $value ); ?>" />
+		<input type="button" class="button custom_media_button" id="gas_camera_digital_image_button" value="Choose or Upload an Image" />
 	<?php
+	return;
 }
 
-// custom sanitization function for a checkbox field
-function gas_sanitize_checkbox( $value ) {
-	return 'on' === $value ? 'yes' : 'no';
+function gas_production_image_field( $image_id ) {
+	$value = get_option( 'gas_production_image' );
+	?>
+		<input type="text" name="gas_production_image" id="gas_production_image" value="<?php echo esc_attr( $value ); ?>" />
+		<input type="button" class="button custom_media_button" id="gas_production_image_button" value="Choose or Upload an Image" />
+	<?php
+	return;
 }

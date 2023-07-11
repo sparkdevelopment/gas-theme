@@ -85,6 +85,11 @@ function tailpress_enqueue_admin_scripts() {
 
 	// Enqueue scripts
 	wp_enqueue_script( 'tailpress-admin', tailpress_asset( 'js/admin.js' ), array( 'jquery' ), $theme->get( 'Version' ), true );
+
+	// Enqueue options script if site options page
+	if ( isset( $_GET['page'] ) && $_GET['page'] === 'gas_options' ) {
+		wp_enqueue_script( 'tailpress-options', tailpress_asset( 'js/adminSiteOptions.js' ), array( 'jquery' ), $theme->get( 'Version' ), true );
+	}
 }
 add_action( 'admin_enqueue_scripts', 'tailpress_enqueue_admin_scripts' );
 
