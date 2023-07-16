@@ -11,9 +11,9 @@
 					<a href="mailto:office@gashire.co.uk?subject=Enquiry from website" class="block font-light md:mb-8">E: office@gashire.co.uk</a>
 				</div>
 				<div class="my-8 hidden md:block">
-					<a target="_blank" href="<?php echo get_theme_file_uri(); ?>/resources/misc/GAS Price List_MAY11_v1.pdf" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Price List</a>
-					<a target="_blank" href="<?php echo get_theme_file_uri(); ?>/resources/misc/GAS-ACCOUNT APPLICATION form.pdf" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Account Form</a>
-					<a target="_blank" href="<?php echo get_theme_file_uri(); ?>/resources/misc/GAS t&cs.pdf" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">T&Cs</a>
+					<a target="_blank" href="<?php echo wp_get_attachment_url(get_option('gas_price_list_pdf')); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Price List</a>
+					<a target="_blank" href="<?php echo wp_get_attachment_url(get_option('gas_account_form_pdf')); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Account Form</a>
+					<a target="_blank" href="<?php echo wp_get_attachment_url(get_option('gas_tnc_pdf')); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">T&Cs</a>
 				</div>
 				<div class="text-lg space-y-4"><?php the_content(); ?></div>
 			</div>
@@ -32,9 +32,9 @@
 			</iframe>
 		</div>
         <div class="col-span-5 my-8 md:hidden flex flex-row gap-2 justify-between">
-            <a target="_blank" href="<?php echo get_theme_file_uri(); ?>/resources/misc/GAS Price List_MAY11_v1.pdf" class="bg-white text-black py-2 w-auto sm:w-1/3 text-center block rounded-3xl text-md font-light h-fit px-4">Price List</a>
-            <a target="_blank" href="<?php echo get_theme_file_uri(); ?>/resources/misc/GAS-ACCOUNT APPLICATION form.pdf" class="bg-white text-black py-2 w-auto sm:w-1/3 text-center block rounded-3xl text-md font-light h-fit px-4">Account Form</a>
-            <a target="_blank" href="<?php echo get_theme_file_uri(); ?>/resources/misc/GAS t&cs.pdf" class="bg-white text-black py-2 w-auto sm:w-1/3 text-center block rounded-3xl text-md font-light h-fit px-4">T&Cs</a>
+            <a target="_blank" href="<?php echo wp_get_attachment_url(get_option('gas_price_list_pdf')); ?>" class="bg-white text-black py-2 w-auto sm:w-1/3 text-center block rounded-3xl text-md font-light h-fit px-4">Price List</a>
+            <a target="_blank" href="<?php echo wp_get_attachment_url(get_option('gas_account_form_pdf')); ?>" class="bg-white text-black py-2 w-auto sm:w-1/3 text-center block rounded-3xl text-md font-light h-fit px-4">Account Form</a>
+            <a target="_blank" href="<?php echo wp_get_attachment_url(get_option('gas_tnc_pdf')); ?>" class="bg-white text-black py-2 w-auto sm:w-1/3 text-center block rounded-3xl text-md font-light h-fit px-4">T&Cs</a>
         </div>
 	</div>
 </section>

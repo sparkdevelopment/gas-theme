@@ -8,16 +8,19 @@
                 'title' => 'Lighting',
                 'class' => 'lighting',
                 'slug'  => 'lighting',
+                'image' => get_option('gas_lighting_image'),
             ),
             array(
                 'title' => 'Camera & Digital',
                 'class' => 'camera_digital',
                 'slug'  => 'camera',
+                'image' => get_option('gas_camera_digital_image'),
             ),
             array(
                 'title' => 'Production',
                 'class' => 'production',
                 'slug'  => 'production',
+                'image' => get_option('gas_production_image'),
             ),
         );
         ?>
@@ -32,7 +35,8 @@
             <?php endif; ?>
                 <a href="<?php echo esc_attr($category_link); ?>" class="h-full mx-auto 2xl:mt-0 2xl:translate-y-0 flex flex-col justify-center">
                     <div class="card-zoom min-h-[150px]">
-                        <div class="card-zoom-image bg-<?php echo $category['class']; ?>"></div>
+                        <!-- Display the image -->
+                        <div class="card-zoom-image bg-<?php echo $category['class']; ?>" style="background-image: url('<?php echo wp_get_attachment_url($category['image']); ?>')"></div>
                         <h1 class="card-zoom-text"><?php echo $category['title']; ?></h1>
                     </div>
                 </a>
