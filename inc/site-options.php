@@ -48,6 +48,15 @@ function gas_settings_fields() {
     }
     add_settings_section( 'gas_category_images', 'Category Images', '', 'gas_options' );
 
+	$fields = array(
+		'homepage_text' => 'Homepage Text',
+	);
+	foreach ( $fields as $field => $label ) {
+		register_setting( 'gas_options', $field, 'sanitize_textarea_field' );
+		add_settings_field( $field, $label, 'gas_text_field', 'gas_options', 'gas_homepage_text', array( 'label_for' => $field ) );
+	}
+	add_settings_section( 'gas_homepage_text', 'Homepage Text', '', 'gas_options' );
+
     // PDF section
     $pdf_fields = array(
         'gas_price_list_pdf' => 'Price List PDF',
@@ -94,5 +103,12 @@ function gas_cat_pdf_field( $args ) {
         <input type="hidden" class="hidden-media-id" name="<?php echo $args['label_for']; ?>" value="<?php echo absint( $pdf_id ); ?>">
     </div>
     <?php
+}
+
+function gas_text_field( $args ) {
+	$text = get_option( $args['label_for'] ) ?? '';
+	?>
+	<textarea name="<?php echo $args['label_for']; ?>" rows="15" cols="80"><?php echo esc_textarea( $text ); ?></textarea>
+	<?php
 }
 
