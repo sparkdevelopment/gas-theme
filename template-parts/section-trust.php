@@ -1,6 +1,8 @@
 <section id="section-trust" class="h-screen overflow-hidden bg-black flex flex-col text-white text-center font-theme-heading justify-center">
     <div class="sm:w-[75vw] md:w-[80vw] lg:w-[55vw] xl:w-[57.5vw] mx-auto font-light">
-        <h2 class="fade-in text-3xl sm:text-3xl md:text-3xl lg:text-3xl 2xl:text-5xl sm:p-3 md:p-4 p-2 w-[75%] sm:w-[75%] mx-auto">Black & White with a Splash of Colour</h2>
+        <h2 class="fade-in text-3xl sm:text-3xl md:text-3xl lg:text-3xl 2xl:text-5xl sm:p-3 md:p-4 p-2 w-[75%] sm:w-[75%] mx-auto">
+            <?php echo get_option('homepage_title'); ?>
+        </h2>
         <?php 
             $homepage_text = get_option('homepage_text');
             // break content into paragraphs if it isn't already

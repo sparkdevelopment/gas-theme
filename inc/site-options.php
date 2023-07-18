@@ -37,6 +37,7 @@ function gas_options_page_callback() {
 }
 
 function gas_settings_fields() {
+    // Image fields
     $fields = array(
         'gas_lighting_image'       => 'Lighting Image',
         'gas_camera_digital_image' => 'Camera & Digital Image',
@@ -48,14 +49,24 @@ function gas_settings_fields() {
     }
     add_settings_section( 'gas_category_images', 'Category Images', '', 'gas_options' );
 
-	$fields = array(
-		'homepage_text' => 'Homepage Text',
-	);
-	foreach ( $fields as $field => $label ) {
-		register_setting( 'gas_options', $field, 'sanitize_textarea_field' );
-		add_settings_field( $field, $label, 'gas_text_field', 'gas_options', 'gas_homepage_text', array( 'label_for' => $field ) );
-	}
-	add_settings_section( 'gas_homepage_text', 'Homepage Text', '', 'gas_options' );
+    // Text fields
+    $fields = array(
+        'homepage_title' => 'Section Title',
+    );
+    foreach ( $fields as $field => $label ) {
+        register_setting( 'gas_options', $field, 'sanitize_text_field' );
+        add_settings_field( $field, $label, 'gas_text_field', 'gas_options', 'gas_homepage_text', array( 'label_for' => $field ) );
+    }
+
+    // Textarea fields
+    $fields = array(
+        'homepage_text'  => 'Section Text',
+    );
+    foreach ( $fields as $field => $label ) {
+        register_setting( 'gas_options', $field, 'sanitize_textarea_field' );
+        add_settings_field( $field, $label, 'gas_textarea_field', 'gas_options', 'gas_homepage_text', array( 'label_for' => $field ) );
+    }
+    add_settings_section( 'gas_homepage_text', 'About Section', '', 'gas_options' );
 
     // PDF section
     $pdf_fields = array(
@@ -69,6 +80,7 @@ function gas_settings_fields() {
     }
     add_settings_section( 'gas_pdf_files', 'PDF Files', '', 'gas_options' );
 }
+
 
 
 function gas_cat_image_field( $args ) {
@@ -105,10 +117,17 @@ function gas_cat_pdf_field( $args ) {
     <?php
 }
 
+function gas_textarea_field( $args ) {
+	$text = get_option( $args['label_for'] ) ?? '';
+	?>
+	<textarea name="<?php echo $args['label_for']; ?>" rows="15" cols="80" class="widefat"><?php echo esc_textarea( $text ); ?></textarea>
+	<?php
+}
+
 function gas_text_field( $args ) {
 	$text = get_option( $args['label_for'] ) ?? '';
 	?>
-	<textarea name="<?php echo $args['label_for']; ?>" rows="15" cols="80"><?php echo esc_textarea( $text ); ?></textarea>
+	<input type="text" name="<?php echo $args['label_for']; ?>" value="<?php echo esc_attr( $text ); ?>" class="widefat">
 	<?php
 }
 
