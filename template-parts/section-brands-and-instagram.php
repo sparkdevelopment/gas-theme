@@ -1,8 +1,16 @@
 <?php
 use Phpfastcache\Helper\Psr16Adapter;
-$instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
-$cache     = new Psr16Adapter( 'Files' );
 try {
+    // Check if file /home/secure/ig_credentials.php exists
+    if ( file_exists( '/home/secure/ig_credentials.php' ) ) {
+        // If it does, include it
+        include_once '/home/secure/ig_credentials.php';
+        $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
+        $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), $gas_ig_un, $gas_ig_pw, new Psr16Adapter('Files'));
+    } else {
+        $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
+    }
+    $cache     = new Psr16Adapter( 'Files' );
     $ig_media  = $cache->get( 'ig_media' );
     if ( is_null( $ig_media ) ) {
         $ig_media = $instagram->getMedias( 'gasproductionhire', 4 );
