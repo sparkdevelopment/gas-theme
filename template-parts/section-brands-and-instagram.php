@@ -37,7 +37,7 @@ try {
 }
 
 function get_ig_media_image( $media, $cache = true ) {
-	$img_url = $media->getImageHighResolutionUrl();
+	$img_url = $media->getImageThumbnailUrl();
 	$cache   = new Psr16Adapter( 'Files' );
 	$image   = $cache ? $cache->get( 'ig_media_image_' . $media->getId() ) : null;
 	if ( is_null( $image ) ) {
