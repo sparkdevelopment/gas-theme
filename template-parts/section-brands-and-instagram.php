@@ -1,14 +1,22 @@
 <?php
 use Phpfastcache\Helper\Psr16Adapter;
+
+const GAS_IG_UN = 'ryanajarrett';
+const GAS_IG_PW = 'bailey2012';
+
+$ig_caching = false;
+
 try {
     // Check if file /home/secure/ig_credentials.php exists
     $credentials_file = '/home/gashirewebadmin/secure/ig_credentials.php';
-    if ( file_exists( $credentials_file ) ) {
+    if ( file_exists( $credentials_file ) || true ) {
         // If it does, include it
         error_log( 'IG credentials file exists');
-        include_once $credentials_file;
+        // include_once $credentials_file;
         $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
         $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), GAS_IG_UN, GAS_IG_PW, new Psr16Adapter('Files'));
+        $instagram->login();
+        $instagram->saveSession();
     } else {
         // If it doesn't, use unauthenticated client
         error_log( 'IG credentials file does not exist');
@@ -16,7 +24,7 @@ try {
     }
     $cache     = new Psr16Adapter( 'Files' );
     $ig_media  = $cache->get( 'ig_media' );
-    if ( is_null( $ig_media ) ) {
+    if ( is_null( $ig_media ) || ! $ig_caching ) {
         error_log( 'IG media cache miss');
         try {
             $ig_media = $instagram->getMedias( 'gasproductionhire', 4 );
@@ -30,11 +38,11 @@ try {
     $ig_media = array();
 }
 
-function get_ig_media_image( $media ) {
+function get_ig_media_image( $media, $cache = true ) {
 	$img_url = $media->getImageHighResolutionUrl();
 	$cache   = new Psr16Adapter( 'Files' );
 	$image   = $cache->get( 'ig_media_image_' . $media->getId() );
-	if ( is_null( $image ) ) {
+	if ( is_null( $image ) || ! $cache ) {
 		$image = base64_encode( file_get_contents( $img_url ) );
 		$cache->set( 'ig_media_image_' . $media->getId(), $image, 3600 );
 	}
@@ -62,7 +70,7 @@ function get_ig_media_image( $media ) {
 		<div class="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 h-full items-center px-0">
 			<!-- Instagram posts -->
 			<?php foreach ( $ig_media as $media ) : ?>
-				<img src="<?php echo get_ig_media_image( $media ); ?>" class="max-h-full w-auto basis-[40%] md:basis-[25%] mx-auto p-[1rem]">
+				<img src="<?php echo get_ig_media_image( $media, $ig_caching ); ?>" class="max-h-full w-auto basis-[40%] md:basis-[25%] mx-auto p-[1rem]">
 			<?php endforeach; ?>
 		</div>
 	</div>
