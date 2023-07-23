@@ -9,7 +9,6 @@ try {
         $cache->set( 'ig_media', $ig_media, 3600 );
     }
 } catch ( \Exception $e ) {
-    echo $e->getMessage();
     exit();
 }
 
