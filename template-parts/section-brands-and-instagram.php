@@ -1,7 +1,7 @@
 <?php
 use Phpfastcache\Helper\Psr16Adapter;
 
-$ig_caching = false;
+$ig_caching = true;
 
 try {
     // Check if file /home/secure/ig_credentials.php exists
