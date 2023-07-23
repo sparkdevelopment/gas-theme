@@ -1,9 +1,6 @@
 <?php
 use Phpfastcache\Helper\Psr16Adapter;
 
-const GAS_IG_UN = 'ryanajarrett';
-const GAS_IG_PW = 'bailey2012';
-
 $ig_caching = false;
 
 try {
@@ -12,7 +9,7 @@ try {
     if ( file_exists( $credentials_file ) || true ) {
         // If it does, include it
         error_log( 'IG credentials file exists');
-        // include_once $credentials_file;
+        include_once $credentials_file;
         $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
         $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), GAS_IG_UN, GAS_IG_PW, new Psr16Adapter('Files'));
         $instagram->login();
