@@ -4,15 +4,19 @@ try {
     // Check if file /home/secure/ig_credentials.php exists
     if ( file_exists( '/home/secure/ig_credentials.php' ) ) {
         // If it does, include it
+        error_log( 'IG credentials file exists');
         include_once '/home/secure/ig_credentials.php';
         $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
         $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), $gas_ig_un, $gas_ig_pw, new Psr16Adapter('Files'));
     } else {
+        // If it doesn't, use unauthenticated client
+        error_log( 'IG credentials file does not exist');
         $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
     }
     $cache     = new Psr16Adapter( 'Files' );
     $ig_media  = $cache->get( 'ig_media' );
     if ( is_null( $ig_media ) ) {
+        error_log( 'IG media cache miss');
         $ig_media = $instagram->getMedias( 'gasproductionhire', 4 );
         $cache->set( 'ig_media', $ig_media, 3600 );
     }
