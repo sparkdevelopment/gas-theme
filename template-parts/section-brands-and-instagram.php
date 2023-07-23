@@ -2,10 +2,15 @@
 use Phpfastcache\Helper\Psr16Adapter;
 $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
 $cache     = new Psr16Adapter( 'Files' );
-$ig_media  = $cache->get( 'ig_media' );
-if ( is_null( $ig_media ) ) {
-	$ig_media = $instagram->getMedias( 'gasproductionhire', 4 );
-	$cache->set( 'ig_media', $ig_media, 3600 );
+try {
+    $ig_media  = $cache->get( 'ig_media' );
+    if ( is_null( $ig_media ) ) {
+        $ig_media = $instagram->getMedias( 'gasproductionhire', 4 );
+        $cache->set( 'ig_media', $ig_media, 3600 );
+    }`
+} catch ( \Exception $e ) {
+    echo $e->getMessage();
+    exit();
 }
 
 function get_ig_media_image( $media ) {
