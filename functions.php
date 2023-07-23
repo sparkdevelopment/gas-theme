@@ -4,6 +4,9 @@
  * Theme setup.
  */
 function tailpress_setup() {
+	// Autoload dependencies
+	require_once get_template_directory() . '/vendor/autoload.php';
+
 	add_theme_support( 'title-tag' );
 
 	register_nav_menus(
