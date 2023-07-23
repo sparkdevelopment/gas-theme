@@ -8,7 +8,7 @@ try {
         error_log( 'IG credentials file exists');
         include_once $credentials_file;
         $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
-        $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), $gas_ig_un, $gas_ig_pw, new Psr16Adapter('Files'));
+        $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), GAS_IG_UN, GAS_IG_PW, new Psr16Adapter('Files'));
     } else {
         // If it doesn't, use unauthenticated client
         error_log( 'IG credentials file does not exist');
