@@ -2,10 +2,11 @@
 use Phpfastcache\Helper\Psr16Adapter;
 try {
     // Check if file /home/secure/ig_credentials.php exists
-    if ( file_exists( '/home/gashirewebadmin/secure/ig_credentials.php' ) ) {
+    $credentials_file = '/home/secure/ig_credentials.php';
+    if ( file_exists( $credentials_file ) ) {
         // If it does, include it
         error_log( 'IG credentials file exists');
-        include_once '/home/secure/ig_credentials.php';
+        include_once $credentials_file;
         $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
         $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), $gas_ig_un, $gas_ig_pw, new Psr16Adapter('Files'));
     } else {
