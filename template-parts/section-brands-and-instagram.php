@@ -18,8 +18,13 @@ try {
     $ig_media  = $cache->get( 'ig_media' );
     if ( is_null( $ig_media ) ) {
         error_log( 'IG media cache miss');
-        $ig_media = $instagram->getMedias( 'gasproductionhire', 4 );
-        $cache->set( 'ig_media', $ig_media, 3600 );
+        try {
+            $ig_media = $instagram->getMedias( 'gasproductionhire', 4 );
+            $cache->set( 'ig_media', $ig_media, 3600 );
+        } catch ( \Exception $e ) {
+            error_log( $e->getMessage() );
+            $ig_media = array();
+        }
     }
 } catch ( \Exception $e ) {
     $ig_media = array();
