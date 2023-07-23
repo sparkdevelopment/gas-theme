@@ -6,7 +6,8 @@ $ig_caching = false;
 try {
     // Check if file /home/secure/ig_credentials.php exists
     $credentials_file = '/home/gashirewebadmin/secure/ig_credentials.php';
-    if ( file_exists( $credentials_file ) || true ) {
+    // $credentials_file = get_stylesheet_directory(  ) . '/ig_credentials.php';
+    if ( file_exists( $credentials_file ) ) {
         // If it does, include it
         error_log( 'IG credentials file exists');
         include_once $credentials_file;
@@ -38,7 +39,7 @@ try {
 function get_ig_media_image( $media, $cache = true ) {
 	$img_url = $media->getImageHighResolutionUrl();
 	$cache   = new Psr16Adapter( 'Files' );
-	$image   = $ig_caching ? $cache->get( 'ig_media_image_' . $media->getId() ) : null;
+	$image   = $cache ? $cache->get( 'ig_media_image_' . $media->getId() ) : null;
 	if ( is_null( $image ) ) {
 		$image = base64_encode( file_get_contents( $img_url ) );
 		$cache->set( 'ig_media_image_' . $media->getId(), $image, 3600 );
