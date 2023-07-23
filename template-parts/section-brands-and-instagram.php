@@ -20,8 +20,8 @@ try {
         $instagram = new \InstagramScraper\Instagram( new \GuzzleHttp\Client() );
     }
     $cache     = new Psr16Adapter( 'Files' );
-    $ig_media  = $cache->get( 'ig_media' );
-    if ( is_null( $ig_media ) || ! $ig_caching ) {
+    $ig_media  = $ig_caching ? $cache->get( 'ig_media' ) : null;
+    if ( is_null( $ig_media ) ) {
         error_log( 'IG media cache miss');
         try {
             $ig_media = $instagram->getMedias( 'gasproductionhire', 4 );
@@ -38,8 +38,8 @@ try {
 function get_ig_media_image( $media, $cache = true ) {
 	$img_url = $media->getImageHighResolutionUrl();
 	$cache   = new Psr16Adapter( 'Files' );
-	$image   = $cache->get( 'ig_media_image_' . $media->getId() );
-	if ( is_null( $image ) || ! $cache ) {
+	$image   = $ig_caching ? $cache->get( 'ig_media_image_' . $media->getId() ) : null;
+	if ( is_null( $image ) ) {
 		$image = base64_encode( file_get_contents( $img_url ) );
 		$cache->set( 'ig_media_image_' . $media->getId(), $image, 3600 );
 	}
