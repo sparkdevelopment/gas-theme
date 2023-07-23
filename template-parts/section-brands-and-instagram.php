@@ -2,7 +2,7 @@
 use Phpfastcache\Helper\Psr16Adapter;
 try {
     // Check if file /home/secure/ig_credentials.php exists
-    $credentials_file = '/home/secure/ig_credentials.php';
+    $credentials_file = '/home/gashirewebadmin/secure/ig_credentials.php';
     if ( file_exists( $credentials_file ) ) {
         // If it does, include it
         error_log( 'IG credentials file exists');
