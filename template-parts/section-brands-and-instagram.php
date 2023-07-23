@@ -9,7 +9,7 @@ try {
         $cache->set( 'ig_media', $ig_media, 3600 );
     }
 } catch ( \Exception $e ) {
-    exit();
+    $ig_media = array();
 }
 
 function get_ig_media_image( $media ) {
