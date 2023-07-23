@@ -7,7 +7,7 @@ try {
     if ( is_null( $ig_media ) ) {
         $ig_media = $instagram->getMedias( 'gasproductionhire', 4 );
         $cache->set( 'ig_media', $ig_media, 3600 );
-    }`
+    }
 } catch ( \Exception $e ) {
     echo $e->getMessage();
     exit();
