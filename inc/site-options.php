@@ -51,7 +51,7 @@ function gas_settings_fields() {
 
     // Text fields
     $fields = array(
-        'homepage_title' => 'Section Title',
+        'homepage_title' => 'About Title',
     );
     foreach ( $fields as $field => $label ) {
         register_setting( 'gas_options', $field, 'sanitize_text_field' );
@@ -60,13 +60,51 @@ function gas_settings_fields() {
 
     // Textarea fields
     $fields = array(
-        'homepage_text'  => 'Section Text',
+        'homepage_text'  => 'About Text',
     );
     foreach ( $fields as $field => $label ) {
         register_setting( 'gas_options', $field, 'sanitize_textarea_field' );
         add_settings_field( $field, $label, 'gas_textarea_field', 'gas_options', 'gas_homepage_text', array( 'label_for' => $field ) );
     }
     add_settings_section( 'gas_homepage_text', 'About Section', '', 'gas_options' );
+
+    // Textarea fields
+    $fields = array(
+        'studios_text'  => 'Studios Text',
+    );
+    foreach ( $fields as $field => $label ) {
+        register_setting( 'gas_options', $field, 'sanitize_textarea_field' );
+        add_settings_field( $field, $label, 'gas_textarea_field', 'gas_options', 'gas_studios_section', array( 'label_for' => $field ) );
+    }
+    
+    // Image field
+    $fields = array(
+        'studios_image' => 'Studios Image',
+    );
+    foreach ( $fields as $field => $label ) {
+        register_setting( 'gas_options', $field, 'absint' );
+        add_settings_field( $field, $label, 'gas_cat_image_field', 'gas_options', 'gas_studios_section', array( 'label_for' => $field ) );
+    }
+    add_settings_section( 'gas_studios_section', 'Studios Section', '', 'gas_options' );
+
+    // Textarea fields
+    $fields = array(
+        'hapaca_text'  => 'Hapaca Text',
+    );
+    foreach ( $fields as $field => $label ) {
+        register_setting( 'gas_options', $field, 'sanitize_textarea_field' );
+        add_settings_field( $field, $label, 'gas_textarea_field', 'gas_options', 'gas_hapaca_section', array( 'label_for' => $field ) );
+    }
+
+    // Image field
+    $fields = array(
+        'hapaca_image' => 'Hapaca Image',
+    );
+    foreach ( $fields as $field => $label ) {
+        register_setting( 'gas_options', $field, 'absint' );
+        add_settings_field( $field, $label, 'gas_cat_image_field', 'gas_options', 'gas_hapaca_section', array( 'label_for' => $field ) );
+    }
+    add_settings_section( 'gas_hapaca_section', 'Hapaca Section', '', 'gas_options' );
 
     // PDF section
     $pdf_fields = array(
@@ -80,8 +118,6 @@ function gas_settings_fields() {
     }
     add_settings_section( 'gas_pdf_files', 'PDF Files', '', 'gas_options' );
 }
-
-
 
 function gas_cat_image_field( $args ) {
 	$image_id = get_option( $args['label_for'] ) ?? 0;
