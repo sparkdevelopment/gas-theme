@@ -570,6 +570,13 @@ video {
   position: relative;
 }
 
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -1006,6 +1013,10 @@ video {
   width: fit-content;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
@@ -1288,6 +1299,10 @@ video {
 
 .bg-\[rgba\(0\.5\2c 0\.5\2c 0\.5\2c 0\.5\)\] {
   background-color: rgba(0.5,0.5,0.5,0.5);
+}
+
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
 }
 
 .bg-camera_digital {
@@ -2404,6 +2419,10 @@ header {
   }
 
   .md\:p-4 {
+    padding: 1rem;
+  }
+
+  .md\:p-\[1rem\] {
     padding: 1rem;
   }
 
