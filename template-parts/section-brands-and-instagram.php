@@ -24,7 +24,9 @@
             $posts = json_decode($json);
             foreach ($posts as $post) : ?>
                 <?php $thumb_url = $post->mediaType == 'IMAGE' ? $post->mediaUrl : $post->thumbnailUrl; ?>
-                    <img src="<?php echo $thumb_url; ?>" class="max-h-full w-auto basis-[40%] md:basis-[25%] mx-auto p-[1rem] object-cover aspect-square">
+                    <a href="<?php echo $post->permalink; ?>" target="_blank">
+                        <img src="<?php echo $thumb_url; ?>" class="max-h-full w-auto basis-[40%] md:basis-[25%] mx-auto p-[1rem] object-cover aspect-square">
+                    </a>
             <?php endforeach; ?>
         </div>
     </div>
