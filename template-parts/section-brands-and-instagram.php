@@ -40,7 +40,7 @@
 				$ig_posts = json_decode( $body );
 				foreach ( $ig_posts as $ig_post ) :
 					?>
-					<?php $thumb_url = 'IMAGE' === $ig_post->mediaType ? $ig_post->mediaUrl : $ig_post->thumbnailUrl; ?>
+					<?php $thumb_url = in_array( $ig_post->mediaType, array( 'IMAGE', 'CAROUSEL_ALBUM' ), true ) ? $ig_post->mediaUrl : $ig_post->thumbnailUrl; ?>
 						<!-- <a href="<?php echo esc_url( $ig_post->permalink ); ?>" target="_blank"> -->
 							<!-- <img src="<?php echo esc_url( $thumb_url ); ?>" class="max-h-full w-auto basis-[40%] md:basis-[25%] mx-auto p-[1rem] object-cover aspect-square"> -->
 						<!-- </a> -->
