@@ -1,3 +1,13 @@
+<?php
+/**
+ * The header for our theme
+ * This is the template that displays all of the <head> section and everything up until <main id="content">
+ *
+ * @package GAS
+ */
+
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -10,23 +20,23 @@
 
 	<?php wp_head(); ?>
 
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '595449329467379');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src=https://www.facebook.com/tr?id=595449329467379&ev=PageView&noscript=1
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+	<!-- Meta Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '595449329467379');
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src=https://www.facebook.com/tr?id=595449329467379&ev=PageView&noscript=1
+	/></noscript>
+	<!-- End Meta Pixel Code -->
 </head>
 
 <body <?php body_class( 'bg-white text-gray-900 antialiased js' ); ?>>
@@ -49,34 +59,34 @@
 									<?php the_custom_logo(); ?>
 								</div>
 								<div class="h-full md:hidden flex">
-									<a href="<?php echo get_bloginfo( 'url' ); ?>">
-										<img class="h-full" src="<?php echo get_template_directory_uri(); ?>/resources/img/mobile-logo.svg">
+									<a href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>">
+										<img class="h-full" src="<?php echo esc_url( get_template_directory_uri() ); ?>/resources/img/mobile-logo.svg">
 									</a>
 								</div>
 							<?php } else { ?>
-								<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">
-									<?php echo get_bloginfo( 'name' ); ?>
+								<a href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>" class="font-extrabold text-lg uppercase">
+									<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 								</a>
 
 								<p class="text-sm font-light text-gray-600">
-									<?php echo get_bloginfo( 'description' ); ?>
+									<?php echo esc_html( get_bloginfo( 'description' ) ); ?>
 								</p>
 
 							<?php } ?>
 						</div>
 
 						<div class="mr-4 md:mr-8 text-white flex flex-col-reverse md:flex-row items-end flex-wrap gap-4 md:gap-10 text-3xl">
-							<?php // Telephone number ?>
+							<?php // Telephone number. ?>
 							<a class="nav-tel block text-lg md:text-3xl" href="tel:020 3397 2757">020 3397 2757</a>
 
 							<div class="flex gap-8 items-center">
 
-								<?php // Search ?>
+								<?php // Search. ?>
 								<a href="#" aria-label="Toggle search" id="search-toggle">
-									<img src="<?php echo get_template_directory_uri(); ?>/resources/img/search.svg" alt="Search" class="w-8 h-8 js-search-icon">
+									<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/resources/img/search.svg" alt="Search" class="w-8 h-8 js-search-icon">
 								</a>
 
-								<?php // Menu ?>
+								<?php // Menu. ?>
 								<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle" class="z-20">
 									<svg viewBox="0 0 18 18" class="inline-block w-6 md:w-8 h-6 md:h-8 nav-hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 										<g stroke="none" stroke-width="2" fill="currentColor" fill-rule="evenodd">
@@ -115,7 +125,7 @@
 			</div>
 		</header>
 		<div class="opacity-0 fixed top-0 left-0 backdrop-blur-sm w-full h-full z-50 transition-opacity pointer-events-none bg-[rgba(0,0,0,0.75)]" id="search-form">
-			<?php get_template_part('template-parts/section', 'search'); ?>
+			<?php get_template_part( 'template-parts/section', 'search' ); ?>
 		</div>
 		<?php } ?>
 
