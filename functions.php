@@ -1,4 +1,9 @@
 <?php
+/**
+ * The functions file
+ *
+ * @package GAS
+ */
 
 /**
  * Theme setup.
@@ -9,6 +14,7 @@ function tailpress_setup() {
 	register_nav_menus(
 		array(
 			'primary' => __( 'Primary Menu', 'tailpress' ),
+			'footer'  => __( 'Footer Menu', 'tailpress' ),
 		)
 	);
 
@@ -42,7 +48,7 @@ add_action( 'after_setup_theme', 'tailpress_setup' );
 function tailpress_enqueue_scripts() {
 	$theme = wp_get_theme();
 
-	// Enqueue styles
+	// Enqueue styles.
 	wp_enqueue_style( 'tailpress', tailpress_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_style( 'owl-carousel-css', tailpress_asset( 'css/owl.carousel.min.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_style( 'owl-carousel-theme', tailpress_asset( 'css/owl.theme.default.min.css' ), array(), $theme->get( 'Version' ) );
@@ -50,7 +56,7 @@ function tailpress_enqueue_scripts() {
 		wp_enqueue_style( 'docslider', tailpress_asset( 'css/docSlider.css' ), array( 'tailpress' ), $theme->get( 'Version' ) );
 	}
 
-	// Enqueue scripts
+	// Enqueue scripts.
 	if ( is_front_page() || is_singular( 'page' ) ) {
 		wp_enqueue_script( 'lethargy', tailpress_asset( 'js/lethargy.min.js' ), array(), $theme->get( 'Version' ), true );
 		wp_enqueue_script( 'docslider', tailpress_asset( 'js/docSlider.js' ), array( 'lethargy' ), $theme->get( 'Version' ), true );
@@ -64,10 +70,10 @@ function tailpress_enqueue_scripts() {
 		wp_enqueue_script( 'gas-product-single', tailpress_asset( 'js/productSingle.js' ), array( 'jquery' ), $theme->get( 'Version' ), true );
 	}
 
-	// Load search on all pages
+	// Load search on all pages.
 	wp_enqueue_script( 'gas-search', tailpress_asset( 'js/search.js' ), array( 'jquery' ), $theme->get( 'Version' ), true );
 
-	// Enqueue jQuery from Google CDN
+	// Enqueue jQuery from Google CDN.
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), null, true );
 }
@@ -80,13 +86,13 @@ function tailpress_enqueue_admin_scripts() {
 	$theme = wp_get_theme();
 	wp_enqueue_media();
 
-	// Enqueue styles
+	// Enqueue styles.
 	wp_enqueue_style( 'tailpress-admin', tailpress_asset( 'css/admin.css' ), array(), $theme->get( 'Version' ) );
 
-	// Enqueue scripts
+	// Enqueue scripts.
 	wp_enqueue_script( 'tailpress-admin', tailpress_asset( 'js/admin.js' ), array( 'jquery' ), $theme->get( 'Version' ), true );
 
-	// Enqueue options script if site options page
+	// Enqueue options script if site options page.
 	if ( isset( $_GET['page'] ) && $_GET['page'] === 'gas_options' ) {
 		wp_enqueue_script( 'tailpress-options', tailpress_asset( 'js/adminSiteOptions.js' ), array( 'jquery' ), $theme->get( 'Version' ), true );
 	}
@@ -236,7 +242,7 @@ function is_product_category() {
 }
 
 // Register images sizes
-add_image_size( 'product', 0, 800, true );	
+add_image_size( 'product', 0, 800, true );
 add_image_size( 'product-large', 900, 0, true );
 add_image_size( 'product-square', 450, 450, true );
 

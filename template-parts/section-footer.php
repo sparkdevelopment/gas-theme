@@ -32,22 +32,26 @@
 			</address>
 			<p class="sm:my-4 my-2 pt-2 block sm:hidden">&copy; GAS Production Hire Ltd <?php echo date_i18n( 'Y' ); ?></p>
 		</div>
-		<div class="col-span-5 sm:col-span-1 mx-4 order-3 sm:order-none">
-			<ul class="sm:my-4 my-2">
-				<li><a href="/info-contact/">Info & Contact</a></li>
-				<li><a href="/careers/">Careers</a></li>
-				<li><a href="/privacy-policy/">Privacy Policy</a></li>
-				<li><a href="/cookie-policy/">Cookie Policy</a></li>
-			</ul>
-		</div>
+		<?php
+			// Display footer menu.
+			wp_nav_menu(
+				array(
+					'container_id'    => 'footer-menu',
+					'container_class' => 'col-span-5 sm:col-span-1 mx-4 order-3 sm:order-none',
+					'menu_class'      => 'sm:my-4 my-2',
+					'theme_location'  => 'footer',
+					'fallback_cb'     => false,
+				)
+			);
+			?>
 		<div class="col-start-3 lg:col-start-4 xl:col-start-6 2xl:col-start-8 col-end-6 lg:col-end7 xl:col-end-9 2xl:col-end-11 2xl:col-span-3 flex flex-col justify-end mx-4 order-2 sm:order-none text-base">
 			<?php
-			// Add widget area for footer newsletter form
+			// Add widget area for footer newsletter form.
 			if ( is_active_sidebar( 'footer-newsletter' ) ) {
 				dynamic_sidebar( 'footer-newsletter' );
 			}
 			?>
-			<p class="sm:my-4 my-2 hidden sm:block text-right text-base sm:text-lg">&copy; GAS Production Hire Ltd <?php echo date_i18n( 'Y' ); ?></p>
+			<p class="sm:my-4 my-2 hidden sm:block text-right text-base sm:text-lg">&copy; GAS Production Hire Ltd <?php echo esc_html( date_i18n( 'Y' ) ); ?></p>
 		</div>
 	</div>
 </div>
