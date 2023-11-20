@@ -50,7 +50,7 @@ function gas_render_pdf_field( $args ) {
 			<a href="<?php echo esc_url( $pdf_url ); ?>" target="_blank" class="custom-media-button-view button">View PDF: <?php echo esc_html( $pdf_title ); ?></a>
 			<a href="#" class="custom-media-button-remove button">Remove PDF</a>
 		<?php else : ?>
-			<a href="#" class="button custom-media-button-upload">Upload PDF</a>
+			<a href="#" class="button custom-media-button-upload">Select PDF</a>
 			<a href="#" class="custom-media-button-remove button" style="display:none">Remove PDF</a>
 		<?php endif; ?>
 		<input type="hidden" class="hidden-media-id" name="<?php echo $args['label_for']; ?>" value="<?php echo absint( $pdf_id ); ?>">
@@ -101,7 +101,7 @@ function gas_render_pdf_or_page_field( $args ) {
 	$field_value = get_option( $field_id ) ?? '';
 
 	$pdf_id    = intval( $field_value['pdf'] ?? 0 );
-	$pdf_url   = wp_get_attachment_url( $field_value['pdf'] );
+	$pdf_url   = wp_get_attachment_url( $pdf_id );
 	$pdf_title = get_the_title( $pdf_id );
 
 	$page_id = intval( $field_value['page'] ?? 0 );
@@ -126,10 +126,10 @@ function gas_render_pdf_or_page_field( $args ) {
 		echo '<a href="' . esc_url( $pdf_url ) . '" target="_blank" class="custom-media-button-view button">View PDF: ' . esc_html( $pdf_title ) . '</a>';
 		echo '<a href="#" class="custom-media-button-remove button">Remove PDF</a>';
 	} else {
-		echo '<a href="#" class="button custom-media-button-upload">Upload PDF</a>';
+		echo '<a href="#" class="button custom-media-button-upload">Select PDF</a>';
 		echo '<a href="#" class="custom-media-button-remove button" style="display:none">Remove PDF</a>';
 	}
-	echo '<input type="hidden" class="hidden-media-id" name="' . esc_attr( $field_id ) . '[pdf]' . '" value="' . absint( $field_value['pdf'] ) . '">';
+	echo '<input type="hidden" class="hidden-media-id" name="' . esc_attr( $field_id ) . '[pdf]' . '" value="' . $pdf_id . '">';
 	echo '</div>';
 
 	// Pages Dropdown
@@ -171,7 +171,7 @@ function gas_render_pdf_or_page_field( $args ) {
                         if ($(this).val() === "pdf") {
                             fieldContainer.find(".gas-page-select-field select").val("");
                         } else {
-                            fieldContainer.find(".custom-media-button-view").removeClass("custom-media-button-view").addClass("custom-media-button-upload").text("Upload PDF");
+                            fieldContainer.find(".custom-media-button-view").removeClass("custom-media-button-view").addClass("custom-media-button-upload").text("Select PDF");
                             fieldContainer.find(".custom-media-button-remove").hide();
                             fieldContainer.find(".gas-pdf-upload-field input[type=\'hidden\']").val("");
                         }

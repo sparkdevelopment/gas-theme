@@ -169,12 +169,15 @@ require_once get_template_directory() . '/inc/custom-widget-areas.php';
 // Include site options page
 require_once get_template_directory() . '/inc/site-options.php';
 
+// Include helper functions
+require_once get_template_directory() . '/inc/helpers.php';
+
 // Build breadcrumbs for single product and product category pages showing parent and child categories, iterating over all levels
 function build_breadcrumbs() {
 	$breadcrumbs = array();
 
 	if ( is_product() ) {
-		$categories = get_the_terms( get_the_ID(), 'product_category' );
+		$categories    = get_the_terms( get_the_ID(), 'product_category' );
 		$breadcrumbs[] = array(
 			'title' => get_the_title(),
 			'link'  => get_the_permalink(),

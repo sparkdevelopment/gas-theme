@@ -14,7 +14,7 @@ function gas_register_settings_fields() {
 	gas_register_section_homepage_text();
 	gas_register_section_studios();
 	gas_register_section_hapaca();
-	gas_register_section_pdf_files();
+	gas_register_info_contact();
 }
 
 /**
@@ -143,17 +143,17 @@ function gas_register_section_hapaca() {
  *
  * @return void
  */
-function gas_register_section_pdf_files() {
+function gas_register_info_contact() {
 	$fields = array(
-		'gas_price_list_pdf'   => array(
+		'gas_price_list_link'   => array(
 			'label' => 'Price List',
 			'type'  => 'pdf_or_page',
 		),
-		'gas_account_form_pdf' => array(
+		'gas_account_form_link' => array(
 			'label' => 'Account Form',
 			'type'  => 'pdf_or_page',
 		),
-		'gas_tnc_pdf'          => array(
+		'gas_tnc_link'          => array(
 			'label' => 'T&C',
 			'type'  => 'pdf_or_page',
 		),

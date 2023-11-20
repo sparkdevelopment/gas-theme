@@ -50,7 +50,7 @@ jQuery(function ($) {
         if (button.prev().is('img')) {
             button.hide().prev().addClass('button').html('Upload image'); // replace the image with text
         } else {
-            button.hide().prev().addClass('button').html('Upload PDF'); // replace the text with "Upload PDF"
+            button.hide().prev().addClass('button').html('Select PDF'); // replace the text with "Select PDF"
         }
     });
 });
