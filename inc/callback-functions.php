@@ -1,6 +1,9 @@
 <?php
 /**
  * Callback function for the options page.
+ *
+ * @since 1.0.0
+ * @package GAS
  */
 
 /**
@@ -26,14 +29,14 @@ function gas_options_page_callback() {
 
 	settings_errors( 'gas_options' );
 
-	// Check if global sections are set and is an array
+	// Check if global sections are set and is an array.
 	if ( ! isset( $gas_registered_sections ) || ! is_array( $gas_registered_sections ) ) {
 		echo 'No settings sections have been defined.';
 		return;
 	}
 	?>
 	<div class="wrap">
-		<h1><?php echo get_admin_page_title(); ?></h1>
+		<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 		<form method="post" action="options.php" class="validate">
 			<?php settings_fields( 'gas_options' ); ?>
 

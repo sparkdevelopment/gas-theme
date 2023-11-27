@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template for displaying content in the single.php template
+ *
+ * @package TailPress
+ * @since TailPress 1.0.0
+ */
+
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header mb-4">
@@ -19,7 +29,7 @@
 					'separator'   => '<span class="screen-reader-text">, </span>',
 				)
 			);
-		?>
+			?>
 	</div>
 
 </article>

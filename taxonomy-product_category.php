@@ -1,5 +1,9 @@
 <?php
-// Template for product archive page
+/**
+ * The template for displaying product archives.
+ *
+ * @package Gas
+ */
 
 get_header();
 

@@ -1,12 +1,9 @@
 <?php
 /**
- * Registers the site options page.
- *
- * This function registers the site options page for the gas theme, using the WordPress functions add_menu_page() and add_submenu_page().
+ * Registers settings fields for the gas theme.
  *
  * @since 1.0.0
- *
- * @return void
+ * @package Gas
  */
 
 require_once 'callback-functions.php';
@@ -16,6 +13,13 @@ require_once 'field-rendering-functions.php';
 add_action( 'admin_menu', 'gas_options_page' );
 add_action( 'admin_init', 'gas_register_settings_fields' );
 
+/**
+ * Registers the site options page.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
 function gas_options_page() {
 	add_menu_page( 'GAS Options', 'GAS', 'manage_options', 'gas_options', 'gas_options_page_callback', 'dashicons-admin-site', 4 );
 }

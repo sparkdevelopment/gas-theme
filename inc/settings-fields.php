@@ -1,4 +1,10 @@
 <?php
+/**
+ * Registers settings fields for the gas theme.
+ *
+ * @since 1.0.0
+ * @package Gas
+ */
 
 global $gas_registered_sections;
 $gas_registered_sections = array();
@@ -15,6 +21,7 @@ function gas_register_settings_fields() {
 	gas_register_section_studios();
 	gas_register_section_hapaca();
 	gas_register_info_contact();
+	gas_register_footer();
 }
 
 /**
@@ -28,9 +35,9 @@ function gas_register_settings_fields() {
 function gas_register_section( $section_id, $section_label, $fields ) {
 	global $gas_registered_sections;
 
-	// Validate fields array
+	// Validate fields array.
 	if ( ! is_array( $fields ) ) {
-		// Handle error, e.g., log or display an admin notice
+		// Handle error, e.g., log or display an admin notice.
 		return;
 	}
 
@@ -38,18 +45,18 @@ function gas_register_section( $section_id, $section_label, $fields ) {
 		$field_type  = $field_properties['type'];
 		$field_label = $field_properties['label'];
 
-		// Dynamic function name based on field type
+		// Dynamic function name based on field type.
 		$render_callback = "gas_render_{$field_type}_field";
 		if ( ! function_exists( $render_callback ) ) {
-			continue; // Skip if render function does not exist
+			continue; // Skip if render function does not exist.
 		}
 
-		// Register setting with a dynamic sanitization callback
-		$sanitization_callback = $field_type === 'image' || $field_type === 'pdf' ? 'absint' : "sanitize_{$field_type}_field";
-		$sanitization_callback = $field_type === 'pdf_or_page' ? 'gas_sanitize_pdf_or_page_field' : $sanitization_callback;
+		// Register setting with a dynamic sanitization callback.
+		$sanitization_callback = ( 'image' === $field_type || 'pdf' === $field_type ) ? 'absint' : "sanitize_{$field_type}_field";
+		$sanitization_callback = 'pdf_or_page' === $field_type ? 'gas_sanitize_pdf_or_page_field' : $sanitization_callback;
 		register_setting( 'gas_options', $field_id, $sanitization_callback );
 
-		// Add settings field with dynamic render callback
+		// Add settings field with dynamic render callback.
 		add_settings_field( $field_id, $field_label, $render_callback, "gas_options_$section_id", "gas_section_$section_id", array( 'label_for' => $field_id ) );
 	}
 
@@ -145,18 +152,57 @@ function gas_register_section_hapaca() {
  */
 function gas_register_info_contact() {
 	$fields = array(
-		'gas_price_list_link'   => array(
+		'gas_info_contact_text'    => array(
+			'label' => 'Info & Contact Text',
+			'type'  => 'textarea',
+		),
+		'gas_info_contact_tel'     => array(
+			'label' => 'Telephone Number',
+			'type'  => 'text',
+		),
+		'gas_info_contact_email'   => array(
+			'label' => 'Email Address',
+			'type'  => 'text',
+		),
+		'gas_info_contact_map_url' => array(
+			'label' => 'Google Map URL',
+			'type'  => 'url',
+		),
+		'gas_price_list_link'      => array(
 			'label' => 'Price List',
 			'type'  => 'pdf_or_page',
 		),
-		'gas_account_form_link' => array(
+		'gas_account_form_link'    => array(
 			'label' => 'Account Form',
 			'type'  => 'pdf_or_page',
 		),
-		'gas_tnc_link'          => array(
+		'gas_tnc_link'             => array(
 			'label' => 'T&C',
 			'type'  => 'pdf_or_page',
 		),
 	);
 	gas_register_section( 'pdf_files', 'Info & Contact', $fields );
+}
+
+/**
+ * Registers the footer section.
+ *
+ * @return void
+ */
+function gas_register_footer() {
+	$fields = array(
+		'gas_footer_email'   => array(
+			'label' => 'Footer Email',
+			'type'  => 'text',
+		),
+		'gas_footer_tel'     => array(
+			'label' => 'Footer Telephone',
+			'type'  => 'text',
+		),
+		'gas_footer_address' => array(
+			'label' => 'Footer Address',
+			'type'  => 'textarea',
+		),
+	);
+	gas_register_section( 'footer', 'Footer', $fields );
 }
