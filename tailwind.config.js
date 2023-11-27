@@ -60,6 +60,7 @@ module.exports = {
         'm-auto',
         'max-w-none',
         'mb-4',
+        'md:h-[80vh]',
         'mt-0',
         'mt-2',
         'placeholder:text-white',

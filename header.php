@@ -110,7 +110,7 @@
 							wp_nav_menu(
 								array(
 									'container_id'    => 'primary-menu',
-									'container_class' => 'absolute w-full md:w-1/2 lg:w-1/3 xl:w-1/4 bg-black text-white h-screen md:h-[66.6vh] text-[2rem] leading-none right-0 top-0 px-7 sm:px-10 md:px-18 lg:px-10 xl:px-12 pt-44 font-light menu-slide z-10',
+									'container_class' => 'absolute w-full md:w-1/2 lg:w-1/3 xl:w-1/4 bg-black text-white h-screen md:h-[80vh] text-[2rem] leading-none right-0 top-0 px-7 sm:px-10 md:px-18 lg:px-10 xl:px-12 pt-44 font-light menu-slide z-10',
 									'menu_class'      => 'flex-col lg:flex lg:-mx-4',
 									'theme_location'  => 'primary',
 									'li_class'        => 'mx-2 lg:mx-4 my-4 lg:my-2',
