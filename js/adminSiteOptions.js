@@ -23,7 +23,7 @@ jQuery(function ($) {
             if (fileType === 'image') {
                 button.removeClass('button').html('<img src="' + attachment.sizes.thumbnail.url + '">'); // add image instead of "Upload Image"
             } else {
-                button.html('View PDF: ' + attachment.title); // add "View PDF" text along with the title
+                button.html('View PDF: ' + attachment.title).attr('href', attachment.url).addClass('custom-media-button-view').removeClass('custom-media-button-upload'); // add "View PDF" text along with the title
             }
             button.next().show(); // show "Remove file" link
             // Populate the hidden field with file ID
@@ -50,7 +50,7 @@ jQuery(function ($) {
         if (button.prev().is('img')) {
             button.hide().prev().addClass('button').html('Upload image'); // replace the image with text
         } else {
-            button.hide().prev().addClass('button').html('Select PDF'); // replace the text with "Select PDF"
+            button.hide().prev().addClass('button').html('Select PDF').removeAttr('href').removeClass('custom-media-button-view').addClass('custom-media-button-upload'); // replace the text with "Select PDF" and remove href attribute
         }
     });
 });
