@@ -180,6 +180,22 @@ function gas_register_info_contact() {
 			'label' => 'T&C',
 			'type'  => 'pdf_or_page',
 		),
+		'gas_extra_button_1_text'  => array(
+			'label' => 'Extra Button 1 Text',
+			'type'  => 'text',
+		),
+		'gas_extra_button_1_link'  => array(
+			'label' => 'Extra Button 1 Link',
+			'type'  => 'pdf_or_page',
+		),
+		'gas_extra_button_2_text'  => array(
+			'label' => 'Extra Button 2 Text',
+			'type'  => 'text',
+		),
+		'gas_extra_button_2_link'  => array(
+			'label' => 'Extra Button 2 Link',
+			'type'  => 'pdf_or_page',
+		),
 	);
 	gas_register_section( 'pdf_files', 'Info & Contact', $fields );
 }

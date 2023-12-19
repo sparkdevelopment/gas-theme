@@ -93,7 +93,7 @@ function tailpress_enqueue_admin_scripts() {
 	wp_enqueue_script( 'tailpress-admin', tailpress_asset( 'js/admin.js' ), array( 'jquery' ), $theme->get( 'Version' ), true );
 
 	// Enqueue options script if site options page.
-	if ( isset( $_GET['page'] ) && $_GET['page'] === 'gas_options' ) {
+	if ( isset( $_GET['page'] ) && 'gas_options' === $_GET['page'] ) {
 		wp_enqueue_script( 'tailpress-options', tailpress_asset( 'js/adminSiteOptions.js' ), array( 'jquery' ), $theme->get( 'Version' ), true );
 	}
 }
@@ -236,23 +236,38 @@ function display_breadcrumbs() {
 	}
 }
 
+/**
+ * Check if the current page is a product.
+ *
+ * @return bool
+ */
 function is_product() {
 	return is_singular( 'product' );
 }
 
+/**
+ * Check if the current page is a product category archive.
+ *
+ * @return bool
+ */
 function is_product_category() {
 	return is_tax( 'product_category' );
 }
 
-// Register images sizes
+// Register images sizes.
 add_image_size( 'product', 0, 800, true );
 add_image_size( 'product-large', 900, 0, true );
 add_image_size( 'product-square', 450, 450, true );
 
-// Disable <p> tags around Contact Form 7 inputs
+// Disable <p> tags around Contact Form 7 inputs.
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
-// Add logo classes
+/**
+ * Add custom classes to the logo.
+ *
+ * @param string $html The logo HTML.
+ * @return string
+ */
 function adjust_logo_classes( $html ) {
 	$html = str_replace( 'custom-logo-link', 'block [&>img]:mx-8 [&>img]:md:mx-0 [&>img]:my-7 [&>img]:md:my-0 [&>img]:h-10 [&>img]:md:h-auto [&>img]:w-auto', $html );
 	return $html;

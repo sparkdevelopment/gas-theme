@@ -29,6 +29,20 @@ $gas_info_contact_email = esc_html( get_option( 'gas_info_contact_email' ) );
 					<a target="_blank" href="<?php echo esc_attr( $gas_price_list_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Price List</a>
 					<a target="_blank" href="<?php echo esc_attr( $gas_account_form_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Account Form</a>
 					<a target="_blank" href="<?php echo esc_attr( $gas_tnc_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">T&Cs</a>
+					<?php
+					$gas_extra_button_1_text = esc_html( get_option( 'gas_extra_button_1_text' ) );
+					$gas_extra_button_1_link = esc_attr( get_pdf_or_page_link( 'gas_extra_button_1_link' ) );
+					$gas_extra_button_2_text = esc_html( get_option( 'gas_extra_button_2_text' ) );
+					$gas_extra_button_2_link = esc_attr( get_pdf_or_page_link( 'gas_extra_button_2_link' ) );
+					if ( $gas_extra_button_1_text && $gas_extra_button_1_link ) :
+						?>
+						<a target="_blank" href="<?php echo esc_attr( $gas_extra_button_1_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8"><?php echo esc_html( $gas_extra_button_1_text ); ?></a>
+					<?php endif; ?>
+					<?php if ( $gas_extra_button_2_text && $gas_extra_button_2_link ) : ?>
+						<a target="_blank" href="<?php echo esc_attr( $gas_extra_button_2_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8"><?php echo esc_html( $gas_extra_button_2_text ); ?></a>
+						<?php
+					endif;
+					?>
 				</div>
 				<div class="text-lg space-y-4"><?php the_content(); ?></div>
 			</div>
