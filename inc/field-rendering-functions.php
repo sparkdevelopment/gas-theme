@@ -86,8 +86,20 @@ function gas_render_textarea_field( $args ) {
  */
 function gas_render_text_field( $args ) {
 	$text = get_option( $args['label_for'] ) ?? '';
+
+	// If max_length is set, add a maxlength attribute to the input field.
+	$max_length     = $args['max_length'] ?? '';
+	$maxlength_attr = $max_length ? "maxlength=\"$max_length\"" : '';
+
 	?>
-	<input type="text" name="<?php echo esc_attr( $args['label_for'] ); ?>" value="<?php echo esc_attr( $text ); ?>" class="widefat">
+	<input type="text" <?php echo $maxlength_attr; ?> name="<?php echo esc_attr( $args['label_for'] ); ?>" value="<?php echo esc_attr( $text ); ?>" class="widefat">
+	<?php
+}
+
+function gas_render_number_field( $args ) {
+	$number = get_option( $args['label_for'] ) ?? '';
+	?>
+	<input type="number" name="<?php echo esc_attr( $args['label_for'] ); ?>" value="<?php echo esc_attr( $number ); ?>" class="widefat">
 	<?php
 }
 
@@ -228,4 +240,10 @@ function gas_render_url_field( $args ) {
  */
 function gas_sanitize_url_field( $input ) {
 	return esc_url_raw( $input );
+}
+
+function gas_render_separator_field( $args ) {
+	?>
+	<hr>
+	<?php
 }

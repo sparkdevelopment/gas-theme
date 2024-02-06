@@ -26,22 +26,40 @@ $gas_info_contact_email = esc_html( get_option( 'gas_info_contact_email' ) );
 					<a href="mailto:<?php echo esc_attr( $gas_info_contact_email ); ?>?subject=Enquiry from website" class="block font-light md:mb-8">E: <?php echo esc_html( $gas_info_contact_email ); ?></a>
 				</div>
 				<div class="my-8 hidden md:block">
-					<a target="_blank" href="<?php echo esc_attr( $gas_price_list_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Price List</a>
-					<a target="_blank" href="<?php echo esc_attr( $gas_account_form_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">Account Form</a>
-					<a target="_blank" href="<?php echo esc_attr( $gas_tnc_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">T&Cs</a>
 					<?php
-					$gas_extra_button_1_text = esc_html( get_option( 'gas_extra_button_1_text' ) );
-					$gas_extra_button_1_link = esc_attr( get_pdf_or_page_link( 'gas_extra_button_1_link' ) );
-					$gas_extra_button_2_text = esc_html( get_option( 'gas_extra_button_2_text' ) );
-					$gas_extra_button_2_link = esc_attr( get_pdf_or_page_link( 'gas_extra_button_2_link' ) );
-					if ( $gas_extra_button_1_text && $gas_extra_button_1_link ) :
-						?>
-						<a target="_blank" href="<?php echo esc_attr( $gas_extra_button_1_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8"><?php echo esc_html( $gas_extra_button_1_text ); ?></a>
-					<?php endif; ?>
-					<?php if ( $gas_extra_button_2_text && $gas_extra_button_2_link ) : ?>
-						<a target="_blank" href="<?php echo esc_attr( $gas_extra_button_2_link ); ?>" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8"><?php echo esc_html( $gas_extra_button_2_text ); ?></a>
-						<?php
-					endif;
+					// Get extra buttons
+					$extra_buttons = array();
+					for ( $i = 1; $i <= 5; $i++ ) {
+						$gas_extra_button_text     = get_option( "gas_info_button_{$i}_text" );
+						$gas_extra_button_link     = get_pdf_or_page_link( "gas_info_button_{$i}_link" );
+						$gas_extra_button_position = get_option( "gas_info_button_{$i}_position" );
+
+						// If no position is set, default to 999
+						if ( ! $gas_extra_button_position ) {
+							$gas_extra_button_position = 999;
+						}
+
+						if ( $gas_extra_button_text && $gas_extra_button_link ) {
+							// If position already used, increment by 1
+							while ( isset( $extra_buttons[ $gas_extra_button_position ] ) ) {
+								++$gas_extra_button_position;
+							}
+							$extra_buttons[ $gas_extra_button_position ] = array(
+								'text' => $gas_extra_button_text,
+								'link' => $gas_extra_button_link,
+							);
+						}
+					}
+
+					// Order the buttons based on position
+					ksort( $extra_buttons );
+
+					// Output the buttons
+					foreach ( $extra_buttons as $button ) {
+						if ( $button['text'] && $button['link'] ) {
+							echo '<a target="_blank" href="' . esc_attr( $button['link'] ) . '" class="bg-white text-black py-2 w-48 text-center block rounded-3xl text-md font-light my-8">' . esc_html( $button['text'] ) . '</a>';
+						}
+					}
 					?>
 				</div>
 				<div class="text-lg space-y-4"><?php the_content(); ?></div>

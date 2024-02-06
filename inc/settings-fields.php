@@ -42,8 +42,17 @@ function gas_register_section( $section_id, $section_label, $fields ) {
 	}
 
 	foreach ( $fields as $field_id => $field_properties ) {
-		$field_type  = $field_properties['type'];
-		$field_label = $field_properties['label'];
+		$field_type       = $field_properties['type'];
+		$field_label      = $field_properties['label'];
+		$field_max_length = $field_properties['max_length'] ?? 0;
+
+		// If separator, output a separator with no label.
+		if ( 'separator' === $field_type ) {
+			$render_callback = 'gas_render_separator_field';
+			$field_label     = '';
+		} else {
+			$field_label = esc_html( $field_label );
+		}
 
 		// Dynamic function name based on field type.
 		$render_callback = "gas_render_{$field_type}_field";
@@ -57,7 +66,17 @@ function gas_register_section( $section_id, $section_label, $fields ) {
 		register_setting( 'gas_options', $field_id, $sanitization_callback );
 
 		// Add settings field with dynamic render callback.
-		add_settings_field( $field_id, $field_label, $render_callback, "gas_options_$section_id", "gas_section_$section_id", array( 'label_for' => $field_id ) );
+		add_settings_field(
+			$field_id,
+			$field_label,
+			$render_callback,
+			"gas_options_$section_id",
+			"gas_section_$section_id",
+			array(
+				'label_for'  => $field_id,
+				'max_length' => $field_max_length,
+			)
+		);
 	}
 
 	$gas_registered_sections[ $section_id ] = $section_label;
@@ -168,35 +187,28 @@ function gas_register_info_contact() {
 			'label' => 'Google Map URL',
 			'type'  => 'url',
 		),
-		'gas_price_list_link'      => array(
-			'label' => 'Price List',
-			'type'  => 'pdf_or_page',
-		),
-		'gas_account_form_link'    => array(
-			'label' => 'Account Form',
-			'type'  => 'pdf_or_page',
-		),
-		'gas_tnc_link'             => array(
-			'label' => 'T&C',
-			'type'  => 'pdf_or_page',
-		),
-		'gas_extra_button_1_text'  => array(
-			'label' => 'Extra Button 1 Text',
-			'type'  => 'text',
-		),
-		'gas_extra_button_1_link'  => array(
-			'label' => 'Extra Button 1 Link',
-			'type'  => 'pdf_or_page',
-		),
-		'gas_extra_button_2_text'  => array(
-			'label' => 'Extra Button 2 Text',
-			'type'  => 'text',
-		),
-		'gas_extra_button_2_link'  => array(
-			'label' => 'Extra Button 2 Link',
-			'type'  => 'pdf_or_page',
-		),
 	);
+	// Add x number of buttons
+	for ( $i = 1; $i <= 5; $i++ ) {
+		// Add seperator
+		$fields[ "gas_info_button_{$i}_separator" ] = array(
+			'label' => "Button {$i} Separator",
+			'type'  => 'separator',
+		);
+		$fields[ "gas_info_button_{$i}_text" ]      = array(
+			'label'      => "Button {$i} Text",
+			'type'       => 'text',
+			'max_length' => '35',
+		);
+		$fields[ "gas_info_button_{$i}_link" ]      = array(
+			'label' => "Button {$i} Link",
+			'type'  => 'pdf_or_page',
+		);
+		$fields[ "gas_info_button_{$i}_position" ]  = array(
+			'label' => "Button {$i} Position",
+			'type'  => 'number',
+		);
+	}
 	gas_register_section( 'pdf_files', 'Info & Contact', $fields );
 }
 
